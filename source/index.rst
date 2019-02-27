@@ -41,8 +41,8 @@ QGIS Tutorials and Tips
 * Python Scripting (PyQGIS)
    - :doc:`docs/3/getting_started_with_pyqgis` [:doc:`QGIS2 version
      <docs/getting_started_with_pyqgis>`]
-   - :doc:`docs/building_a_python_plugin`
    - :doc:`docs/3/custom_python_functions` [:doc:`QGIS2 version <docs/custom_python_functions>`]
+   - :doc:`docs/3/building_a_python_plugin` [:doc:`QGIS 2 version <docs/building_a_python_plugin>`]
    - :doc:`docs/3/processing_python_scripts` [ :doc:`QGIS2 version <docs/processing_python_scripts>` ]
    - :doc:`docs/running_qgis_jobs`
    - :doc:`docs/find_neighbor_polygons`
