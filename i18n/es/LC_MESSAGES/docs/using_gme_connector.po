@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the QGIS Tutorials and Tips package.
 # 
 # Translators:
+# Fran Raga <FRANKA1986@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Tutorials\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-31 06:12+0000\n"
-"PO-Revision-Date: 2015-10-07 21:56+0000\n"
+"POT-Creation-Date: 2019-02-21 18:12+0000\n"
+"PO-Revision-Date: 2019-02-20 19:18+0000\n"
 "Last-Translator: Ujaval Gandhi <ujaval@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/spatialthoughts/qgis-tutorials/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -68,7 +69,7 @@ msgstr ""
 
 #: ../../source/docs/using_gme_connector.rst:36
 msgid "Get the data"
-msgstr ""
+msgstr "Obtener los datos"
 
 #: ../../source/docs/using_gme_connector.rst:38
 msgid ""

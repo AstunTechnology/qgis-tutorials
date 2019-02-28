@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the QGIS Tutorials and Tips package.
 # 
 # Translators:
-# Dick Groskamp, 2015-2016
+# Dick Groskamp, 2015-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Tutorials\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-31 06:12+0000\n"
-"PO-Revision-Date: 2016-04-22 17:48+0000\n"
+"POT-Creation-Date: 2019-02-21 18:12+0000\n"
+"PO-Revision-Date: 2018-03-25 17:21+0000\n"
 "Last-Translator: Dick Groskamp\n"
 "Language-Team: Dutch (http://www.transifex.com/spatialthoughts/qgis-tutorials/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -170,7 +170,7 @@ msgid ""
 " Console. In the main QGIS window, go to :menuselection:`Plugins --> Python "
 "Console`. Once the console is open, find your script in the "
 ":guilabel:`Processing Toolbox` and double-click it to launch it."
-msgstr "Bij het schrijven van code is het belangrijk om de fouten te kunnen zien en uw code te kunnen debuggen. Uw scripts voor Processing kunnen eenvoudig worden gedebugd via de ingebouwde Python Console. Fa, in het hoofdvenster van QGIS, naar :menuselection:`Plug-ins --> Python Console`. Zoek, als de console eenmaal is geopend, naar uw script in de :guilabel:`Processing Toolbox` en dubbelklik erop om het te starten."
+msgstr "Bij het schrijven van code is het belangrijk om de fouten te kunnen zien en uw code te kunnen debuggen. Uw scripts voor Processing kunnen eenvoudig worden gedebugd via de ingebouwde Python Console. Ga, in het hoofdvenster van QGIS, naar :menuselection:`Plug-ins --> Python Console`. Zoek, als de console eenmaal is geopend, naar uw script in de :guilabel:`Processing Toolbox` en dubbelklik erop om het te starten."
 
 #: ../../source/docs/processing_python_scripts.rst:145
 msgid ""
@@ -265,7 +265,7 @@ msgid ""
 "A new ``output layer`` will be added to QGIS. This will contain dissolved "
 "geometries only from the selected features in the input layer. You will also"
 " note that the ``output layer`` will contain only 2 fields as expected."
-msgstr "Een nieuwe ``output layer`` zal wordne toegevoegd aan QGIS. Deze zal alleen de ontbonden geometrieën bevatten uit de geselecteerde objecten van de invoerlaag. U zult ook zien dat de ``output layer``, zoals verwacht, slechts 2 velden zal bevatten."
+msgstr "Een nieuwe ``output layer`` zal worden toegevoegd aan QGIS. Deze zal alleen de ontbonden geometrieën bevatten uit de geselecteerde objecten van de invoerlaag. U zult ook zien dat de ``output layer``, zoals verwacht, slechts 2 velden zal bevatten."
 
 #: ../../source/docs/processing_python_scripts.rst:282
 msgid ""

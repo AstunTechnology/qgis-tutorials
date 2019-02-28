@@ -3,12 +3,14 @@
 # This file is distributed under the same license as the QGIS Tutorials and Tips package.
 # 
 # Translators:
+# Fran Raga <FRANKA1986@gmail.com>, 2017
+# JF Buzzetti <jbuzzetti@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Tutorials\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-31 06:12+0000\n"
-"PO-Revision-Date: 2016-04-22 07:18+0000\n"
+"POT-Creation-Date: 2019-02-21 18:12+0000\n"
+"PO-Revision-Date: 2019-02-04 05:57+0000\n"
 "Last-Translator: Ujaval Gandhi <ujaval@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/spatialthoughts/qgis-tutorials/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +21,7 @@ msgstr ""
 
 #: ../../source/docs/advanced_georeferencing.rst:2
 msgid "Georeferencing Aerial Imagery"
-msgstr ""
+msgstr "Georeferenciación de imágenes aéreas"
 
 #: ../../source/docs/advanced_georeferencing.rst:3
 msgid ""
@@ -30,17 +32,17 @@ msgid ""
 "an image. In that case, you can use another georeferenced data source as "
 "your input. In this tutorial, you will learn how to use existing open data "
 "sources in your georeferencing process."
-msgstr ""
+msgstr "En el tutorial: doc: `georeferencing_basics` cubrimos el proceso básico de georreferenciación en QGIS. Ese método implica leer las coordenadas del mapa escaneado e ingresarlas manualmente. Sin embargo, en ocasiones, es posible que las coordenadas no estén impresas en el mapa que se está intentando georeferenciar. En este caso, se puede usar otra fuente de datos georreferenciados. En este tutorial aprenderá a utilizar fuentes de datos abiertos existentes en el proceso de georreferenciación."
 
 #: ../../source/docs/advanced_georeferencing.rst:13
 msgid "Overview of the task"
-msgstr ""
+msgstr "Información general del projecto"
 
 #: ../../source/docs/advanced_georeferencing.rst:15
 msgid ""
 "We will georeference high resolution balloon-imagery using reference "
 "coordinates from OpenStreetMap."
-msgstr ""
+msgstr "Vamos a georeferenciar una imágen de alta resolución de globo usando coordenadas de referencia de OpenStreetMap"
 
 #: ../../source/docs/advanced_georeferencing.rst:19
 msgid "Other skills you will learn"
@@ -48,31 +50,31 @@ msgstr "Otras habilidades que aprenderás"
 
 #: ../../source/docs/advanced_georeferencing.rst:20
 msgid "Downloading super high-resolution public domain imagery."
-msgstr ""
+msgstr "¿Cómo bajar imágenes de súper alta resolución de dominio público?"
 
 #: ../../source/docs/advanced_georeferencing.rst:21
 msgid "Using the OpenLayers plugin in QGIS."
-msgstr ""
+msgstr "Por medio del complemento OpenLayers de QGIS."
 
 #: ../../source/docs/advanced_georeferencing.rst:22
 msgid ""
 "Converting coordinates between different projection using **cs2cs** command-"
 "line tool."
-msgstr ""
+msgstr "Cómo hacer conversiones entre proyecciones diferentes usando la herramienta **cs2cs** en la lína de comandos."
 
 #: ../../source/docs/advanced_georeferencing.rst:24
 msgid ""
 "Using an existing georeferenced layer to input GCP points in the "
 "Georeferencer tool."
-msgstr ""
+msgstr "Por medio de una capa ya georeferenciada para ingresar puntos GCP en la herramienta Georeferenciador."
 
 #: ../../source/docs/advanced_georeferencing.rst:26
 msgid "Setting a custom no-data value for a layer."
-msgstr ""
+msgstr "Establecer un valor personalizado sin-datos para una capa."
 
 #: ../../source/docs/advanced_georeferencing.rst:29
 msgid "Get the data"
-msgstr ""
+msgstr "Obtener los datos"
 
 #: ../../source/docs/advanced_georeferencing.rst:31
 msgid ""
@@ -83,7 +85,7 @@ msgid ""
 "georeferencing it in QGIS.  If you like the imagery they provide, you can "
 "`explore it <http://google-latlong.blogspot.in/2012/04/ balloon-and-kite-"
 "imagery-in-google.html>`_ in Google Earth as well."
-msgstr ""
+msgstr "En este tutorial vamos a utilizar hermosas imágenes aéreas obtenidas por medio de cometas y globos por `The Public Laboratory <http://publiclaboratory.org/archive>`_. \n `The Public Laboratory <http://publiclaboratory.org/archive>`_ también produce versiones georeferenciadas de las imágenes disponibles. Sin embargo, vamos a bajar una imágen no georeferenciada en formato JPG y realizar el proceso de georreferenciación en QGIS. Si le agradan las imágenes aéreas provistas, puede explorarlas `explore it <http://google-latlong.blogspot.in/2012/04/ balloon-and-kite-imagery-in-google.html>`_ también en Google Earth."
 
 #: ../../source/docs/advanced_georeferencing.rst:39
 msgid ""
@@ -91,24 +93,24 @@ msgid ""
 "publiclaboratory.org/map/washington-square-park-new-york-new-"
 "york/2012-10-01>`_. You can right-click the JPG button and choose "
 ":guilabel:`Save link as...`."
-msgstr ""
+msgstr "Baje la imágen JPG  `Washington Square Park, New York <http:// publiclaboratory.org/map/washington-square-park-new-york-new-york/2012-10-01>`_. Puede hacer click derecho en el botón :guilabel:`Save link as...`."
 
 #: ../../source/docs/advanced_georeferencing.rst:43
 msgid ""
 "For convenience, you may directly download a copy of the dataset from the "
 "link below:"
-msgstr ""
+msgstr "Para su comodidad, puede descargar directamente una copia del conjunto de datos del siguiente enlace:"
 
 #: ../../source/docs/advanced_georeferencing.rst:46
 msgid ""
 "`newyorkcity-washingtonsquarepark.jpg "
 "<http://www.qgistutorials.com/downloads/newyorkcity-"
 "washingtonsquarepark.jpg>`_"
-msgstr ""
+msgstr "`newyorkcity-washingtonsquarepark.jpg <http://www.qgistutorials.com/downloads/newyorkcity-washingtonsquarepark.jpg>`_"
 
 #: ../../source/docs/advanced_georeferencing.rst:49
 msgid "Procedure"
-msgstr ""
+msgstr "Procedmiento"
 
 #: ../../source/docs/advanced_georeferencing.rst:51
 msgid ""
@@ -156,7 +158,13 @@ msgid ""
 "find a terminal at :menuselection:`Start --> OSGeo4W --> MSYS`."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:97
+#: ../../source/docs/advanced_georeferencing.rst:94
+msgid ""
+"MacOS users can locate the cs2cs tool at "
+"/Library/Frameworks/PROJ.Framework/Programs/cs2cs"
+msgstr ""
+
+#: ../../source/docs/advanced_georeferencing.rst:99
 msgid ""
 "Once you have verified that the cs2cs tool exists on your system, it is time"
 " to convert out Latitude and Longitude to Mercator coordinates. The way this"
@@ -173,7 +181,12 @@ msgid ""
 "output X Y coordinates in EPSG 3857 CRS."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:120
+#: ../../source/docs/advanced_georeferencing.rst:119
+msgid ""
+"If the above command does not work for you, please try the following variant"
+msgstr ""
+
+#: ../../source/docs/advanced_georeferencing.rst:129
 msgid ""
 "Copy these coordinates and switch to QGIS. At the bottom of the QGIS window,"
 " you will see a textbox labeled Coordinates. Enter the coordinates there in "
@@ -182,7 +195,7 @@ msgid ""
 "Coordinate box and press Enter."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:129
+#: ../../source/docs/advanced_georeferencing.rst:138
 msgid ""
 "Voila! you now see Washington Square Park area on your canvas. Now it is "
 "time to start georeferencing. Launch the **Georeferencer** from "
@@ -192,33 +205,33 @@ msgid ""
 " Installed`."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:139
+#: ../../source/docs/advanced_georeferencing.rst:148
 msgid ""
 "In the :guilabel:`Georeferencer` window, go to :menuselection:`File --> Open"
 " raster`. Navigate to the downloaded JPG file and click :guilabel:`Open`."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:145
+#: ../../source/docs/advanced_georeferencing.rst:154
 msgid ""
 "In the :guilabel:`Coordinate Reference System Selector`, choose "
 ":guilabel:`EPSG:3857 Pseudo Mercator`"
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:151
+#: ../../source/docs/advanced_georeferencing.rst:160
 msgid ""
 "Now click on the :guilabel:`Add Point` button on the toolbar and select an "
 "easily identifiable location on the image. Corners, intersections, poles "
 "etc. make good control points."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:158
+#: ../../source/docs/advanced_georeferencing.rst:167
 msgid ""
 "Once you click on the image at a control point location, you will see a pop-"
 "up asking you to enter map coordinates. Click the button :guilabel:`From map"
 " canvas`."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:165
+#: ../../source/docs/advanced_georeferencing.rst:174
 msgid ""
 "Find the same location in your reference layer, i.e. the OpenStreetMap layer"
 " and click there. The coordinates are auto-populated from your click on the "
@@ -226,11 +239,11 @@ msgid ""
 "add their coordinates from the reference layer."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:173
+#: ../../source/docs/advanced_georeferencing.rst:182
 msgid "Now go to :menuselection:`Settings --> Transformation settings.`"
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:178
+#: ../../source/docs/advanced_georeferencing.rst:187
 msgid ""
 "Choose the settings as shown below. Make sure you the :guilabel:`Load in "
 "QGIS when done` button is checked. Click OK. Back in the "
@@ -239,20 +252,20 @@ msgid ""
 "GCPs and creating the target raster."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:187
+#: ../../source/docs/advanced_georeferencing.rst:196
 msgid ""
 "Once the process finishes, you will see the georeferenced layer loaded in "
 "QGIS. If all went well, you will see it nicely overlay the OpenStreetMap "
 "layer."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:194
+#: ../../source/docs/advanced_georeferencing.rst:203
 msgid ""
 "To make our output look nicer, let’s remove the black and white no-data "
 "values. Right click on the image layer and choose :guilabel:`Properties`."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:200
+#: ../../source/docs/advanced_georeferencing.rst:209
 msgid ""
 "Switch to the :guilabel:`Transparency` tab. We want to indicate that any "
 "black or white pixels in the image are `no-data` values and should be made "
@@ -262,7 +275,7 @@ msgid ""
 "::guilabel:`Percent transparent`. Click :guilabel:`OK`."
 msgstr ""
 
-#: ../../source/docs/advanced_georeferencing.rst:210
+#: ../../source/docs/advanced_georeferencing.rst:219
 msgid ""
 "Now you will see your georeferenced image nicely overlaid on the base layer."
 msgstr ""

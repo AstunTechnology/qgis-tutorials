@@ -31,18 +31,19 @@ QGIS Tutorials and Tips
    - :doc:`docs/nearest_neighbor_analysis`
    - :doc:`docs/sampling_raster_data`
    - :doc:`docs/interpolating_point_data`
-   - :doc:`docs/batch_processing`
-   - :doc:`docs/processing_graphical_modeler`
-   - :doc:`docs/automating_map_creation`
+   - :doc:`docs/3/batch_processing` [ :doc:`QGIS2 version <docs/batch_processing>` ]
+   - :doc:`docs/3/processing_graphical_modeler` [ :doc:`QGIS2 version <docs/processing_graphical_modeler>` ]
+   - :doc:`docs/3/automating_map_creation` [ :doc:`QGIS2 version <docs/automating_map_creation>` ]
 * Tips and Tricks
    - :doc:`docs/using_qgis_browser`
    - :doc:`docs/counting_vertices`
    - :doc:`docs/open_bil_bip_bsq_files`
 * Python Scripting (PyQGIS)
-   - :doc:`docs/getting_started_with_pyqgis`
+   - :doc:`docs/3/getting_started_with_pyqgis` [:doc:`QGIS2 version
+     <docs/getting_started_with_pyqgis>`]
    - :doc:`docs/building_a_python_plugin`
-   - :doc:`docs/custom_python_functions`
-   - :doc:`docs/processing_python_scripts`
+   - :doc:`docs/3/custom_python_functions` [:doc:`QGIS2 version <docs/custom_python_functions>`]
+   - :doc:`docs/3/processing_python_scripts` [ :doc:`QGIS2 version <docs/processing_python_scripts>` ]
    - :doc:`docs/running_qgis_jobs`
    - :doc:`docs/find_neighbor_polygons`
    - :doc:`docs/performing_table_joins_pyqgis`
@@ -81,16 +82,16 @@ QGIS Tutorials and Tips
    docs/nearest_neighbor_analysis
    docs/sampling_raster_data
    docs/interpolating_point_data
-   docs/batch_processing
-   docs/processing_graphical_modeler
-   docs/automating_map_creation
+   docs/3/batch_processing
+   docs/3/processing_graphical_modeler
+   docs/3/automating_map_creation
    docs/using_qgis_browser
    docs/counting_vertices
    docs/open_bil_bip_bsq_files
    docs/getting_started_with_pyqgis
    docs/building_a_python_plugin
    docs/custom_python_functions
-   docs/processing_python_scripts
+   docs/3/processing_python_scripts
    docs/running_qgis_jobs
    docs/find_neighbor_polygons
    docs/performing_table_joins_pyqgis
@@ -98,4 +99,5 @@ QGIS Tutorials and Tips
    docs/creating_basemaps_with_qtiles
    docs/learning_resources
    docs/credits
+   docs/batch_processing
 

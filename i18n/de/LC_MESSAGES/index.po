@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Tutorials\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-31 06:12+0000\n"
-"PO-Revision-Date: 2017-01-31 06:13+0000\n"
+"POT-Creation-Date: 2019-02-21 18:12+0000\n"
+"PO-Revision-Date: 2019-02-21 18:13+0000\n"
 "Last-Translator: Ujaval Gandhi <ujaval@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/spatialthoughts/qgis-tutorials/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -138,15 +138,21 @@ msgid ":doc:`docs/interpolating_point_data`"
 msgstr ""
 
 #: ../../source/index.rst:34
-msgid ":doc:`docs/batch_processing`"
+msgid ""
+":doc:`docs/3/batch_processing` [ :doc:`QGIS2 version "
+"<docs/batch_processing>` ]"
 msgstr ""
 
 #: ../../source/index.rst:35
-msgid ":doc:`docs/processing_graphical_modeler`"
+msgid ""
+":doc:`docs/3/processing_graphical_modeler` [ :doc:`QGIS2 version "
+"<docs/processing_graphical_modeler>` ]"
 msgstr ""
 
 #: ../../source/index.rst:36
-msgid ":doc:`docs/automating_map_creation`"
+msgid ""
+":doc:`docs/3/automating_map_creation` [ :doc:`QGIS2 version "
+"<docs/automating_map_creation>` ]"
 msgstr ""
 
 #: ../../source/index.rst:39

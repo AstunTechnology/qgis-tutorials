@@ -91,6 +91,8 @@ Procedure
    window and type ``cs2cs`` to check if it is available. Windows users can find
    a terminal at :menuselection:`Start --> OSGeo4W --> MSYS`.
 
+.. note:: MacOS users can locate the cs2cs tool at /Library/Frameworks/PROJ.Framework/Programs/cs2cs
+   
 .. image:: /static/advanced_georeferencing/images/5.png
    :align: center
 
@@ -113,6 +115,13 @@ Procedure
    echo "-73d59'51\" 40d43'51\"" | cs2cs +init=EPSG:4326 +to +init=EPSG:3857
 
    -8237364.02 4972720.34 0.00
+
+If the above command does not work for you, please try the following variant
+
+.. code-block:: none
+
+   echo -73d59'51 40d43'51 | cs2cs +init=EPSG:4326 +to +init=EPSG:3857
+
 
 .. image:: /static/advanced_georeferencing/images/6.png
    :align: center

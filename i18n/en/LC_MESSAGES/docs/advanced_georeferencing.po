@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Tutorials\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-31 06:12+0000\n"
-"PO-Revision-Date: 2016-04-22 07:18+0000\n"
+"POT-Creation-Date: 2019-02-21 18:12+0000\n"
+"PO-Revision-Date: 2019-02-04 05:57+0000\n"
 "Last-Translator: Ujaval Gandhi <ujaval@gmail.com>\n"
 "Language-Team: English (http://www.transifex.com/spatialthoughts/qgis-tutorials/language/en/)\n"
 "MIME-Version: 1.0\n"
@@ -156,7 +156,13 @@ msgid ""
 "find a terminal at :menuselection:`Start --> OSGeo4W --> MSYS`."
 msgstr "You will notice that the coordinates are in Degrees/Minute/Seconds and are Latitude and Longitude. But since our layer is in Mercator projection, we will need Mercator coordinates to locate the park. Here’s where a command-line tool called **cs2cs** comes handy. If you have installed QGIS from OSGeo4W installer, you will already have it installed on your system. On Linux and Mac too, it comes pre-installed with QGIS. Launch a terminal window and type ``cs2cs`` to check if it is available. Windows users can find a terminal at :menuselection:`Start --> OSGeo4W --> MSYS`."
 
-#: ../../source/docs/advanced_georeferencing.rst:97
+#: ../../source/docs/advanced_georeferencing.rst:94
+msgid ""
+"MacOS users can locate the cs2cs tool at "
+"/Library/Frameworks/PROJ.Framework/Programs/cs2cs"
+msgstr "MacOS users can locate the cs2cs tool at /Library/Frameworks/PROJ.Framework/Programs/cs2cs"
+
+#: ../../source/docs/advanced_georeferencing.rst:99
 msgid ""
 "Once you have verified that the cs2cs tool exists on your system, it is time"
 " to convert out Latitude and Longitude to Mercator coordinates. The way this"
@@ -173,7 +179,12 @@ msgid ""
 "output X Y coordinates in EPSG 3857 CRS."
 msgstr "Once you have verified that the cs2cs tool exists on your system, it is time to convert out Latitude and Longitude to Mercator coordinates. The way this tool works is that you need to specify a :guilabel:`source` and :guilabel:`destination` CRS. The CRS definition could be a `PROJ4 string <http://trac.osgeo.org/proj/wiki/GenParms>`_ or an `EPSG code <http://www.epsg-registry.org/>`_. Since we already know the EPSG code for out input and output CRS, we will use this. The simplest way to use the tool is to supply the input coordinates on the command line itself. Note that the tool accepts coordinates in the order `X Y`, so we need to enter `Longitude Latitude`. Enter the following command in the terminal and press Enter. Note that we need to escape the quotes (\") with a backslash (\\\\). Once you press enter, you will see the tool process the coordinates and print out output X Y coordinates in EPSG 3857 CRS."
 
-#: ../../source/docs/advanced_georeferencing.rst:120
+#: ../../source/docs/advanced_georeferencing.rst:119
+msgid ""
+"If the above command does not work for you, please try the following variant"
+msgstr "If the above command does not work for you, please try the following variant"
+
+#: ../../source/docs/advanced_georeferencing.rst:129
 msgid ""
 "Copy these coordinates and switch to QGIS. At the bottom of the QGIS window,"
 " you will see a textbox labeled Coordinates. Enter the coordinates there in "
@@ -182,7 +193,7 @@ msgid ""
 "Coordinate box and press Enter."
 msgstr "Copy these coordinates and switch to QGIS. At the bottom of the QGIS window, you will see a textbox labeled Coordinates. Enter the coordinates there in X,Y form. Press Enter.  You will see the map shift a bit, but not zoom. To zoom to the area, select 1:2500 scale from the Scale drop-down next to the Coordinate box and press Enter."
 
-#: ../../source/docs/advanced_georeferencing.rst:129
+#: ../../source/docs/advanced_georeferencing.rst:138
 msgid ""
 "Voila! you now see Washington Square Park area on your canvas. Now it is "
 "time to start georeferencing. Launch the **Georeferencer** from "
@@ -192,33 +203,33 @@ msgid ""
 " Installed`."
 msgstr "Voila! you now see Washington Square Park area on your canvas. Now it is time to start georeferencing. Launch the **Georeferencer** from :menuselection:`Raster --> Georeferencer --> Georeferencer`. If you do not see that menu item, you will need to enable the :guilabel:`Georeferencer GDAL` plugin from :menuselection:`Plugins --> Manage and install Plugins --> Installed`."
 
-#: ../../source/docs/advanced_georeferencing.rst:139
+#: ../../source/docs/advanced_georeferencing.rst:148
 msgid ""
 "In the :guilabel:`Georeferencer` window, go to :menuselection:`File --> Open"
 " raster`. Navigate to the downloaded JPG file and click :guilabel:`Open`."
 msgstr "In the :guilabel:`Georeferencer` window, go to :menuselection:`File --> Open raster`. Navigate to the downloaded JPG file and click :guilabel:`Open`."
 
-#: ../../source/docs/advanced_georeferencing.rst:145
+#: ../../source/docs/advanced_georeferencing.rst:154
 msgid ""
 "In the :guilabel:`Coordinate Reference System Selector`, choose "
 ":guilabel:`EPSG:3857 Pseudo Mercator`"
 msgstr "In the :guilabel:`Coordinate Reference System Selector`, choose :guilabel:`EPSG:3857 Pseudo Mercator`"
 
-#: ../../source/docs/advanced_georeferencing.rst:151
+#: ../../source/docs/advanced_georeferencing.rst:160
 msgid ""
 "Now click on the :guilabel:`Add Point` button on the toolbar and select an "
 "easily identifiable location on the image. Corners, intersections, poles "
 "etc. make good control points."
 msgstr "Now click on the :guilabel:`Add Point` button on the toolbar and select an easily identifiable location on the image. Corners, intersections, poles etc. make good control points."
 
-#: ../../source/docs/advanced_georeferencing.rst:158
+#: ../../source/docs/advanced_georeferencing.rst:167
 msgid ""
 "Once you click on the image at a control point location, you will see a pop-"
 "up asking you to enter map coordinates. Click the button :guilabel:`From map"
 " canvas`."
 msgstr "Once you click on the image at a control point location, you will see a pop-up asking you to enter map coordinates. Click the button :guilabel:`From map canvas`."
 
-#: ../../source/docs/advanced_georeferencing.rst:165
+#: ../../source/docs/advanced_georeferencing.rst:174
 msgid ""
 "Find the same location in your reference layer, i.e. the OpenStreetMap layer"
 " and click there. The coordinates are auto-populated from your click on the "
@@ -226,11 +237,11 @@ msgid ""
 "add their coordinates from the reference layer."
 msgstr "Find the same location in your reference layer, i.e. the OpenStreetMap layer and click there. The coordinates are auto-populated from your click on the map canvas. Click Ok. Similarly, choose at least 4 points on the image and add their coordinates from the reference layer."
 
-#: ../../source/docs/advanced_georeferencing.rst:173
+#: ../../source/docs/advanced_georeferencing.rst:182
 msgid "Now go to :menuselection:`Settings --> Transformation settings.`"
 msgstr "Now go to :menuselection:`Settings --> Transformation settings.`"
 
-#: ../../source/docs/advanced_georeferencing.rst:178
+#: ../../source/docs/advanced_georeferencing.rst:187
 msgid ""
 "Choose the settings as shown below. Make sure you the :guilabel:`Load in "
 "QGIS when done` button is checked. Click OK. Back in the "
@@ -239,20 +250,20 @@ msgid ""
 "GCPs and creating the target raster."
 msgstr "Choose the settings as shown below. Make sure you the :guilabel:`Load in QGIS when done` button is checked. Click OK. Back in the :guilabel:`Georeferencer` window, go to :menuselection:`File --> Start georeferencing`. This will start the process of warping the image using the GCPs and creating the target raster."
 
-#: ../../source/docs/advanced_georeferencing.rst:187
+#: ../../source/docs/advanced_georeferencing.rst:196
 msgid ""
 "Once the process finishes, you will see the georeferenced layer loaded in "
 "QGIS. If all went well, you will see it nicely overlay the OpenStreetMap "
 "layer."
 msgstr "Once the process finishes, you will see the georeferenced layer loaded in QGIS. If all went well, you will see it nicely overlay the OpenStreetMap layer."
 
-#: ../../source/docs/advanced_georeferencing.rst:194
+#: ../../source/docs/advanced_georeferencing.rst:203
 msgid ""
 "To make our output look nicer, let’s remove the black and white no-data "
 "values. Right click on the image layer and choose :guilabel:`Properties`."
 msgstr "To make our output look nicer, let’s remove the black and white no-data values. Right click on the image layer and choose :guilabel:`Properties`."
 
-#: ../../source/docs/advanced_georeferencing.rst:200
+#: ../../source/docs/advanced_georeferencing.rst:209
 msgid ""
 "Switch to the :guilabel:`Transparency` tab. We want to indicate that any "
 "black or white pixels in the image are `no-data` values and should be made "
@@ -262,7 +273,7 @@ msgid ""
 "::guilabel:`Percent transparent`. Click :guilabel:`OK`."
 msgstr "Switch to the :guilabel:`Transparency` tab. We want to indicate that any black or white pixels in the image are `no-data` values and should be made transparent. Input 0 as the :guilabel:`No data value`. Also, in the :guilabel:`Custom transparency options`, click the :guilabel:`+` button and add 255 as the transparent pixels for each band and enter 100 as the ::guilabel:`Percent transparent`. Click :guilabel:`OK`."
 
-#: ../../source/docs/advanced_georeferencing.rst:210
+#: ../../source/docs/advanced_georeferencing.rst:219
 msgid ""
 "Now you will see your georeferenced image nicely overlaid on the base layer."
 msgstr "Now you will see your georeferenced image nicely overlaid on the base layer."

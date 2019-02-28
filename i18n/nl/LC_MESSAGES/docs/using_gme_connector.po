@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the QGIS Tutorials and Tips package.
 # 
 # Translators:
-# Dick Groskamp, 2015
+# Dick Groskamp, 2015,2017,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Tutorials\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-31 06:12+0000\n"
-"PO-Revision-Date: 2015-11-16 15:03+0000\n"
-"Last-Translator: Dick Groskamp\n"
+"POT-Creation-Date: 2019-02-21 18:12+0000\n"
+"PO-Revision-Date: 2019-02-20 19:18+0000\n"
+"Last-Translator: Ujaval Gandhi <ujaval@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/spatialthoughts/qgis-tutorials/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -275,7 +275,7 @@ msgid ""
 "You will see a new map containing the styled layer. You have an option of "
 "choosing different basemaps for the map. Since this is a bike path map, you "
 "can select the :guilabel:`Terrain` style basemap."
-msgstr "Nu zult u ene kaart zien die de opgemaakte laag bevat. U heeft de optie om te kiezen uit verschillende basiskaarten voor de kaart. Omdat dit een kaart is voor fietspaden kunt u de basiskaart met de :guilabel:`Terrain` kiezen."
+msgstr "Nu zult u een kaart zien die de opgemaakte laag bevat. U heeft de optie om te kiezen uit verschillende basiskaarten voor de kaart. Omdat dit een kaart is voor fietspaden kunt u de basiskaart met de :guilabel:`Terrain` kiezen."
 
 #: ../../source/docs/using_gme_connector.rst:247
 msgid "Click :guilabel:`Publish map`."
