@@ -111,10 +111,10 @@ Procedure
     colour to yellow. 
     
     .. warning::
-      Due to an `issue <https://gis.stackexchange.com/questions/312782/custom-function-works-in-zoom-to-features-but-not-select-features>`__
-      in QGIS3.4.4 this will not work! However it does work in 
-      releases from QGIS3.4.5 and QGIS3.6.
-
+      However, due to a `current
+      issue <https://gis.stackexchange.com/questions/312782/custom-function-works-in-zoom-to-features-but-not-select-features>`__
+      in QGIS3.4.4 this isn't working! However it does work in the next
+      release.
 
     ::
 

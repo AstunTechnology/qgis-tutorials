@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Using the QGIS Browser &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,11 +21,11 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Counting Number of Vertices in a Layer" href="counting_vertices.html" />
-    <link rel="prev" title="Automating Map Creation with Print Composer Atlas" href="automating_map_creation.html" />
+    <link rel="prev" title="Automating Map Creation with Print Layout Atlas (QGIS3)" href="3/automating_map_creation.html" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -131,7 +126,7 @@
               
                 
   <li>
-    <a href="automating_map_creation.html" title="Previous Chapter: Automating Map Creation with Print Composer Atlas"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Automating Ma...</span>
+    <a href="3/automating_map_creation.html" title="Previous Chapter: Automating Map Creation with Print Layout Atlas (QGIS3)"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Automating Ma...</span>
     </a>
   </li>
   <li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/using_qgis_browser_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'using_qgis_browser_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/using_qgis_browser_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'using_qgis_browser_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/using_qgis_browser_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'using_qgis_browser_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/using_qgis_browser_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'using_qgis_browser_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="using-the-qgis-browser">
@@ -267,23 +263,23 @@ using the Browser. Instead of seeing all support files and non-spatial data,
 you see only the spatial layers that are supported by QGIS. Click on a layer
 to select it.</li>
 </ol>
-<img alt="../_images/1137.png" class="align-center" src="../_images/1137.png" />
+<img alt="../_images/1152.png" class="align-center" src="../_images/1152.png" />
 <ol class="arabic simple" start="2">
 <li>As you select a layer, you will see the Metadata in the first tab on the
 right-hand panel. You can quickly gather basic information about the dataset
 from this panel, such as number of features, projection etc.</li>
 </ol>
-<img alt="../_images/288.png" class="align-center" src="../_images/288.png" />
+<img alt="../_images/2106.png" class="align-center" src="../_images/2106.png" />
 <ol class="arabic simple" start="3">
 <li>If you switch to the Preview tab, you will a preview of the dataset. This is
 a quick way to determine how the dataset looks before opening it in QGIS.</li>
 </ol>
-<img alt="../_images/346.png" class="align-center" src="../_images/346.png" />
+<img alt="../_images/362.png" class="align-center" src="../_images/362.png" />
 <ol class="arabic simple" start="4">
 <li>The last tab is the Attributes tab. Here you can see the attribute table of
 the dataset to get an idea of the fields available and their values.</li>
 </ol>
-<img alt="../_images/433.png" class="align-center" src="../_images/433.png" />
+<img alt="../_images/440.png" class="align-center" src="../_images/440.png" />
 <ol class="arabic simple" start="5">
 <li>The QGIS Browser not only gives you access to vector and imagery layers on
 your system, but also databases and network resources. If you use any online
@@ -292,14 +288,14 @@ WMS location and you will see the resources you have setup. Similarly, if
 you have PostGIS, SpatialLite or MSSQL databases available, you can access
 those as well.</li>
 </ol>
-<img alt="../_images/534.png" class="align-center" src="../_images/534.png" />
+<img alt="../_images/541.png" class="align-center" src="../_images/541.png" />
 <ol class="arabic simple" start="6">
 <li>QGIS Browser has the ability to browse and open zip files directly. Navigate
 to any folder containing zip files. You will see that the zip files also
 appear as a supported dataset and you can preview it just like any other
 dataset.</li>
 </ol>
-<img alt="../_images/632.png" class="align-center" src="../_images/632.png" />
+<img alt="../_images/638.png" class="align-center" src="../_images/638.png" />
 <ol class="arabic simple" start="7">
 <li>Another useful feature is to add certain folders in your system as
 <span class="guilabel">Favorites</span>. Right-click any folder and select <span class="guilabel">Add as a favorite</span>.</li>
@@ -309,22 +305,22 @@ dataset.</li>
 <p class="last">Adding a folder to your favorites list currently works only from the Browser
 panel in QGIS. This feature is not available in the standalone application.</p>
 </div>
-<img alt="../_images/731.png" class="align-center" src="../_images/731.png" />
+<img alt="../_images/738.png" class="align-center" src="../_images/738.png" />
 <ol class="arabic simple" start="8">
 <li>After adding  the location as a favorite, it can be quickly accessed from the
 <span class="guilabel">Favorites</span> folder in the browser.</li>
 </ol>
-<img alt="../_images/830.png" class="align-center" src="../_images/830.png" />
+<img alt="../_images/835.png" class="align-center" src="../_images/835.png" />
 <ol class="arabic simple" start="9">
 <li>Once you have selected the layer, you can double-click it to add it to the
 QGIS canvas. You can also drag-and-drop the layer to the QGIS Canvas.</li>
 </ol>
-<img alt="../_images/928.png" class="align-center" src="../_images/928.png" />
+<img alt="../_images/935.png" class="align-center" src="../_images/935.png" />
 <ol class="arabic simple" start="10">
 <li>You can switch back to the <span class="guilabel">Layers</span> panel from the bottom of the
 left-hand panel in QGIS to view the added layer.</li>
 </ol>
-<img alt="../_images/1029.png" class="align-center" src="../_images/1029.png" />
+<img alt="../_images/1034.png" class="align-center" src="../_images/1034.png" />
 </div>
 </div>
 
@@ -350,8 +346,8 @@ left-hand panel in QGIS to view the added layer.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

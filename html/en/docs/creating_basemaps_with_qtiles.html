@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Creating Basemaps with QTiles &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="QGIS Learning Resources" href="learning_resources.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/creating_basemaps_with_qtiles_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'creating_basemaps_with_qtiles_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/creating_basemaps_with_qtiles_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'creating_basemaps_with_qtiles_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/creating_basemaps_with_qtiles_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'creating_basemaps_with_qtiles_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/creating_basemaps_with_qtiles_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'creating_basemaps_with_qtiles_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="creating-basemaps-with-qtiles">
@@ -253,7 +249,7 @@ computer. Open QGIS and go to
 <span class="menuselection">Layer ‣ Add Raster Layer</span>. Browse to the location of the
 extracted files and select <code class="docutils literal"><span class="pre">NE2_LR_LC_SR_W.tif</span></code>. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/126.png" class="align-center" src="../_images/126.png" />
+<img alt="../_images/180.png" class="align-center" src="../_images/180.png" />
 <ol class="arabic simple" start="2">
 <li>Install the <code class="docutils literal"><span class="pre">QTiles</span></code> plugin by going to <span class="menuselection">Plugins ‣ Manage and
 Install Plugin</span>. Note that the plugin is currently marked <strong>experimental</strong>,
@@ -262,7 +258,7 @@ Plugin Settings. (See <a class="reference internal" href="using_plugins.html"><s
 plugins in QGIS). Once the plugin is installed, go to
 <span class="menuselection">Plugins ‣ QTiles ‣ QTiles</span>.</li>
 </ol>
-<img alt="../_images/217.png" class="align-center" src="../_images/217.png" />
+<img alt="../_images/236.png" class="align-center" src="../_images/236.png" />
 <ol class="arabic simple" start="3">
 <li>In the <span class="guilabel">QTiles</span> dialog, select <span class="guilabel">Directory</span> as the
 <span class="guilabel">Output</span> and browse to a folder of your choice where the output
@@ -278,25 +274,25 @@ to start the process of rendering the tiles.</li>
 and since our layer has an extend of the entire world - there will be millions
 of tiles at higher zoom levels.</p>
 </div>
-<img alt="../_images/310.png" class="align-center" src="../_images/310.png" />
+<img alt="../_images/327.png" class="align-center" src="../_images/327.png" />
 <ol class="arabic simple" start="4">
 <li>Once the process finishes, close the <span class="guilabel">QTiles</span> dialog and browse to
 the output folder you had selected. You will notice folders for each zoom
 level upto the maximum zoom level. Each folder further contains subfolder
 for X coordinates and then the actual tiles named for Y coordinates.</li>
 </ol>
-<img alt="../_images/47.png" class="align-center" src="../_images/47.png" />
+<img alt="../_images/414.png" class="align-center" src="../_images/414.png" />
 <ol class="arabic simple" start="5">
 <li>In the parent directory of top-level tiles directory, you will find a
 <code class="docutils literal"><span class="pre">QTiles.html</span></code> file. This is a simple viewer to explore the tiles using the
 Leaflet web mapping library.</li>
 </ol>
-<img alt="../_images/57.png" class="align-center" src="../_images/57.png" />
+<img alt="../_images/514.png" class="align-center" src="../_images/514.png" />
 <ol class="arabic simple" start="6">
 <li>Double-click the <code class="docutils literal"><span class="pre">QTiles.html</span></code> to open it in a web browser. You can zoom
 and pan around to see the tiles seamlessly form the original raster layer.</li>
 </ol>
-<img alt="../_images/66.png" class="align-center" src="../_images/66.png" />
+<img alt="../_images/612.png" class="align-center" src="../_images/612.png" />
 <ol class="arabic simple" start="7">
 <li>You can use these tiles with any web-mapping library that supports XYZ
 tiling schemes and overlay other layers on top. To demonstrate the
@@ -308,11 +304,11 @@ own custom basemap created in this tutorial. Go to the output directory
 where the qgis2web map was exported. Open the <span class="menuselection">Layers ‣
 layers.js</span> file created during the export.</li>
 </ol>
-<img alt="../_images/76.png" class="align-center" src="../_images/76.png" />
+<img alt="../_images/713.png" class="align-center" src="../_images/713.png" />
 <ol class="arabic simple" start="8">
 <li>Locate the code block where the <code class="docutils literal"><span class="pre">OSM</span> <span class="pre">B</span> <span class="pre">&amp;</span> <span class="pre">W</span></code> base layer is defined.</li>
 </ol>
-<img alt="../_images/86.png" class="align-center" src="../_images/86.png" />
+<img alt="../_images/811.png" class="align-center" src="../_images/811.png" />
 <ol class="arabic simple" start="9">
 <li>Replace the definition of the base layer with our own tiles. At this point,
 the tiles exist only on your computer, so the URL will be the local
@@ -330,12 +326,12 @@ Earth. Save the file.</li>
 <span class="p">})</span>
 </pre></div>
 </div>
-<img alt="../_images/96.png" class="align-center" src="../_images/96.png" />
+<img alt="../_images/913.png" class="align-center" src="../_images/913.png" />
 <ol class="arabic simple" start="10">
 <li>Open the web map in a browser and you will see that the B &amp; W OSM layer is
 replaced by our freshly created tiles.</li>
 </ol>
-<img alt="../_images/106.png" class="align-center" src="../_images/106.png" />
+<img alt="../_images/1011.png" class="align-center" src="../_images/1011.png" />
 </div>
 </div>
 
@@ -361,8 +357,8 @@ replaced by our freshly created tiles.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

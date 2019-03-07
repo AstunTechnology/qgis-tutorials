@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Making a Map &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Working with Attributes" href="working_with_attributes.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/making_a_map_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'making_a_map_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/making_a_map_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'making_a_map_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/making_a_map_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'making_a_map_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/making_a_map_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'making_a_map_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="making-a-map">
@@ -232,7 +228,7 @@ map inset, grids, north arrow, scale bar and labels.</p>
 <div class="section" id="other-skills-you-will-learn">
 <h3>Other skills you will learn<a class="headerlink" href="#other-skills-you-will-learn" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Using &#8216;on-the-fly&#8217; CRS transformation to visualize your data in a different
+<li>Using ‘on-the-fly’ CRS transformation to visualize your data in a different
 projection.</li>
 </ul>
 </div>
@@ -242,7 +238,7 @@ projection.</li>
 <p>We will use the Natural Earth dataset - specifically the Natural Earth Quick
 Start Kit that comes with beautifully styled global layers that can be loaded
 directly to QGIS.</p>
-<p>Download the <a class="reference external" href="http://kelso.it/x/nequickstart">Natural Earth Quickstart Kit</a>.</p>
+<p>Download the <a class="reference external" href="http://naciscdn.org/naturalearth/packages/Natural_Earth_quick_start.zip">Natural Earth Quickstart Kit</a>.</p>
 <p>Data Source <a class="reference internal" href="credits.html#naturalearth" id="id1">[NATURALEARTH]</a></p>
 </div>
 <div class="section" id="procedure">
@@ -251,25 +247,25 @@ directly to QGIS.</p>
 <li>Download and extract the Natural Earth Quick Start Kit data. Open QGIS.
 Click on <span class="menuselection">File ‣ Open Project</span>.</li>
 </ol>
-<img alt="../_images/190.png" class="align-center" src="../_images/190.png" />
+<img alt="../_images/1108.png" class="align-center" src="../_images/1108.png" />
 <ol class="arabic simple" start="2">
 <li>Browse to the directory when you had extracted the natural earth data. You
 should see a file named <code class="file docutils literal"><span class="pre">Natural_Earth_quick_start_for_QGIS.qgs</span></code>. This
 is the project file that contains styled layers in QGIS Document format.
 Click <span class="guilabel">Open</span>.</li>
 </ol>
-<img alt="../_images/236.png" class="align-center" src="../_images/236.png" />
+<img alt="../_images/260.png" class="align-center" src="../_images/260.png" />
 <ol class="arabic simple" start="3">
 <li>You would see a lot of layers in the table of content and a styled world map
 in the QGIS canvas. If you see errors displayed at the top of the canvas,
 click on the cross to close it.</li>
 </ol>
-<img alt="../_images/324.png" class="align-center" src="../_images/324.png" />
+<img alt="../_images/340.png" class="align-center" src="../_images/340.png" />
 <ol class="arabic simple" start="4">
 <li>In this tutorial, we will make a map of Japan. Click the <span class="guilabel">Zoom In</span>
 button and draw a rectangle around Japan to zoom to the area.</li>
 </ol>
-<img alt="../_images/418.png" class="align-center" src="../_images/418.png" />
+<img alt="../_images/425.png" class="align-center" src="../_images/425.png" />
 <ol class="arabic simple" start="5">
 <li>You can turn off some map layers for data that we do not need for this map.
 Un-check the box next to <code class="docutils literal"><span class="pre">10m_geography_marine_polys</span></code> and
@@ -279,7 +275,7 @@ the units are degrees. This is not appropriate for a map where you want the
 distances to be in kilometers or miles. We need to use a Projected
 Coordinate System that minimizes distortions for our region of interest and
 has units in meters. Universal Transverse Mercator (UTM) is a decent choice
-for a projected coordinate system. It is also global, so it&#8217;s a good default
+for a projected coordinate system. It is also global, so it’s a good default
 that you can rely on and  choose a UTM zone that contains your area of
 interest to minimize distortions for your region. In our case, we will use
 UTM Zone 54N. Click the <span class="guilabel">CRS Status</span> button at the bottom-right of
@@ -292,19 +288,19 @@ system (CRS) that is designed for minimum distortions. It is divided in 18
 zones and if you are working for a smaller region in Japan, using this CRS
 will be better.</p>
 </div>
-<img alt="../_images/518.png" class="align-center" src="../_images/518.png" />
+<img alt="../_images/525.png" class="align-center" src="../_images/525.png" />
 <ol class="arabic simple" start="6">
 <li>Check the <span class="guilabel">Enable on-the-fly CRS Transformation</span> box. Type <code class="docutils literal"><span class="pre">Tokyo</span>
 <span class="pre">utm</span> <span class="pre">zone54n</span></code> in the <span class="guilabel">Filter</span> search box. Once you see the
 results, select <span class="guilabel">Tokyo / UTM Zone 54N - EPSG:3095</span>. Click
 <span class="guilabel">Apply</span>.</li>
 </ol>
-<img alt="../_images/617.png" class="align-center" src="../_images/617.png" />
+<img alt="../_images/623.png" class="align-center" src="../_images/623.png" />
 <ol class="arabic simple" start="7">
 <li>Now we can start to assemble our map. Go to
 <span class="menuselection">Project ‣ New Print Composer</span>.</li>
 </ol>
-<img alt="../_images/716.png" class="align-center" src="../_images/716.png" />
+<img alt="../_images/723.png" class="align-center" src="../_images/723.png" />
 <ol class="arabic simple" start="8">
 <li>You will be prompted to enter a title for the composer. You can leave it
 empty and click <span class="guilabel">Ok</span>.</li>
@@ -314,32 +310,32 @@ empty and click <span class="guilabel">Ok</span>.</li>
 <p class="last">Leaving the composer name empty will assign a default name such as
 <code class="docutils literal"><span class="pre">Composer</span> <span class="pre">1</span></code>.</p>
 </div>
-<img alt="../_images/816.png" class="align-center" src="../_images/816.png" />
+<img alt="../_images/821.png" class="align-center" src="../_images/821.png" />
 <ol class="arabic simple" start="10">
 <li>In the Print Composer window, click on <span class="guilabel">Zoom full</span> to display the
 full extent of the Layout. Now we would have to bring the map view that we
 see in the QGIS Canvas to the composer. Go to <span class="menuselection">Layout ‣
 Add Map</span>.</li>
 </ol>
-<img alt="../_images/1015.png" class="align-center" src="../_images/1015.png" />
+<img alt="../_images/1020.png" class="align-center" src="../_images/1020.png" />
 <ol class="arabic simple" start="11">
 <li>Once the <span class="guilabel">Add Map</span> button is active, hold the left mouse button
 and drag a rectangle where you want to insert the map.</li>
 </ol>
-<img alt="../_images/1118.png" class="align-center" src="../_images/1118.png" />
+<img alt="../_images/1124.png" class="align-center" src="../_images/1124.png" />
 <ol class="arabic simple" start="12">
 <li>You will see that the rectangle window will be rendered with the map from
 the main QGIS canvas. The rendered map may not be covering the full extent
 of our interest area.  Select <span class="menuselection">Layout ‣ Move item content</span>
 to pan the map in the window and center it in the composer.</li>
 </ol>
-<img alt="../_images/1217.png" class="align-center" src="../_images/1217.png" />
+<img alt="../_images/1222.png" class="align-center" src="../_images/1222.png" />
 <ol class="arabic simple" start="13">
 <li>Let us adjust the zoom level for the given map. Click on the
 <span class="guilabel">Item Properties</span> tab and enter <cite>7000000</cite> for <span class="guilabel">Scale</span>
 value.</li>
 </ol>
-<img alt="../_images/1315.png" class="align-center" src="../_images/1315.png" />
+<img alt="../_images/1321.png" class="align-center" src="../_images/1321.png" />
 <ol class="arabic simple" start="14">
 <li>Now we will add a map inset that shows a zoomed in view for the Tokyo area.
 Before we make  any changes to the layers in the main QGIS window, check
@@ -347,22 +343,22 @@ the <span class="guilabel">Lock layers for map item</span> and <span class="guil
 for map item</span> boxes. This will ensure that if we turn off some layers or
 change their styles, this view will not change.</li>
 </ol>
-<img alt="../_images/1413.png" class="align-center" src="../_images/1413.png" />
+<img alt="../_images/1419.png" class="align-center" src="../_images/1419.png" />
 <ol class="arabic simple" start="15">
 <li>Switch to the main QGIS window. Use the <span class="guilabel">Zoom In</span> button to zoom
 to the area around Tokyo.</li>
 </ol>
-<img alt="../_images/1513.png" class="align-center" src="../_images/1513.png" />
+<img alt="../_images/1519.png" class="align-center" src="../_images/1519.png" />
 <ol class="arabic simple" start="16">
 <li>There are some duplicate labels coming from the <code class="docutils literal"><span class="pre">ne_10m_populated_places</span></code>
 layer. You can turn it off for this view.</li>
 </ol>
-<img alt="../_images/1612.png" class="align-center" src="../_images/1612.png" />
+<img alt="../_images/1617.png" class="align-center" src="../_images/1617.png" />
 <ol class="arabic simple" start="17">
 <li>We are now ready to add the map inset. Switch the the <span class="guilabel">Print
 Composer</span> window. Go to <span class="menuselection">Layout ‣ Add Map</span>.</li>
 </ol>
-<img alt="../_images/1711.png" class="align-center" src="../_images/1711.png" />
+<img alt="../_images/1715.png" class="align-center" src="../_images/1715.png" />
 <ol class="arabic simple" start="18">
 <li>Drag a rectangle at the place where you want to add the map inset. You will
 now notice that we have 2 map objects in the Print Composer. When making
@@ -372,7 +368,7 @@ object that we just added from the <span class="guilabel">Items</span> panel. Se
 and check the box next to it. You can change the color and thickness of the
 frame border so it is easy to distinguish against the map background.</li>
 </ol>
-<img alt="../_images/1811.png" class="align-center" src="../_images/1811.png" />
+<img alt="../_images/1816.png" class="align-center" src="../_images/1816.png" />
 <ol class="arabic simple" start="19">
 <li>One neat feature of the Print Composer is that it can automatically
 highlight the area from the main map which is represented in our inset.
@@ -380,68 +376,68 @@ Select the <code class="docutils literal"><span class="pre">Map</span> <span cla
 <span class="guilabel">Item properties</span> tab, scroll down to the <span class="guilabel">Overviews</span>
 section. Click the <span class="guilabel">Add a new overview</span> button.</li>
 </ol>
-<img alt="../_images/199.png" class="align-center" src="../_images/199.png" />
+<img alt="../_images/1914.png" class="align-center" src="../_images/1914.png" />
 <ol class="arabic simple" start="20">
 <li>Select <code class="docutils literal"><span class="pre">Map</span> <span class="pre">1</span></code> as the <span class="guilabel">Map Frame</span>. What this is telling the
 Print Composer is that it must highlight our current object <code class="docutils literal"><span class="pre">Map</span> <span class="pre">0</span></code> with
 the extent of the map shown in the <code class="docutils literal"><span class="pre">Map</span> <span class="pre">1</span></code> object.</li>
 </ol>
-<img alt="../_images/206.png" class="align-center" src="../_images/206.png" />
+<img alt="../_images/2010.png" class="align-center" src="../_images/2010.png" />
 <ol class="arabic simple" start="21">
 <li>Now that we have the map inset ready, we will add a grid and zebra border
 to the main map. Select the <code class="docutils literal"><span class="pre">Map</span> <span class="pre">0</span></code> object from the <span class="guilabel">Items</span>
 panel. In the <span class="guilabel">Item properties</span> tab, scroll down to the
 <span class="guilabel">Grids</span> section. Click the <span class="guilabel">Add a new grid</span> button.</li>
 </ol>
-<img alt="../_images/2112.png" class="align-center" src="../_images/2112.png" />
+<img alt="../_images/2115.png" class="align-center" src="../_images/2115.png" />
 <ol class="arabic simple" start="22">
 <li>By default, the grid lines use the same units and projections as the
 currently selected map projections. However, it is more common and useful
 to display grid lines in degrees. We can select a different CRS for the
-grid. Click on the <span class="guilabel">change...</span> button next to <span class="guilabel">CRS</span>.</li>
+grid. Click on the <span class="guilabel">change…</span> button next to <span class="guilabel">CRS</span>.</li>
 </ol>
-<img alt="../_images/2211.png" class="align-center" src="../_images/2211.png" />
+<img alt="../_images/2213.png" class="align-center" src="../_images/2213.png" />
 <ol class="arabic simple" start="23">
 <li>In the <span class="guilabel">Coordinate Reference System Selector</span> dialog, enter
 <code class="docutils literal"><span class="pre">4326</span></code> in the <span class="guilabel">Filter</span> box. From the results, select the
 <code class="docutils literal"><span class="pre">WGS84</span> <span class="pre">EPSG:4326</span></code> as the CRS. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/237.png" class="align-center" src="../_images/237.png" />
+<img alt="../_images/2312.png" class="align-center" src="../_images/2312.png" />
 <ol class="arabic simple" start="24">
 <li>Select the <span class="guilabel">Interval</span> values as <code class="docutils literal"><span class="pre">5</span></code> degrees in both
 <span class="guilabel">X</span> and <span class="guilabel">Y</span> direction. You can adjust the
 <span class="guilabel">Offset</span> to change where the grid lines appear.</li>
 </ol>
-<img alt="../_images/245.png" class="align-center" src="../_images/245.png" />
+<img alt="../_images/2411.png" class="align-center" src="../_images/2411.png" />
 <ol class="arabic simple" start="25">
 <li>Scroll down to the <span class="guilabel">Grid frame</span> section and select a frame style
 that suits your taste. Also check the <span class="guilabel">Draw coordinates</span> box.</li>
 </ol>
-<img alt="../_images/254.png" class="align-center" src="../_images/254.png" />
+<img alt="../_images/2511.png" class="align-center" src="../_images/2511.png" />
 <ol class="arabic simple" start="26">
 <li>Adjust the <span class="guilabel">Distance to map frame</span> till the coordinates are
 legible. Change the <span class="guilabel">Coordinate precision</span> to <code class="docutils literal"><span class="pre">1</span></code> so the
 coordinates are displayed only upto the first decimal.</li>
 </ol>
-<img alt="../_images/263.png" class="align-center" src="../_images/263.png" />
+<img alt="../_images/268.png" class="align-center" src="../_images/268.png" />
 <ol class="arabic simple" start="27">
 <li>Now we will add a North Arrow to the map. The Print Composer comes with a
 nice collection of map-related images - including many types of North
 Arrows.  Click <span class="menuselection">Layout ‣ Add Image</span>.</li>
 </ol>
-<img alt="../_images/273.png" class="align-center" src="../_images/273.png" />
+<img alt="../_images/277.png" class="align-center" src="../_images/277.png" />
 <ol class="arabic simple" start="28">
 <li>Holding your left mouse button, draw a rectangle on the top-right corner of
 the map canvas. On the right-hand panel, click on the <span class="guilabel">Item
 Properties</span> tab and expand the <span class="guilabel">Search directories</span> section and
 select the North Arrow image of your liking.</li>
 </ol>
-<img alt="../_images/282.png" class="align-center" src="../_images/282.png" />
+<img alt="../_images/285.png" class="align-center" src="../_images/285.png" />
 <ol class="arabic simple" start="29">
 <li>Now we will add a scale bar. Click on <span class="menuselection">Layout ‣ Add
 Scalebar</span>.</li>
 </ol>
-<img alt="../_images/293.png" class="align-center" src="../_images/293.png" />
+<img alt="../_images/296.png" class="align-center" src="../_images/296.png" />
 <ol class="arabic simple" start="30">
 <li>Click on the layout where you want the scalebar to appear.  In the
 <span class="guilabel">Item Properties</span> tab, make sure you have chosen the correct map
@@ -449,11 +445,11 @@ element for which to display the scalebar. Choose the Style that fit your
 requirement. In the <span class="guilabel">Segments</span> panel, you can adjust the number
 of segments and their size.</li>
 </ol>
-<img alt="../_images/303.png" class="align-center" src="../_images/303.png" />
+<img alt="../_images/305.png" class="align-center" src="../_images/305.png" />
 <ol class="arabic simple" start="31">
 <li>It is time to label our map. Click on <span class="menuselection">Layout ‣ Add Label</span>.</li>
 </ol>
-<img alt="../_images/3111.png" class="align-center" src="../_images/3111.png" />
+<img alt="../_images/3112.png" class="align-center" src="../_images/3112.png" />
 <ol class="arabic simple" start="32">
 <li>Click on the map and draw a box where the label should be. In the
 <span class="guilabel">Item Properties</span> tab, expand the <span class="guilabel">Label</span> section and
@@ -466,17 +462,17 @@ HTML tags.</li>
 &lt;/div&gt;
 </pre></div>
 </div>
-<img alt="../_images/325.png" class="align-center" src="../_images/325.png" />
+<img alt="../_images/3211.png" class="align-center" src="../_images/3211.png" />
 <ol class="arabic simple" start="33">
 <li>Similarly add another label to add the data and software credits.</li>
 </ol>
-<img alt="../_images/332.png" class="align-center" src="../_images/332.png" />
+<img alt="../_images/3310.png" class="align-center" src="../_images/3310.png" />
 <ol class="arabic simple" start="34">
 <li>Once you are satisfied with the map, you can export it as Image, PDF or
 SVG. For this tutorial, let’s export it as an image. Click
 <span class="menuselection">Composer ‣ Export as Image</span>.</li>
 </ol>
-<img alt="../_images/342.png" class="align-center" src="../_images/342.png" />
+<img alt="../_images/343.png" class="align-center" src="../_images/343.png" />
 <ol class="arabic simple" start="35">
 <li>Save the image in the format of your liking. Below is the exported PNG
 image.</li>
@@ -507,8 +503,8 @@ image.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Performing Spatial Queries &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Nearest Neighbor Analysis" href="nearest_neighbor_analysis.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/performing_spatial_queries_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'performing_spatial_queries_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/performing_spatial_queries_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'performing_spatial_queries_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/performing_spatial_queries_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'performing_spatial_queries_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/performing_spatial_queries_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'performing_spatial_queries_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="performing-spatial-queries">
@@ -255,31 +251,31 @@ cities that are within 10 kms of a river.</p>
 <li>Once you have downloaded the data, open QGIS. Go to
 <span class="menuselection">Layer ‣ Add Vector Layer</span>.</li>
 </ol>
-<img alt="../_images/1103.png" class="align-center" src="../_images/1103.png" />
+<img alt="../_images/1129.png" class="align-center" src="../_images/1129.png" />
 <ol class="arabic simple" start="2">
 <li>Click <span class="guilabel">Browse</span> and navigate to the folder where you downloaded the
 zip files.</li>
 </ol>
-<img alt="../_images/248.png" class="align-center" src="../_images/248.png" />
+<img alt="../_images/280.png" class="align-center" src="../_images/280.png" />
 <ol class="arabic simple" start="3">
 <li>Hold the <code class="kbd docutils literal"><span class="pre">Shift</span></code> key and click on both the zip files to select them.
 Click <span class="guilabel">Open</span>.</li>
 </ol>
-<img alt="../_images/329.png" class="align-center" src="../_images/329.png" />
+<img alt="../_images/347.png" class="align-center" src="../_images/347.png" />
 <ol class="arabic simple" start="4">
 <li>You will be asked to choose a layer from the zip archive.
 Select <code class="docutils literal"><span class="pre">ne_10m_rivers_lake_centerlines.shp</span></code> and click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/421.png" class="align-center" src="../_images/421.png" />
+<img alt="../_images/428.png" class="align-center" src="../_images/428.png" />
 <ol class="arabic simple" start="5">
 <li>Since you have selected multiple files, repeat the process for the next file.
 Select 10m_populated_places_simple.shp and click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/522.png" class="align-center" src="../_images/522.png" />
+<img alt="../_images/529.png" class="align-center" src="../_images/529.png" />
 <ol class="arabic simple" start="6">
 <li>You will see both the shapefiles now loaded in QGIS.</li>
 </ol>
-<img alt="../_images/621.png" class="align-center" src="../_images/621.png" />
+<img alt="../_images/627.png" class="align-center" src="../_images/627.png" />
 <ol class="arabic simple" start="7">
 <li>We will be created buffers around the point and line layers. The <cite>Buffer</cite>
 geoprocessing tool in QGIS uses <cite>layer units</cite> to calculate buffer distances.
@@ -289,14 +285,14 @@ the unit of <cite>degrees</cite>. This is not appropriate as we want our analysi
 <cite>Projected Coordinate Reference System (CRS)</cite>. Right-click on the
 <code class="docutils literal"><span class="pre">10m_populated_places_simple</span> <span class="pre">layer</span></code> and choose <span class="guilabel">Save As</span>.</li>
 </ol>
-<img alt="../_images/720.png" class="align-center" src="../_images/720.png" />
+<img alt="../_images/727.png" class="align-center" src="../_images/727.png" />
 <ol class="arabic simple" start="8">
-<li>In the <span class="guilabel">Save vector layer as...</span> dialog, click <span class="guilabel">Browse</span>
+<li>In the <span class="guilabel">Save vector layer as…</span> dialog, click <span class="guilabel">Browse</span>
 next to <span class="guilabel">Save as</span> and select the output file location. Name the
 output file as <code class="docutils literal"><span class="pre">populated_places_reprojected.shp</span></code>. Next, click the
 <span class="guilabel">Browse</span> button next to <span class="guilabel">CRS</span>.</li>
 </ol>
-<img alt="../_images/819.png" class="align-center" src="../_images/819.png" />
+<img alt="../_images/824.png" class="align-center" src="../_images/824.png" />
 <ol class="arabic simple" start="9">
 <li>Now we must choose an appropriate CRS for our purpose. For creating buffers,
 a Azimuthal Equidistant projection would be best suited as radial distances
@@ -312,43 +308,43 @@ dataset is global, we will choose a world projection. In the
 origin. Here the origin being 0 degrees longitude, the only data contained
 within +/- 90 degrees longitude will be converted.</p>
 </div>
-<img alt="../_images/917.png" class="align-center" src="../_images/917.png" />
+<img alt="../_images/924.png" class="align-center" src="../_images/924.png" />
 <ol class="arabic simple" start="10">
-<li>Back in <span class="guilabel">Save vector layer as ...</span> dialog, check the box next to
+<li>Back in <span class="guilabel">Save vector layer as …</span> dialog, check the box next to
 <span class="guilabel">Add saved file to map</span> and click <cite>OK</cite>.</li>
 </ol>
-<img alt="../_images/1018.png" class="align-center" src="../_images/1018.png" />
+<img alt="../_images/1023.png" class="align-center" src="../_images/1023.png" />
 <ol class="arabic simple" start="11">
 <li>Repeat the re-projection process for the <code class="docutils literal"><span class="pre">ne_10m_rivers_lake_centerlines</span></code>
 layer and save the new layer as <code class="docutils literal"><span class="pre">rivers_lake_reprojected.shp</span></code>.</li>
 </ol>
-<img alt="../_images/1121.png" class="align-center" src="../_images/1121.png" />
+<img alt="../_images/1130.png" class="align-center" src="../_images/1130.png" />
 <ol class="arabic simple" start="12">
 <li>Now you will have 4 layers in your <span class="guilabel">Layers Panel</span>. Un-check the
 boxes next to the original layers to display only the re-projected layers.
 The re-projected layers are still being shown in the <cite>Geographic CRS</cite>
-because of a setting. Let&#8217;s turn that off. Click on the
+because of a setting. Let’s turn that off. Click on the
 <span class="guilabel">Project Properties</span> button. This setting can also be accessed
 from <span class="menuselection">Project ‣ Project Properties</span>.</li>
 </ol>
-<img alt="../_images/1220.png" class="align-center" src="../_images/1220.png" />
+<img alt="../_images/1225.png" class="align-center" src="../_images/1225.png" />
 <ol class="arabic simple" start="13">
 <li>In the <span class="guilabel">CRS</span> tab of the <span class="guilabel">Project Properties</span> dialog,
 un-check the box next to <span class="guilabel">Enable on-the-fly CRS transformation</span>.
 Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1317.png" class="align-center" src="../_images/1317.png" />
+<img alt="../_images/1323.png" class="align-center" src="../_images/1323.png" />
 <ol class="arabic simple" start="14">
 <li>Back in the main QGIS window, right-click on any one of the re-projected
 layers and select <span class="guilabel">Zoom to Layer Extent</span>.</li>
 </ol>
-<img alt="../_images/1416.png" class="align-center" src="../_images/1416.png" />
+<img alt="../_images/1422.png" class="align-center" src="../_images/1422.png" />
 <ol class="arabic simple" start="15">
-<li>Now you will see the data in the layer&#8217;s CRS. We will now create buffers for
+<li>Now you will see the data in the layer’s CRS. We will now create buffers for
 both the datasets. Click <span class="menuselection">Vector ‣ Geoprocessing Tools ‣
 Buffer</span>.</li>
 </ol>
-<img alt="../_images/1515.png" class="align-center" src="../_images/1515.png" />
+<img alt="../_images/1521.png" class="align-center" src="../_images/1521.png" />
 <ol class="arabic simple" start="16">
 <li>In the <span class="guilabel">Buffer</span> tool, select <code class="docutils literal"><span class="pre">populated_places_reprojected</span></code>
 layer as Input. Enter the buffer distance as <cite>10000</cite>. Note that we want a
@@ -356,79 +352,79 @@ buffer of 10kms and since the CRS units are metres, we need to enter 10,000.
 Enter the output file name as <code class="docutils literal"><span class="pre">populated_places_buffer.shp</span></code>. Click
 <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1614.png" class="align-center" src="../_images/1614.png" />
+<img alt="../_images/1619.png" class="align-center" src="../_images/1619.png" />
 <ol class="arabic simple" start="17">
 <li>Once the buffer processing is over, click the <span class="guilabel">Yes</span> to add the
 newly created layer to the TOC.</li>
 </ol>
-<img alt="../_images/1713.png" class="align-center" src="../_images/1713.png" />
+<img alt="../_images/1717.png" class="align-center" src="../_images/1717.png" />
 <ol class="arabic simple" start="18">
 <li>Repeat the same buffer process for the <code class="docutils literal"><span class="pre">rivers_lake_reprojected</span></code> layer and
 create an output file named <code class="docutils literal"><span class="pre">rivers_lake_buffer.shp</span></code>.</li>
 </ol>
-<img alt="../_images/1813.png" class="align-center" src="../_images/1813.png" />
+<img alt="../_images/1818.png" class="align-center" src="../_images/1818.png" />
 <ol class="arabic simple" start="19">
 <li>The <code class="docutils literal"><span class="pre">rivers_lake_buffer</span></code> contains features that are both rivers as well as
 lakes. Our analysis calls for using only river features, so we will run a
 query to select only river features. Right-click on the
 <code class="docutils literal"><span class="pre">rivers_lake_buffer</span></code> layer and select <span class="guilabel">Open Attribute Table</span>.</li>
 </ol>
-<img alt="../_images/1911.png" class="align-center" src="../_images/1911.png" />
+<img alt="../_images/1916.png" class="align-center" src="../_images/1916.png" />
 <ol class="arabic simple" start="20">
 <li>You will see that the <cite>featurecla</cite> attribute contains the information we can
 use to select the river features. Click on <cite>Select features using an
 expression</cite> button.</li>
 </ol>
-<img alt="../_images/208.png" class="align-center" src="../_images/208.png" />
+<img alt="../_images/2012.png" class="align-center" src="../_images/2012.png" />
 <ol class="arabic simple" start="21">
-<li>Enter the expression <cite>&#8220;featurecla&#8221; = &#8220;River&#8221;</cite> and click <span class="guilabel">Select</span>
+<li>Enter the expression <cite>“featurecla” = “River”</cite> and click <span class="guilabel">Select</span>
 and then click <span class="guilabel">Close</span> to back to the main QGIS window.</li>
 </ol>
-<img alt="../_images/2114.png" class="align-center" src="../_images/2114.png" />
+<img alt="../_images/2117.png" class="align-center" src="../_images/2117.png" />
 <ol class="arabic simple" start="22">
 <li>Now we are ready to perform the spatial query. You need to enable the
 <cite>Spatial Query plugin</cite> to use this functionality. See <a class="reference internal" href="using_plugins.html"><span class="doc">Using Plugins</span></a>
 for more details. Once enabled, go to <span class="menuselection">Vector ‣ Spatial
 Query ‣ Spatial Query</span>.</li>
 </ol>
-<img alt="../_images/2213.png" class="align-center" src="../_images/2213.png" />
+<img alt="../_images/2215.png" class="align-center" src="../_images/2215.png" />
 <ol class="arabic simple" start="23">
 <li>For our query, we want to select features from the buffered places that
 intersect with the buffered river lines. Make sure the checkbox next to
 <cite>selected geometries</cite> is checked. This is to ensure the query uses only
 river features that we selected previously. Click <span class="guilabel">Apply</span>.</li>
 </ol>
-<img alt="../_images/2310.png" class="align-center" src="../_images/2310.png" />
+<img alt="../_images/2314.png" class="align-center" src="../_images/2314.png" />
 <ol class="arabic simple" start="24">
 <li>Once the query is complete, you will see a new section named
 <span class="guilabel">Selected features</span>. Click on the <span class="guilabel">Create layer with
 selected</span> button. A new layer will be added to the <cite>Layers Panel</cite>. Click
 <span class="guilabel">Close</span>.</li>
 </ol>
-<img alt="../_images/249.png" class="align-center" src="../_images/249.png" />
+<img alt="../_images/2413.png" class="align-center" src="../_images/2413.png" />
 <ol class="arabic simple" start="25">
 <li>Zoom-in to any area and compare the results. You will notice that the new
 layer contains only the features that intersect with river buffers.</li>
 </ol>
-<img alt="../_images/256.png" class="align-center" src="../_images/256.png" />
+<img alt="../_images/2513.png" class="align-center" src="../_images/2513.png" />
 <ol class="arabic simple" start="26">
 <li>We should always verify my results to ensure the analysis is not flawed. One
 way to verify the results is to export this layer as a KML file and load it
 up in Google Earth. You can check if the areas you found really are within
-10kms of a river. Right-click the layer and <span class="guilabel">Save As...</span>.</li>
+10kms of a river. Right-click the layer and <span class="guilabel">Save As…</span>.</li>
 </ol>
-<img alt="../_images/265.png" class="align-center" src="../_images/265.png" />
+<img alt="../_images/2611.png" class="align-center" src="../_images/2611.png" />
 <ol class="arabic simple" start="27">
-<li>In the <span class="guilabel">Save vector layer as...</span>, choose <cite>WGS84</cite> as the CRS. This
+<li>In the <span class="guilabel">Save vector layer as…</span>, choose <cite>WGS84</cite> as the CRS. This
 because KML format needs the coordinates to be in this CRS. Name your KML as
 <code class="docutils literal"><span class="pre">cities_near_river.kml</span></code>.</li>
 </ol>
-<img alt="../_images/275.png" class="align-center" src="../_images/275.png" />
+<img alt="../_images/2710.png" class="align-center" src="../_images/2710.png" />
 <ol class="arabic simple" start="28">
 <li>Open Google Earth and verify that the cities represented by these buffers
 are indeed close to rivers.</li>
 </ol>
-<img alt="../_images/284.png" class="align-center" src="../_images/284.png" />
+<img alt="../_images/287.png" class="align-center" src="../_images/287.png" />
 </div>
 </div>
 
@@ -454,8 +450,8 @@ are indeed close to rivers.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

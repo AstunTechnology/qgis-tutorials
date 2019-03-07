@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Automating Map Creation with Print Composer Atlas &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,11 +21,9 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using the QGIS Browser" href="using_qgis_browser.html" />
-    <link rel="prev" title="Automating Complex Workflows using Processing Modeler" href="processing_graphical_modeler.html" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -52,7 +44,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +55,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -80,7 +72,7 @@
      href="../index.html">Tutorials List <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
+      aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="making_a_map.html">Making a Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="working_with_attributes.html">Working with Attributes</a></li>
@@ -105,16 +97,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -130,14 +123,6 @@
             
               
                 
-  <li>
-    <a href="processing_graphical_modeler.html" title="Previous Chapter: Automating Complex Workflows using Processing Modeler"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Automating Co...</span>
-    </a>
-  </li>
-  <li>
-    <a href="using_qgis_browser.html" title="Next Chapter: Using the QGIS Browser"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Using the QGI... &raquo;</span>
-    </a>
-  </li>
               
             
             
@@ -198,18 +183,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/automating_map_creation_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'automating_map_creation_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/automating_map_creation_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'automating_map_creation_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/automating_map_creation_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'automating_map_creation_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/automating_map_creation_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'automating_map_creation_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,11 +203,15 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="automating-map-creation-with-print-composer-atlas">
 <h1>Automating Map Creation with Print Composer Atlas<a class="headerlink" href="#automating-map-creation-with-print-composer-atlas" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">A new version of this tutorial is available at <a class="reference internal" href="3/automating_map_creation.html"><span class="doc">Automating Map Creation with Print Layout Atlas (QGIS3)</span></a></p>
+</div>
 <p>If your organization publishes printed or online maps, you often would need to
 create many maps with the same template - usually one for each administrative
 unit or a region of interest. Creating these maps manually can take a long time
@@ -264,15 +254,15 @@ below:</p>
 <li>Launch QGIS and go to <span class="menuselection">Layer ‣ Add Layer ‣ Add Vector
 Layer</span>.</li>
 </ol>
-<img alt="../_images/110.png" class="align-center" src="../_images/110.png" />
+<img alt="../_images/128.png" class="align-center" src="../_images/128.png" />
 <ol class="arabic simple" start="2">
 <li>Browse to the <code class="docutils literal"><span class="pre">HI_Wetlands.shp.zip</span></code> file and click <span class="guilabel">Open</span>.</li>
 </ol>
-<img alt="../_images/21.png" class="align-center" src="../_images/21.png" />
+<img alt="../_images/220.png" class="align-center" src="../_images/220.png" />
 <ol class="arabic simple" start="3">
 <li>Select the <code class="docutils literal"><span class="pre">HI_Wetlands_Poly</span></code> layer and click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/31.png" class="align-center" src="../_images/31.png" />
+<img alt="../_images/318.png" class="align-center" src="../_images/318.png" />
 <ol class="arabic simple" start="4">
 <li>You will see the polygons representing the wetlands in the entire state of
 Hawaii. Since we want to make separate wetlands map for each county in the
@@ -280,31 +270,31 @@ state, we will need the county boundaries layer. Go to <span class="menuselectio
 ‣ Add Layer ‣ Add Vector Layer</span> and browse to the <code class="docutils literal"><span class="pre">county10.shp.zip</span></code>
 file. Click <span class="guilabel">Open</span>.</li>
 </ol>
-<img alt="../_images/41.png" class="align-center" src="../_images/41.png" />
+<img alt="../_images/48.png" class="align-center" src="../_images/48.png" />
 <ol class="arabic simple" start="5">
 <li>Go to <span class="menuselection">Project ‣ New Print Composer</span>.</li>
 </ol>
-<img alt="../_images/51.png" class="align-center" src="../_images/51.png" />
+<img alt="../_images/58.png" class="align-center" src="../_images/58.png" />
 <ol class="arabic simple" start="6">
 <li>Leave the composer title field empty and click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/61.png" class="align-center" src="../_images/61.png" />
+<img alt="../_images/67.png" class="align-center" src="../_images/67.png" />
 <ol class="arabic simple" start="7">
 <li>Go to <span class="menuselection">Layout ‣ Add Map</span>.</li>
 </ol>
-<img alt="../_images/71.png" class="align-center" src="../_images/71.png" />
+<img alt="../_images/78.png" class="align-center" src="../_images/78.png" />
 <ol class="arabic simple" start="8">
 <li>Drag a rectangle while holding the left mouse button where you would like to
 insert the map.</li>
 </ol>
-<img alt="../_images/81.png" class="align-center" src="../_images/81.png" />
+<img alt="../_images/86.png" class="align-center" src="../_images/86.png" />
 <ol class="arabic simple" start="9">
 <li>Scroll down in the <span class="guilabel">Item Properties</span> tab and check the
 <span class="guilabel">Controlled by atlas</span> box. This will indicate the composer that
 the extent of the map displayed in this item will be determined by the
 <code class="docutils literal"><span class="pre">Atlas</span></code> tool.</li>
 </ol>
-<img alt="../_images/91.png" class="align-center" src="../_images/91.png" />
+<img alt="../_images/98.png" class="align-center" src="../_images/98.png" />
 <ol class="arabic simple" start="10">
 <li>Switch to the <span class="guilabel">Atlas generation</span> tab. Check the
 <span class="guilabel">Generate an atlas</span> box. Select the <code class="docutils literal"><span class="pre">county10</span></code> as the
@@ -313,37 +303,37 @@ each for every polygon feature in the <code class="docutils literal"><span class
 check the <span class="guilabel">Hidden coverage layer</span> so that the features themselves
 will not appear on the map.</li>
 </ol>
-<img alt="../_images/101.png" class="align-center" src="../_images/101.png" />
+<img alt="../_images/106.png" class="align-center" src="../_images/106.png" />
 <ol class="arabic simple" start="11">
 <li>You will notice that the map image does not change after configuring the
 Atlas settings. Go to <span class="menuselection">Atlas ‣ Preview Atlas</span>.</li>
 </ol>
-<img alt="../_images/111.png" class="align-center" src="../_images/111.png" />
+<img alt="../_images/1111.png" class="align-center" src="../_images/1111.png" />
 <ol class="arabic simple" start="12">
 <li>Now you will see the map refresh and show how individual map will look
 like. Notice that it shows the current feature number from the coverage
 layer at the bottom right.</li>
 </ol>
-<img alt="../_images/121.png" class="align-center" src="../_images/121.png" />
+<img alt="../_images/129.png" class="align-center" src="../_images/129.png" />
 <ol class="arabic simple" start="13">
 <li>You can preview how the map will look for each of the county polygons. Go
 to <span class="menuselection">Atlas ‣ Next Feature</span>.</li>
 </ol>
-<img alt="../_images/131.png" class="align-center" src="../_images/131.png" />
+<img alt="../_images/138.png" class="align-center" src="../_images/138.png" />
 <ol class="arabic simple" start="14">
 <li>Atlas will render the map to the extent of the next feature in the coverage
 layer.</li>
 </ol>
-<img alt="../_images/141.png" class="align-center" src="../_images/141.png" />
+<img alt="../_images/147.png" class="align-center" src="../_images/147.png" />
 <ol class="arabic simple" start="15">
-<li>Let&#8217;s add a label to the map. Go to <span class="menuselection">Layout ‣ Add Label</span>.</li>
+<li>Let’s add a label to the map. Go to <span class="menuselection">Layout ‣ Add Label</span>.</li>
 </ol>
-<img alt="../_images/151.png" class="align-center" src="../_images/151.png" />
+<img alt="../_images/157.png" class="align-center" src="../_images/157.png" />
 <ol class="arabic simple" start="16">
 <li>Under the <span class="guilabel">Item properties</span> tab, click <span class="guilabel">Insert an
-expression...</span> button.</li>
+expression…</span> button.</li>
 </ol>
-<img alt="../_images/161.png" class="align-center" src="../_images/161.png" />
+<img alt="../_images/166.png" class="align-center" src="../_images/166.png" />
 <ol class="arabic simple" start="17">
 <li>The label of the map can use the attributes from the coverage layer.he
 <code class="docutils literal"><span class="pre">concat</span></code> function is used to join multiple text items into a single text
@@ -357,57 +347,57 @@ below and click <span class="guilabel">OK</span>.</li>
 <ol class="arabic simple" start="18">
 <li>Adjust the font size to your liking.</li>
 </ol>
-<img alt="../_images/181.png" class="align-center" src="../_images/181.png" />
+<img alt="../_images/186.png" class="align-center" src="../_images/186.png" />
 <ol class="arabic simple" start="19">
 <li>Add another label and enter <code class="docutils literal"><span class="pre">Wetlands</span> <span class="pre">Map</span></code> under the <span class="guilabel">Main
 properties</span>. Since there is no expression here, this text will remain the
 same on all maps.</li>
 </ol>
-<img alt="../_images/191.png" class="align-center" src="../_images/191.png" />
+<img alt="../_images/195.png" class="align-center" src="../_images/195.png" />
 <ol class="arabic simple" start="20">
 <li>Go to <span class="menuselection">Atlas ‣ Last Feature</span> and verify that the map
 labels do work as intended. You will notice that the wetland map has
 polygons extending out in the ocean that looks ugly. We can change the
 style to that areas outside the county boundaries are hidden.</li>
 </ol>
-<img alt="../_images/20.png" class="align-center" src="../_images/20.png" />
+<img alt="../_images/204.png" class="align-center" src="../_images/204.png" />
 <ol class="arabic simple" start="21">
 <li>Switch to the main QGIS window. Right-click the <code class="docutils literal"><span class="pre">county10</span></code> layer and
 select <span class="guilabel">Properties</span>.</li>
 </ol>
-<img alt="../_images/211.png" class="align-center" src="../_images/211.png" />
+<img alt="../_images/2110.png" class="align-center" src="../_images/2110.png" />
 <ol class="arabic simple" start="22">
 <li>In the <span class="guilabel">Style</span> tab, select the <span class="guilabel">Inverted polygons</span>
 renderer. This renderer styles the <cite>outside</cite> of the polygon - not inside.
 Select white as the fill color and click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/22.png" class="align-center" src="../_images/22.png" />
+<img alt="../_images/224.png" class="align-center" src="../_images/224.png" />
 <ol class="arabic simple" start="23">
 <li>Switch to the Print Composer window. If we want the effect of the inverted
 polygons to show, we need to uncheck the <span class="guilabel">Hidden coverage layer</span>
 box under <span class="guilabel">Atlas generation</span>. You will now see that the rendered
 image is clean and areas outside the coverage polygon is not visible.</li>
 </ol>
-<img alt="../_images/23.png" class="align-center" src="../_images/23.png" />
+<img alt="../_images/234.png" class="align-center" src="../_images/234.png" />
 <ol class="arabic simple" start="24">
 <li>There is one problem though. You can see areas of the map that are outside
 the coverage layer boundary but still visible. This is because Atlas
-doesn&#8217;t automatically hide other features. This can be useful in some
+doesn’t automatically hide other features. This can be useful in some
 cases, but for our purpose, we only want to show wetlands of the county
 whose map is being generated. To fix this, switch back to the main QGIS
 window and right-click the <code class="docutils literal"><span class="pre">county10</span></code> layer and select
 <span class="guilabel">Properties</span>.</li>
 </ol>
-<img alt="../_images/24.png" class="align-center" src="../_images/24.png" />
+<img alt="../_images/244.png" class="align-center" src="../_images/244.png" />
 <ol class="arabic simple" start="25">
 <li>In the <span class="guilabel">Style</span> tab, select <span class="guilabel">Rule-based</span> renderer as the
 <span class="guilabel">Sub renderer</span>. Double-click the area under <span class="guilabel">Rule</span>.</li>
 </ol>
-<img alt="../_images/25.png" class="align-center" src="../_images/25.png" />
+<img alt="../_images/253.png" class="align-center" src="../_images/253.png" />
 <ol class="arabic simple" start="26">
-<li>Click the <span class="guilabel">...</span> button next to <span class="guilabel">Filter</span>.</li>
+<li>Click the <span class="guilabel">…</span> button next to <span class="guilabel">Filter</span>.</li>
 </ol>
-<img alt="../_images/26.png" class="align-center" src="../_images/26.png" />
+<img alt="../_images/264.png" class="align-center" src="../_images/264.png" />
 <ol class="arabic simple" start="27">
 <li>In the <span class="guilabel">Expression string builder</span>, expand the <span class="guilabel">Atlas</span>
 group of functions. The <code class="docutils literal"><span class="pre">$atlasfeatureid</span></code> function will return the
@@ -418,19 +408,19 @@ below:</li>
 <div class="highlight-none"><div class="highlight"><pre><span></span>$id = $atlasfeatureid
 </pre></div>
 </div>
-<img alt="../_images/27.png" class="align-center" src="../_images/27.png" />
+<img alt="../_images/273.png" class="align-center" src="../_images/273.png" />
 <ol class="arabic simple" start="28">
 <li>Back in the Print Composer window, click the <span class="guilabel">Update preview</span>
 button under <span class="guilabel">Item properties</span> tab to see the changes. Notice
 that now only the area covering the county boundary is shown.</li>
 </ol>
-<img alt="../_images/28.png" class="align-center" src="../_images/28.png" />
+<img alt="../_images/283.png" class="align-center" src="../_images/283.png" />
 <ol class="arabic simple" start="29">
 <li>We will now add another dynamic label to show the current date. Go to
 <span class="menuselection">Layout ‣ Add Label</span> and select the area on the map. Click
 <span class="guilabel">Insert an expression</span> button.</li>
 </ol>
-<img alt="../_images/29.png" class="align-center" src="../_images/29.png" />
+<img alt="../_images/293.png" class="align-center" src="../_images/293.png" />
 <ol class="arabic simple" start="30">
 <li>Expand the <span class="guilabel">Date and Time</span> functions group and you will find the
 <code class="docutils literal"><span class="pre">$now</span></code> function. This holds the current system time. The function
@@ -440,28 +430,28 @@ below:</li>
 <div class="highlight-none"><div class="highlight"><pre><span></span>concat(&#39;Created on: &#39;, todate($now))
 </pre></div>
 </div>
-<img alt="../_images/30.png" class="align-center" src="../_images/30.png" />
+<img alt="../_images/302.png" class="align-center" src="../_images/302.png" />
 <ol class="arabic simple" start="31">
 <li>Add another label citing the data source. You may also add other map
 elements such as a north arrow, scalebar etc. as described in
 <a class="reference internal" href="making_a_map.html"><span class="doc">Making a Map</span></a> tutorial.</li>
 </ol>
-<img alt="../_images/311.png" class="align-center" src="../_images/311.png" />
+<img alt="../_images/319.png" class="align-center" src="../_images/319.png" />
 <ol class="arabic simple" start="32">
 <li>Once you are satisfied with the map layout, go to <span class="menuselection">Atlas ‣
 Export Atlas as Images</span>.</li>
 </ol>
-<img alt="../_images/32.png" class="align-center" src="../_images/32.png" />
+<img alt="../_images/322.png" class="align-center" src="../_images/322.png" />
 <ol class="arabic simple" start="33">
 <li>Select a directory on your computer and click <span class="guilabel">Choose</span>.</li>
 </ol>
-<img alt="../_images/33.png" class="align-center" src="../_images/33.png" />
+<img alt="../_images/331.png" class="align-center" src="../_images/331.png" />
 <ol class="arabic simple" start="34">
 <li>The Atlas tool will now iterate through each feature in the coverage layer
 and create a separate map image based on the template we created. You can
 see the images in the directory once the process completes.</li>
 </ol>
-<img alt="../_images/34.png" class="align-center" src="../_images/34.png" />
+<img alt="../_images/341.png" class="align-center" src="../_images/341.png" />
 <ol class="arabic simple" start="35">
 <li>Here are the map images for refeence.</li>
 </ol>
@@ -495,8 +485,8 @@ see the images in the directory once the process completes.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

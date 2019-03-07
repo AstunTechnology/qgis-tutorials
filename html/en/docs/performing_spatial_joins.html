@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Performing Spatial Joins &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Points in Polygon Analysis" href="points_in_polygon.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/performing_spatial_joins_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'performing_spatial_joins_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/performing_spatial_joins_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'performing_spatial_joins_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/performing_spatial_joins_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'performing_spatial_joins_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/performing_spatial_joins_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'performing_spatial_joins_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="performing-spatial-joins">
@@ -246,12 +242,12 @@ of free data for New York city.</p>
 <li>Download the <a class="reference external" href="https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm">Borough Boundaries</a>
 zip file using the Export option on the portal.</li>
 </ol>
-<img alt="../_images/1102.png" class="align-center" src="../_images/1102.png" />
+<img alt="../_images/1127.png" class="align-center" src="../_images/1127.png" />
 <ol class="arabic simple" start="2">
 <li>Download the <a class="reference external" href="https://data.cityofnewyork.us/Health/Nursing-Homes/9tqc-rnkr">Nursing Homes</a>  zip file
 using the Export option on the portal.</li>
 </ol>
-<img alt="../_images/247.png" class="align-center" src="../_images/247.png" />
+<img alt="../_images/279.png" class="align-center" src="../_images/279.png" />
 <p>For convenience, you may directly download a copy of the datasets from the
 links below:</p>
 <p><a class="reference external" href="http://www.qgistutorials.com/downloads/nybb_12c.zip">nybb_12c.zip</a></p>
@@ -263,29 +259,29 @@ links below:</p>
 <li>Go to <span class="menuselection">Layer ‣ Add Vector Layer</span>. Browse to the downloaded
 zip file <code class="docutils literal"><span class="pre">nybb_12c.zip</span></code> and select <span class="guilabel">Open</span>.</li>
 </ol>
-<img alt="../_images/328.png" class="align-center" src="../_images/328.png" />
+<img alt="../_images/346.png" class="align-center" src="../_images/346.png" />
 <ol class="arabic simple" start="4">
 <li>Select the layer <code class="docutils literal"><span class="pre">nybb.shp</span></code> and click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/420.png" class="align-center" src="../_images/420.png" />
+<img alt="../_images/427.png" class="align-center" src="../_images/427.png" />
 <ol class="arabic simple" start="5">
 <li>Repeat the steps 3 and 4 for the another file <code class="docutils literal"><span class="pre">OEM_NursingHomes_001.zip</span></code>
 and load the <code class="docutils literal"><span class="pre">OEM_NursingHomes_001.shp</span></code> layer. Once both the layers are
 loaded, right-click on the <code class="docutils literal"><span class="pre">OEM_NursingHomes_001</span></code> layer and select
 <span class="guilabel">Open Attribute Table</span>.</li>
 </ol>
-<img alt="../_images/521.png" class="align-center" src="../_images/521.png" />
+<img alt="../_images/528.png" class="align-center" src="../_images/528.png" />
 <ol class="arabic simple" start="6">
 <li>Examine the attributes available for each feature. Since our task is to
 calculate the total nursing home capacity for each borough, we can use the
 attribute <strong>Capacity</strong> which can join to the boundaries layer.</li>
 </ol>
-<img alt="../_images/620.png" class="align-center" src="../_images/620.png" />
+<img alt="../_images/626.png" class="align-center" src="../_images/626.png" />
 <ol class="arabic simple" start="7">
 <li>Go to <span class="menuselection">Vector ‣ Data Mangement Tools ‣ Join attributes by
 location</span>.</li>
 </ol>
-<img alt="../_images/719.png" class="align-center" src="../_images/719.png" />
+<img alt="../_images/726.png" class="align-center" src="../_images/726.png" />
 <ol class="arabic simple" start="8">
 <li>The <span class="guilabel">Target vector layer</span> is the one we want to add the attributes
 to. In our case, this will be the boroughs boundary <code class="docutils literal"><span class="pre">nybb</span></code> layer. The
@@ -295,7 +291,7 @@ homes, select <span class="guilabel">Take summary of intersecting features</span
 <span class="guilabel">Sum</span>. Name the output file as <code class="docutils literal"><span class="pre">nyc_borough_join.shp</span></code>. In the
 <span class="guilabel">Output table</span> select <span class="guilabel">Keep all records`</span>.</li>
 </ol>
-<img alt="../_images/818.png" class="align-center" src="../_images/818.png" />
+<img alt="../_images/823.png" class="align-center" src="../_images/823.png" />
 <ol class="arabic simple" start="9">
 <li>Once the process finishes, select <span class="guilabel">Yes</span> when asked if you want to
 add the layer to TOC. The new layer <code class="docutils literal"><span class="pre">nyc_borough_join</span></code> would have the
@@ -303,36 +299,36 @@ features from <code class="docutils literal"><span class="pre">nybb</span></code
 <code class="docutils literal"><span class="pre">OEM_NursingHomes_001</span></code> layer. Right-click on the layer and select
 <span class="guilabel">Open Attribute Table</span>.</li>
 </ol>
-<img alt="../_images/916.png" class="align-center" src="../_images/916.png" />
+<img alt="../_images/923.png" class="align-center" src="../_images/923.png" />
 <ol class="arabic simple" start="10">
 <li>You will see a column <strong>SUMCapacit</strong> in the attribute table. This is the
 sum of the <strong>Capacity</strong> attribute for the nursing homes that fall within
 each borough feature.</li>
 </ol>
-<img alt="../_images/1017.png" class="align-center" src="../_images/1017.png" />
+<img alt="../_images/1022.png" class="align-center" src="../_images/1022.png" />
 <ol class="arabic simple" start="11">
 <li>This is the answer we are looking for. But there are extra columns that we
-do not need in our output. Let&#8217;s clean up our output. Click on the
+do not need in our output. Let’s clean up our output. Click on the
 <span class="guilabel">Toggle editing</span> button and then the <span class="guilabel">Delete column</span>
 button.</li>
 </ol>
-<img alt="../_images/1120.png" class="align-center" src="../_images/1120.png" />
+<img alt="../_images/1128.png" class="align-center" src="../_images/1128.png" />
 <ol class="arabic simple" start="12">
 <li>Press <code class="kbd docutils literal"><span class="pre">Control-A</span></code> to select all columns in the <span class="guilabel">Delete
 Attributes</span> dialog. Next hold the <code class="kbd docutils literal"><span class="pre">Control</span></code> key and de-select the
 columns you want to keep. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1219.png" class="align-center" src="../_images/1219.png" />
+<img alt="../_images/1224.png" class="align-center" src="../_images/1224.png" />
 <ol class="arabic simple" start="13">
 <li>In the attribute table, click <span class="guilabel">Toggle editing</span> button again to
 save the changes.</li>
 </ol>
-<img alt="../_images/1316.png" class="align-center" src="../_images/1316.png" />
+<img alt="../_images/1322.png" class="align-center" src="../_images/1322.png" />
 <ol class="arabic simple" start="14">
 <li>Back in the QGIS Canvas, use the <span class="guilabel">Identify</span> tool to verify that
 the output file has the desired attributes for each burough feature.</li>
 </ol>
-<img alt="../_images/1415.png" class="align-center" src="../_images/1415.png" />
+<img alt="../_images/1421.png" class="align-center" src="../_images/1421.png" />
 </div>
 </div>
 
@@ -358,8 +354,8 @@ the output file has the desired attributes for each burough feature.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Working with WMS Data &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Working with Projections" href="working_with_projections.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/working_with_wms_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'working_with_wms_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/working_with_wms_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'working_with_wms_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/working_with_wms_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'working_with_wms_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/working_with_wms_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'working_with_wms_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="working-with-wms-data">
@@ -236,13 +232,13 @@ hassle of downloading or styling the data.</p>
 <div class="section" id="procedure">
 <h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Open QGIS and go to on <span class="menuselection">Layer ‣ Add WMS Layer...</span>.</li>
+<li>Open QGIS and go to on <span class="menuselection">Layer ‣ Add WMS Layer…</span>.</li>
 </ol>
-<img alt="../_images/1146.png" class="align-center" src="../_images/1146.png" />
+<img alt="../_images/1161.png" class="align-center" src="../_images/1161.png" />
 <ol class="arabic simple" start="2">
 <li>In the <span class="guilabel">Layers</span> tab, click on <span class="guilabel">New</span>.</li>
 </ol>
-<img alt="../_images/2100.png" class="align-center" src="../_images/2100.png" />
+<img alt="../_images/2128.png" class="align-center" src="../_images/2128.png" />
 <ol class="arabic simple" start="3">
 <li>Name your connection. This is not the name of the layer but the name of
 service which is offering the WMS layer. A single service usually offers
@@ -254,7 +250,7 @@ and the GetCapabilities URL as
 <code class="docutils literal"><span class="pre">http://mrdata.usgs.gov/services/ca?request=getcapabilities&amp;service=WMS&amp;version=1.1.1&amp;</span></code>.
 Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/354.png" class="align-center" src="../_images/354.png" />
+<img alt="../_images/367.png" class="align-center" src="../_images/367.png" />
 <ol class="arabic simple" start="4">
 <li>Next, click on the <span class="guilabel">Connect</span> button to fetch the list of layers available. You
 will notice different IDs listed next to the layers. ID <code class="docutils literal"><span class="pre">0</span></code> means you get a
@@ -262,7 +258,7 @@ map of all the layers. If you do not want all the layers, you can expand the
 list by clicking on <span class="guilabel">+</span> icon and selecting the layer of interest. Select the
 layer <code class="docutils literal"><span class="pre">0</span></code> for this tutorial.</li>
 </ol>
-<img alt="../_images/438.png" class="align-center" src="../_images/438.png" />
+<img alt="../_images/445.png" class="align-center" src="../_images/445.png" />
 <ol class="arabic" start="5">
 <li><p class="first">In the <span class="guilabel">Image encoding</span> section, you need to choose an image
 format. Image formats matter a great deal and which one you choose depends on your use case. Here
@@ -285,7 +281,7 @@ results. For imagery layers, JPEG is usually a better choice.</li>
 <span class="guilabel">Layer name</span> if you wish and click <span class="guilabel">Add</span>.</p>
 </li>
 </ol>
-<img alt="../_images/539.png" class="align-center" src="../_images/539.png" />
+<img alt="../_images/546.png" class="align-center" src="../_images/546.png" />
 <ol class="arabic simple" start="6">
 <li>You will see the layer loaded in the QGIS canvas. You can zoom/pan around
 just like any other layer. The way WMS service works is that every time you
@@ -295,18 +291,18 @@ will be some delay before you see the image for the area after you have
 zoomed in. Also, since the data you see is an image, there is no way to
 query for attributes like in a regular vector/imagery layer.</li>
 </ol>
-<img alt="../_images/637.png" class="align-center" src="../_images/637.png" />
+<img alt="../_images/643.png" class="align-center" src="../_images/643.png" />
 <ol class="arabic simple" start="7">
 <li>You can, however, see some metadata about the layer. Right-click the layer
 and choose <span class="guilabel">Properties</span>.</li>
 </ol>
-<img alt="../_images/736.png" class="align-center" src="../_images/736.png" />
+<img alt="../_images/743.png" class="align-center" src="../_images/743.png" />
 <ol class="arabic simple" start="8">
 <li>You will notice that the <span class="guilabel">Properties</span> dialog looks different and has fewer
 tabs. You can go to the <span class="guilabel">Metadata</span> tab to learn more about the WMS service
 and the layers.</li>
 </ol>
-<img alt="../_images/835.png" class="align-center" src="../_images/835.png" />
+<img alt="../_images/840.png" class="align-center" src="../_images/840.png" />
 </div>
 </div>
 
@@ -332,8 +328,8 @@ and the layers.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>
