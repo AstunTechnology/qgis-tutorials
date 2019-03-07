@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Working with Attributes &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Importing Spreadsheets or CSV files" href="importing_spreadsheets_csv.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/working_with_attributes_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'working_with_attributes_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/working_with_attributes_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'working_with_attributes_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/working_with_attributes_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'working_with_attributes_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/working_with_attributes_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'working_with_attributes_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="working-with-attributes">
@@ -254,47 +250,47 @@ below:</p>
 <li>Once you have downloaded the data, open QGIS. Go to <span class="menuselection">Layer
 ‣ Add Layer ‣ Add Vector Layer</span>.</li>
 </ol>
-<img alt="../_images/1140.png" class="align-center" src="../_images/1140.png" />
+<img alt="../_images/1155.png" class="align-center" src="../_images/1155.png" />
 <ol class="arabic simple" start="2">
 <li>Click on <span class="guilabel">Browse</span> and navigate to the folder where you downloaded
 the data.</li>
 </ol>
-<img alt="../_images/290.png" class="align-center" src="../_images/290.png" />
+<img alt="../_images/2108.png" class="align-center" src="../_images/2108.png" />
 <ol class="arabic simple" start="3">
 <li>Locate the downloaded zip file <cite>ne_10m_populated_places_simple.zip</cite>. You do
 not need to unzip the file. QGIS has the ability to read zip files directly.
 Select the file and click <span class="guilabel">Open</span>.</li>
 </ol>
-<img alt="../_images/348.png" class="align-center" src="../_images/348.png" />
+<img alt="../_images/364.png" class="align-center" src="../_images/364.png" />
 <ol class="arabic simple" start="4">
 <li>The selected layer will now be loaded in QGIS and you will see many points
 representing the populated places of the world.</li>
 </ol>
-<img alt="../_images/435.png" class="align-center" src="../_images/435.png" />
+<img alt="../_images/442.png" class="align-center" src="../_images/442.png" />
 <ol class="arabic simple" start="5">
 <li>Right-click the layer and select <span class="guilabel">Open Attribute Table</span>.</li>
 </ol>
-<img alt="../_images/536.png" class="align-center" src="../_images/536.png" />
+<img alt="../_images/543.png" class="align-center" src="../_images/543.png" />
 <ol class="arabic simple" start="6">
 <li>Explore the various attributes and their values.</li>
 </ol>
-<img alt="../_images/634.png" class="align-center" src="../_images/634.png" />
+<img alt="../_images/640.png" class="align-center" src="../_images/640.png" />
 <ol class="arabic simple" start="7">
 <li>We are interested in the population of each feature, so <cite>pop_max</cite> is the
 field we are looking for. You can click twice on the field header to sort
 the column in descending order.</li>
 </ol>
-<img alt="../_images/733.png" class="align-center" src="../_images/733.png" />
+<img alt="../_images/740.png" class="align-center" src="../_images/740.png" />
 <ol class="arabic simple" start="8">
 <li>Now we are ready to perform our query on these attributes. QGIS uses
 SQL-like expressions to perform queries. Click <span class="guilabel">Select features
 using an expression</span>.</li>
 </ol>
-<img alt="../_images/832.png" class="align-center" src="../_images/832.png" />
+<img alt="../_images/837.png" class="align-center" src="../_images/837.png" />
 <ol class="arabic simple" start="9">
 <li>In the <span class="guilabel">Select By Expression</span> window, expand the <span class="guilabel">Fields
 and Values</span> section and double-click the <code class="docutils literal"><span class="pre">pop_max</span></code> label.  You will notice
-that it is added to the expression section at the bottom.  If you aren&#8217;t
+that it is added to the expression section at the bottom.  If you aren’t
 sure about the field values, you can click the <span class="guilabel">Load all unique
 values</span> to see what the attribute values are present in the dataset. For
 this exercise, we are looking to find all features that have a population
@@ -304,14 +300,14 @@ greater than <code class="docutils literal"><span class="pre">1,000,000</span></
 <div class="highlight-none"><div class="highlight"><pre><span></span>&quot;pop_max&quot; &gt; 1000000
 </pre></div>
 </div>
-<img alt="../_images/930.png" class="align-center" src="../_images/930.png" />
+<img alt="../_images/937.png" class="align-center" src="../_images/937.png" />
 <ol class="arabic simple" start="10">
 <li>Click on <span class="guilabel">Close</span> and return to the main QGIS window. You will
 notice that a subset of points is now rendered in yellow. This is the
 result of our query and you are seeing all places from the dataset that
 have the <code class="docutils literal"><span class="pre">pop_max</span></code> attribute value greater than <code class="docutils literal"><span class="pre">1,000,000</span></code>.</li>
 </ol>
-<img alt="../_images/1031.png" class="align-center" src="../_images/1031.png" />
+<img alt="../_images/1036.png" class="align-center" src="../_images/1036.png" />
 <ol class="arabic simple" start="11">
 <li>The goal for this exercise is to find the places that are country capitals.
 The field containing this data is <cite>adm0cap</cite>. The value <code class="docutils literal"><span class="pre">1</span></code> indicates that
@@ -324,7 +320,7 @@ and click <span class="guilabel">Select</span> and then <span class="guilabel">C
 <div class="highlight-none"><div class="highlight"><pre><span></span>&quot;pop_max&quot; &gt; 1000000 and &quot;adm0cap&quot; = 1
 </pre></div>
 </div>
-<img alt="../_images/1141.png" class="align-center" src="../_images/1141.png" />
+<img alt="../_images/1156.png" class="align-center" src="../_images/1156.png" />
 <ol class="arabic simple" start="12">
 <li>Return to the main QGIS window. Now you will see a smaller subset of the
 points selected. This is the result of the second query and shows all
@@ -334,19 +330,19 @@ on this subset of data, we can make this selection persistent. Right-click
 the <code class="docutils literal"><span class="pre">ne_10m_populated_places_simple</span></code> layer and select
 <span class="guilabel">Properties</span>.</li>
 </ol>
-<img alt="../_images/1231.png" class="align-center" src="../_images/1231.png" />
+<img alt="../_images/1236.png" class="align-center" src="../_images/1236.png" />
 <ol class="arabic simple" start="13">
 <li>In the <span class="guilabel">General</span> tab, scroll down to the <span class="guilabel">Feature
 subset</span> section. Click <span class="guilabel">Query Builder</span>.</li>
 </ol>
-<img alt="../_images/1328.png" class="align-center" src="../_images/1328.png" />
+<img alt="../_images/1334.png" class="align-center" src="../_images/1334.png" />
 <ol class="arabic simple" start="14">
 <li>Enter the same expression you had entered earlier and click <span class="guilabel">OK</span>.</li>
 </ol>
 <div class="highlight-none"><div class="highlight"><pre><span></span>&quot;pop_max&quot; &gt; 1000000 and &quot;adm0cap&quot; = 1
 </pre></div>
 </div>
-<img alt="../_images/1427.png" class="align-center" src="../_images/1427.png" />
+<img alt="../_images/1433.png" class="align-center" src="../_images/1433.png" />
 <ol class="arabic simple" start="15">
 <li>Back in the main QGIS window, you will see rest of the points disappear.
 You may now perform any other analysis on this layer and only the features
@@ -355,12 +351,12 @@ still appear in yellow. This is because they are still selected. Find the
 <span class="guilabel">Deselect Features from All Layers</span> button under the
 <span class="guilabel">Attributes</span> toolbar and click on it.</li>
 </ol>
-<img alt="../_images/1525.png" class="align-center" src="../_images/1525.png" />
+<img alt="../_images/1531.png" class="align-center" src="../_images/1531.png" />
 <ol class="arabic simple" start="16">
 <li>You will see that the points are now de-selected and rendered in their
 original color.</li>
 </ol>
-<img alt="../_images/1624.png" class="align-center" src="../_images/1624.png" />
+<img alt="../_images/1629.png" class="align-center" src="../_images/1629.png" />
 </div>
 </div>
 
@@ -386,8 +382,8 @@ original color.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

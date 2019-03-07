@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Using Google Maps Engine Connector for QGIS &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
 
@@ -50,7 +44,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -61,7 +55,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -103,16 +97,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -120,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -188,18 +183,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/using_gme_connector_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'using_gme_connector_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/using_gme_connector_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'using_gme_connector_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/using_gme_connector_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'using_gme_connector_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/using_gme_connector_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'using_gme_connector_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -207,7 +203,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="using-google-maps-engine-connector-for-qgis">
@@ -250,7 +246,7 @@ of open data for San Francisco.</p>
 <li>Download the <a class="reference external" href="https://data.sfgov.org/Transportation/SFMTA-Bikeway-Network/t6vv-tjkd">SFMTA Bikeway Network</a>
 shapefile using the Export option on the portal.</li>
 </ol>
-<img alt="../_images/1133.png" class="align-center" src="../_images/1133.png" />
+<img alt="../_images/1148.png" class="align-center" src="../_images/1148.png" />
 <p>Data Source: <a class="reference internal" href="credits.html#sfmta" id="id1">[SFMTA]</a></p>
 </div>
 <div class="section" id="create-a-google-maps-engine-account">
@@ -261,7 +257,7 @@ account is a full featured Maps Engine instance with limited storage quota.
 Visit <a class="reference external" href="http://www.google.com/enterprise/mapsearth/products/mapsengine.html">Google Maps Engine homepage</a> and
 click the <span class="guilabel">Get started with a free account</span> link.</li>
 </ol>
-<img alt="../_images/278.png" class="align-center" src="../_images/278.png" />
+<img alt="../_images/2104.png" class="align-center" src="../_images/2104.png" />
 <ol class="arabic simple" start="3">
 <li>You will need to sign-in to your Google account. If you wish to use your
 work email, you can create a new Google account with your work email address
@@ -270,7 +266,7 @@ Project</span> screen. Enter a <span class="guilabel">Project Name</span> which 
 account when using Google Maps Engine. Accept the terms and click
 <span class="guilabel">Accept and create</span> button.</li>
 </ol>
-<img alt="../_images/343.png" class="align-center" src="../_images/343.png" />
+<img alt="../_images/359.png" class="align-center" src="../_images/359.png" />
 </div>
 <div class="section" id="create-a-google-developer-console-project">
 <h2>Create a Google Developer Console project<a class="headerlink" href="#create-a-google-developer-console-project" title="Permalink to this headline">¶</a></h2>
@@ -284,105 +280,105 @@ and click <span class="guilabel">Create Project</span>. Enter <code class="docut
 <span class="guilabel">PROJECT ID</span>. These names are just a suggestion - you may use any
 name and id you like.</li>
 </ol>
-<img alt="../_images/431.png" class="align-center" src="../_images/431.png" />
+<img alt="../_images/438.png" class="align-center" src="../_images/438.png" />
 <ol class="arabic simple" start="5">
 <li>Once the project is created, click the <span class="guilabel">APIs &amp; auth</span> link. Scroll
 down and find the <span class="guilabel">Google Maps Engine API</span>. Click the
 <span class="guilabel">OFF</span> button to toggle it to <span class="guilabel">ON</span>.</li>
 </ol>
-<img alt="../_images/532.png" class="align-center" src="../_images/532.png" />
+<img alt="../_images/539.png" class="align-center" src="../_images/539.png" />
 <ol class="arabic simple" start="6">
 <li>Next, click on the <span class="guilabel">Credentials</span> link. Click <span class="guilabel">CREATE NEW
 CLIEND ID</span> under the <span class="guilabel">OAuth</span> section.</li>
 </ol>
-<img alt="../_images/630.png" class="align-center" src="../_images/630.png" />
+<img alt="../_images/636.png" class="align-center" src="../_images/636.png" />
 <ol class="arabic simple" start="7">
 <li>In the <span class="guilabel">Create Client ID</span> dialog, select <span class="guilabel">Installed
 Application</span> as the <span class="guilabel">APPLICATION TYPE</span> and <span class="guilabel">Other</span> as
 the <span class="guilabel">INSTALLED APPLICATION TYPE</span>. Click <span class="guilabel">Create Client
 ID.</span></li>
 </ol>
-<img alt="../_images/729.png" class="align-center" src="../_images/729.png" />
+<img alt="../_images/736.png" class="align-center" src="../_images/736.png" />
 <ol class="arabic simple" start="8">
 <li>Once the client id is created, you will see a new section called
 <span class="guilabel">Client ID for native application</span>. Note the <span class="guilabel">Client ID</span>
 and <span class="guilabel">Client secret</span>. These are the credentials you will need to use
 in QGIS.</li>
 </ol>
-<img alt="../_images/828.png" class="align-center" src="../_images/828.png" />
+<img alt="../_images/833.png" class="align-center" src="../_images/833.png" />
 <ol class="arabic simple" start="9">
 <li>Back in QGIS, visit <span class="menuselection">Plugins ‣ Manage and Install
-Plugins...</span>. Find the <code class="docutils literal"><span class="pre">Google</span> <span class="pre">Maps</span> <span class="pre">Engine</span> <span class="pre">Connector</span></code> plugin and
+Plugins…</span>. Find the <code class="docutils literal"><span class="pre">Google</span> <span class="pre">Maps</span> <span class="pre">Engine</span> <span class="pre">Connector</span></code> plugin and
 click <span class="guilabel">Install plugin</span>.</li>
 </ol>
-<img alt="../_images/926.png" class="align-center" src="../_images/926.png" />
+<img alt="../_images/933.png" class="align-center" src="../_images/933.png" />
 <ol class="arabic simple" start="10">
 <li>Once the plugin is installed, you will see a new toolbar in QGIS. This
 toolbar contains various tools to work with Google Maps Engine. Click the
 <span class="guilabel">More</span> button.</li>
 </ol>
-<img alt="../_images/1027.png" class="align-center" src="../_images/1027.png" />
+<img alt="../_images/1032.png" class="align-center" src="../_images/1032.png" />
 <ol class="arabic simple" start="11">
 <li>In the <span class="guilabel">Advanced Settings</span> dialog, enter the <span class="guilabel">Client
 ID</span> and <span class="guilabel">Client Secret</span> you obtained from Google Developer
 Console. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1134.png" class="align-center" src="../_images/1134.png" />
+<img alt="../_images/1149.png" class="align-center" src="../_images/1149.png" />
 <ol class="arabic simple" start="12">
 <li>As you entered new API credentials, you will be prompted to log-in and
 authorize the plugin to use these. Sign-in to your Google account.</li>
 </ol>
-<img alt="../_images/1228.png" class="align-center" src="../_images/1228.png" />
+<img alt="../_images/1233.png" class="align-center" src="../_images/1233.png" />
 <ol class="arabic simple" start="13">
 <li>Click <span class="guilabel">Accept</span> in the next screen.</li>
 </ol>
-<img alt="../_images/1325.png" class="align-center" src="../_images/1325.png" />
+<img alt="../_images/1331.png" class="align-center" src="../_images/1331.png" />
 <ol class="arabic simple" start="14">
 <li>If all went well, you will see a message indicating you have successfully
 logged in.</li>
 </ol>
-<img alt="../_images/1424.png" class="align-center" src="../_images/1424.png" />
+<img alt="../_images/1430.png" class="align-center" src="../_images/1430.png" />
 <ol class="arabic simple" start="15">
 <li>Now lets add the SFMTA Bikeway Network layer that was downloaded earlier.
 Go to <span class="menuselection">Layer ‣ Add Vector Layer</span>. Browse to the downloaded
 <code class="docutils literal"><span class="pre">SFMTA_Bikeway_Network.zip</span></code> file and click <span class="guilabel">Open</span>. Select the
 <code class="docutils literal"><span class="pre">SFMTA_Bikeway_Network.shp</span></code> layer and click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1523.png" class="align-center" src="../_images/1523.png" />
+<img alt="../_images/1529.png" class="align-center" src="../_images/1529.png" />
 <ol class="arabic simple" start="16">
 <li>One of the features of the <code class="docutils literal"><span class="pre">Google</span> <span class="pre">Maps</span> <span class="pre">Engine</span> <span class="pre">Connector</span></code> plugin
 is the ability to upload datasets directly from QGIS. Select the
 <code class="docutils literal"><span class="pre">SFMTA_Bikeway_Network</span></code> layer and click <span class="guilabel">Upload</span> icon in the
 toolbar.</li>
 </ol>
-<img alt="../_images/1622.png" class="align-center" src="../_images/1622.png" />
+<img alt="../_images/1627.png" class="align-center" src="../_images/1627.png" />
 <ol class="arabic simple" start="17">
 <li>In the <span class="guilabel">Upload a dataset to Google Maps Engine</span> dialog, enter a
 <span class="guilabel">Description</span> of the dataset. You may leave all other settings to
 default values. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1721.png" class="align-center" src="../_images/1721.png" />
+<img alt="../_images/1725.png" class="align-center" src="../_images/1725.png" />
 <ol class="arabic simple" start="18">
 <li>The plugin will use the Google Maps Engine API to upload the layer and
 create a Google Maps Engine <em>Data Source</em>. Once the upload is finished, a
 new browser tab will open and take you to the newly created data source.</li>
 </ol>
-<img alt="../_images/1821.png" class="align-center" src="../_images/1821.png" />
+<img alt="../_images/1826.png" class="align-center" src="../_images/1826.png" />
 <ol class="arabic simple" start="19">
 <li>The next few steps will demonstrate the process of creating a map using
 Google Maps Engine. Once the map is created, we will access that map using
 the plugin in QGIS. Once your vector table has finished processing, click
 <span class="guilabel">Create styled layer</span>.</li>
 </ol>
-<img alt="../_images/1919.png" class="align-center" src="../_images/1919.png" />
+<img alt="../_images/1924.png" class="align-center" src="../_images/1924.png" />
 <ol class="arabic simple" start="20">
 <li>Name the layer as <code class="docutils literal"><span class="pre">SFMTA_Bikeway_Network</span></code> and click <span class="guilabel">Create</span>.</li>
 </ol>
-<img alt="../_images/2016.png" class="align-center" src="../_images/2016.png" />
+<img alt="../_images/2020.png" class="align-center" src="../_images/2020.png" />
 <ol class="arabic simple" start="21">
 <li>Click <span class="guilabel">Add rule</span> to add a custom style for the layer.</li>
 </ol>
-<img alt="../_images/2120.png" class="align-center" src="../_images/2120.png" />
+<img alt="../_images/2123.png" class="align-center" src="../_images/2123.png" />
 <ol class="arabic simple" start="22">
 <li>Choose the color and label options under the <span class="guilabel">Line style</span>
 section. Click <span class="guilabel">Apply</span> to view the style settings applied to your
@@ -391,7 +387,7 @@ corner to allow you to see your layer without the underlying basemap. Once
 you are satisfied with the styling, switch to the <span class="guilabel">Info windows</span>
 tab.</li>
 </ol>
-<img alt="../_images/2219.png" class="align-center" src="../_images/2219.png" />
+<img alt="../_images/2221.png" class="align-center" src="../_images/2221.png" />
 <ol class="arabic simple" start="23">
 <li>Here you can specify what content is shown when a feature is clicked on the
 map. You can access the feature attributes using the markup
@@ -406,68 +402,68 @@ click <span class="guilabel">Exit</span>.</li>
 &lt;/div&gt;
 </pre></div>
 </div>
-<img alt="../_images/2315.png" class="align-center" src="../_images/2315.png" />
+<img alt="../_images/2319.png" class="align-center" src="../_images/2319.png" />
 <ol class="arabic simple" start="24">
 <li>Click <span class="guilabel">Add to map</span> to create a map with this layer.</li>
 </ol>
-<img alt="../_images/2413.png" class="align-center" src="../_images/2413.png" />
+<img alt="../_images/2417.png" class="align-center" src="../_images/2417.png" />
 <ol class="arabic simple" start="25">
 <li>Select <span class="guilabel">Create new</span> and enter <code class="docutils literal"><span class="pre">SFMTA</span> <span class="pre">Bikeway</span> <span class="pre">Network</span></code> as the
 <span class="guilabel">Map title</span>.</li>
 </ol>
-<img alt="../_images/2512.png" class="align-center" src="../_images/2512.png" />
+<img alt="../_images/2516.png" class="align-center" src="../_images/2516.png" />
 <ol class="arabic simple" start="26">
 <li>You will see a new map containing the styled layer. You have an option of
 choosing different basemaps for the map. Since this is a bike path map, you
 can select the <span class="guilabel">Terrain</span> style basemap.</li>
 </ol>
-<img alt="../_images/2611.png" class="align-center" src="../_images/2611.png" />
+<img alt="../_images/2614.png" class="align-center" src="../_images/2614.png" />
 <ol class="arabic simple" start="27">
 <li>Click <span class="guilabel">Publish map</span>.</li>
 </ol>
-<img alt="../_images/279.png" class="align-center" src="../_images/279.png" />
+<img alt="../_images/2713.png" class="align-center" src="../_images/2713.png" />
 <ol class="arabic simple" start="28">
 <li>Once the map is published, click on the <span class="guilabel">Access links</span> icon.</li>
 </ol>
-<img alt="../_images/287.png" class="align-center" src="../_images/287.png" />
+<img alt="../_images/2812.png" class="align-center" src="../_images/2812.png" />
 <ol class="arabic simple" start="29">
 <li>You will see various options to view, embed and access the newly created
 map. Since we will be accessing the map using the QGIS plugin, you do not
 need any links from here.</li>
 </ol>
-<img alt="../_images/296.png" class="align-center" src="../_images/296.png" />
+<img alt="../_images/2911.png" class="align-center" src="../_images/2911.png" />
 <ol class="arabic simple" start="30">
 <li>Back in QGIS, click the <span class="guilabel">Search</span> icon in the toolbar.</li>
 </ol>
-<img alt="../_images/304.png" class="align-center" src="../_images/304.png" />
+<img alt="../_images/306.png" class="align-center" src="../_images/306.png" />
 <ol class="arabic simple" start="31">
 <li>In the <span class="guilabel">Maps Engine Maps</span> dialog, you will see your map listed.
 Click on the row to select it. Click <span class="guilabel">Add Selected to Map</span>.</li>
 </ol>
-<img alt="../_images/3112.png" class="align-center" src="../_images/3112.png" />
+<img alt="../_images/3113.png" class="align-center" src="../_images/3113.png" />
 <ol class="arabic simple" start="32">
 <li>The plugin will query Google Maps Engine and load a vector layer containing
 the bounding box of the map. If you do not see any data on the canvas,
 right-click on the <code class="docutils literal"><span class="pre">SFMTA_Bikeway_Network</span></code> layer and select
 <span class="guilabel">Zoom to Layer Extent</span>.</li>
 </ol>
-<img alt="../_images/3210.png" class="align-center" src="../_images/3210.png" />
+<img alt="../_images/3212.png" class="align-center" src="../_images/3212.png" />
 <ol class="arabic simple" start="33">
 <li>Click on the bounding box layer to select it. You will notice that the
 <span class="guilabel">View</span> tools are now enabled. Click on the <span class="guilabel">WMS
 Overlay</span> icon in the toolbar.</li>
 </ol>
-<img alt="../_images/3310.png" class="align-center" src="../_images/3310.png" />
+<img alt="../_images/3311.png" class="align-center" src="../_images/3311.png" />
 <ol class="arabic simple" start="34">
 <li>In the <span class="guilabel">Select A Layer to Add</span> dialog, choose the
 <code class="docutils literal"><span class="pre">SFMTA_Bikeway_Network</span></code> layer and click <span class="guilabel">Add Selected to Map</span>.</li>
 </ol>
-<img alt="../_images/344.png" class="align-center" src="../_images/344.png" />
+<img alt="../_images/3410.png" class="align-center" src="../_images/3410.png" />
 <ol class="arabic simple" start="35">
 <li>A new WMS layer will be added to QGIS and you will see your styled layer
 from Google Maps Engine displayed in QGIS.</li>
 </ol>
-<img alt="../_images/353.png" class="align-center" src="../_images/353.png" />
+<img alt="../_images/3510.png" class="align-center" src="../_images/3510.png" />
 <p>Hope this tutorial gives an overview of the capabilities of the plugin. You can
 visit the <a class="reference external" href="https://github.com/googlemaps/mapsengine-qgis-connector">plugin homepage</a>
 to view the source code and learn more about the plugin.</p>
@@ -501,8 +497,8 @@ width="100%" height="600px"></iframe>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

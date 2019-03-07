@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Getting Started With Python Programming &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Building a Python Plugin" href="building_a_python_plugin.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/getting_started_with_pyqgis_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'getting_started_with_pyqgis_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/getting_started_with_pyqgis_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'getting_started_with_pyqgis_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/getting_started_with_pyqgis_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'getting_started_with_pyqgis_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/getting_started_with_pyqgis_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'getting_started_with_pyqgis_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="getting-started-with-python-programming">
@@ -249,25 +245,25 @@ dataset from Natural Earth.</p>
 downloaded <code class="docutils literal"><span class="pre">ne_10m_airports.zip</span></code> file and click <span class="guilabel">Open</span>. Select
 the <code class="docutils literal"><span class="pre">ne_10m_airports.shp</span></code> layer and click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/160.png" class="align-center" src="../_images/160.png" />
+<img alt="../_images/1104.png" class="align-center" src="../_images/1104.png" />
 <ol class="arabic simple" start="2">
 <li>You will see the <code class="docutils literal"><span class="pre">ne_10m_airports</span></code> layer loaded in QGIS.</li>
 </ol>
-<img alt="../_images/228.png" class="align-center" src="../_images/228.png" />
+<img alt="../_images/256.png" class="align-center" src="../_images/256.png" />
 <ol class="arabic simple" start="3">
 <li>Select the <span class="guilabel">Identify</span> tool and click on any of the points to
 examine the available attributes. You will see that the name of the airport
-and it&#8217;s 3 digit code are contained in the attributes <code class="docutils literal"><span class="pre">name</span></code> and
+and it’s 3 digit code are contained in the attributes <code class="docutils literal"><span class="pre">name</span></code> and
 <code class="docutils literal"><span class="pre">iata_code</span></code> respectively.</li>
 </ol>
-<img alt="../_images/319.png" class="align-center" src="../_images/319.png" />
+<img alt="../_images/336.png" class="align-center" src="../_images/336.png" />
 <ol class="arabic simple" start="4">
 <li>QGIS provides a built-in console where you can type python commands and get
 the result. This console is a great way to learn scripting and also to do
 quick data processing. Open the <span class="guilabel">Python Console</span> by going to
 <span class="menuselection">Plugins ‣ Python Console</span>.</li>
 </ol>
-<img alt="../_images/414.png" class="align-center" src="../_images/414.png" />
+<img alt="../_images/421.png" class="align-center" src="../_images/421.png" />
 <ol class="arabic simple" start="5">
 <li>You will see a new panel open at the bottom of QGIS canvas. You will see a
 prompt like <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code> at the bottom where you can type commands. For
@@ -279,7 +275,7 @@ loaded layer and stores it in the <code class="docutils literal"><span class="pr
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">activeLayer</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../_images/514.png" class="align-center" src="../_images/514.png" />
+<img alt="../_images/521.png" class="align-center" src="../_images/521.png" />
 <ol class="arabic simple" start="6">
 <li>There is a handy function called <code class="docutils literal"><span class="pre">dir()</span></code> in python that shows you all
 available methods for any object. This is useful when you are not sure
@@ -289,7 +285,7 @@ see what operations we can do on the <code class="docutils literal"><span class=
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../_images/613.png" class="align-center" src="../_images/613.png" />
+<img alt="../_images/619.png" class="align-center" src="../_images/619.png" />
 <ol class="arabic simple" start="7">
 <li>You will see a long list of available functions. For now, we will use a
 function called <code class="docutils literal"><span class="pre">getFeatures()</span></code> which will gets you the reference to all
@@ -302,7 +298,7 @@ second line.</li>
   <span class="k">print</span> <span class="n">f</span>
 </pre></div>
 </div>
-<img alt="../_images/713.png" class="align-center" src="../_images/713.png" />
+<img alt="../_images/720.png" class="align-center" src="../_images/720.png" />
 <ol class="arabic simple" start="8">
 <li>As you will see in the output, each line contains a reference to a feature
 within the layer. The reference to the feature is stored in the <code class="docutils literal"><span class="pre">f</span></code>
@@ -314,10 +310,10 @@ airport feature.</li>
   <span class="k">print</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;iata_code&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<img alt="../_images/813.png" class="align-center" src="../_images/813.png" />
+<img alt="../_images/818.png" class="align-center" src="../_images/818.png" />
 <ol class="arabic simple" start="9">
 <li>So now you know how to programatically access the attribute of each feature
-in a layer. Now, let&#8217;s see how we can access the coordinates of the feature.
+in a layer. Now, let’s see how we can access the coordinates of the feature.
 The coordinates of a vector feature can be accessed by calling the
 <code class="docutils literal"><span class="pre">geometry()</span></code> function. This function returns a geometry object that we can
 store in the variable <code class="docutils literal"><span class="pre">geom</span></code>. You can run <code class="docutils literal"><span class="pre">asPoint()</span></code> function on the
@@ -331,7 +327,7 @@ the x and y coordinates of each feature.</li>
   <span class="k">print</span> <span class="n">geom</span><span class="o">.</span><span class="n">asPoint</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../_images/912.png" class="align-center" src="../_images/912.png" />
+<img alt="../_images/919.png" class="align-center" src="../_images/919.png" />
 <ol class="arabic simple" start="10">
 <li>What if we wanted to get only the <code class="docutils literal"><span class="pre">x</span></code> cordinate of the feature? You can
 call the <code class="docutils literal"><span class="pre">x()</span></code> function on the point object and get its x coordinate.</li>
@@ -341,7 +337,7 @@ call the <code class="docutils literal"><span class="pre">x()</span></code> func
   <span class="k">print</span> <span class="n">geom</span><span class="o">.</span><span class="n">asPoint</span><span class="p">()</span><span class="o">.</span><span class="n">x</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../_images/1012.png" class="align-center" src="../_images/1012.png" />
+<img alt="../_images/1017.png" class="align-center" src="../_images/1017.png" />
 <ol class="arabic simple" start="11">
 <li>Now we have all the pieces that we can stitch together to generate our
 desired output. Type the following code to print the name, iata_code,
@@ -354,7 +350,7 @@ latitude and longitude of each of the airport features. The <code class="docutil
          <span class="n">geom</span><span class="o">.</span><span class="n">asPoint</span><span class="p">()</span><span class="o">.</span><span class="n">y</span><span class="p">(),</span> <span class="n">geom</span><span class="o">.</span><span class="n">asPoint</span><span class="p">()</span><span class="o">.</span><span class="n">x</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="../_images/1115.png" class="align-center" src="../_images/1115.png" />
+<img alt="../_images/1121.png" class="align-center" src="../_images/1121.png" />
 <ol class="arabic simple" start="12">
 <li>You can see the output printed on the console. A more useful way to store
 the output would be in a file. You can type the following code to create a
@@ -362,7 +358,7 @@ file and write the output there. Replace the file path with a path on your
 own system. Note that we add <code class="docutils literal"><span class="pre">\n</span></code> at the end of our line formatting. This
 is to add a newline after we add the data for each feature. You should also
 note the <code class="docutils literal"><span class="pre">unicode_line</span> <span class="pre">=</span> <span class="pre">line.encode('utf-8')</span></code> line. Since our layer
-contains some features with unicode characters, we can&#8217;t simply write it to
+contains some features with unicode characters, we can’t simply write it to
 a text file. We encode the text using the UTF-8 encoding and then write to
 the text file.</li>
 </ol>
@@ -376,13 +372,13 @@ the text file.</li>
 <span class="n">output_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../_images/1214.png" class="align-center" src="../_images/1214.png" />
+<img alt="../_images/1219.png" class="align-center" src="../_images/1219.png" />
 <ol class="arabic simple" start="13">
 <li>You can go to the output file location you specified and open the text file.
 You will see the data from the airports shapefile that we extracted using
 python scripting.</li>
 </ol>
-<img alt="../_images/1312.png" class="align-center" src="../_images/1312.png" />
+<img alt="../_images/1318.png" class="align-center" src="../_images/1318.png" />
 </div>
 </div>
 
@@ -408,8 +404,8 @@ python scripting.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

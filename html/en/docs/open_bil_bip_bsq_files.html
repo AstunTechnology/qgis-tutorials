@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Open BIL, BIP or BSQ files in QGIS &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Getting Started With Python Programming" href="getting_started_with_pyqgis.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/open_bil_bip_bsq_files_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'open_bil_bip_bsq_files_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/open_bil_bip_bsq_files_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'open_bil_bip_bsq_files_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/open_bil_bip_bsq_files_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'open_bil_bip_bsq_files_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/open_bil_bip_bsq_files_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'open_bil_bip_bsq_files_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="open-bil-bip-or-bsq-files-in-qgis">
@@ -259,12 +255,12 @@ below:</p>
 will see that you only have a .bsq file named
 <code class="docutils literal"><span class="pre">gl-latlong-1deg-landcover.bsq</span></code>.  There is no hdr file.</li>
 </ol>
-<img alt="../_images/1101.png" class="align-center" src="../_images/1101.png" />
+<img alt="../_images/1126.png" class="align-center" src="../_images/1126.png" />
 <ol class="arabic simple" start="2">
 <li>Note that if you try to open the <code class="docutils literal"><span class="pre">gl-latlong-1deg-landcover.bsq</span></code> file in
 QGIS as it is, you will get an error message.</li>
 </ol>
-<img alt="../_images/240.png" class="align-center" src="../_images/240.png" />
+<img alt="../_images/270.png" class="align-center" src="../_images/270.png" />
 <ol class="arabic simple" start="3">
 <li>To overcome this error, we will create a header file with <code class="docutils literal"><span class="pre">.hdr</span></code> extension.
 The header file contains information about the dataset and how it is organized.
@@ -274,7 +270,7 @@ clues. Some of the information can be guessed if you do not know it. In case
 of this dataset, the data download page links to the <a class="reference external" href="ftp://ftp.glcf.umd.edu/glcf/Global_Land_Cover/Global/1deg/gl-latlong-1deg-landcover.glcf">metadata</a>.
 Download the metadata and open it.</li>
 </ol>
-<img alt="../_images/327.png" class="align-center" src="../_images/327.png" />
+<img alt="../_images/345.png" class="align-center" src="../_images/345.png" />
 <ol class="arabic simple" start="4">
 <li>The .hdr file needs to be a plain text file in the following format. Some of
 these parameters are given to us and some needs to be worked out. <a class="reference external" href="http://www.gdal.org/frmt_various.html">Learn
@@ -306,20 +302,20 @@ equal to 8 and pixeltype will be <strong>byte_unsigned</strong>. We do not have
 information about the byteorder, so leave it as msbfirst. You may download
 the correctly formatted HDR file from <a class="reference external" href="../../downloads/gl-latlong-1deg-landcover.hdr">here</a>.</li>
 </ol>
-<img alt="../_images/520.png" class="align-center" src="../_images/520.png" />
+<img alt="../_images/527.png" class="align-center" src="../_images/527.png" />
 <ol class="arabic simple" start="6">
 <li>Now that you have the header file, put it in the same directory as
 <code class="docutils literal"><span class="pre">gl-latlong-1deg-landcover.bsq</span></code>. Then in QGIS, go to
 <span class="menuselection">Layer ‣ Add Raster Layer</span>. Select
 <code class="docutils literal"><span class="pre">gl-latlong-1deg-landcover.bsq</span></code> as your input and click <span class="guilabel">Open</span>.</li>
 </ol>
-<img alt="../_images/619.png" class="align-center" src="../_images/619.png" />
+<img alt="../_images/625.png" class="align-center" src="../_images/625.png" />
 <ol class="arabic simple" start="7">
 <li>In the next screen, you may be prompted to choose a CRS. Since the data is
 in Lat/Long, choose <strong>WGS84 EPSG:4326</strong> as your CRS. Now you will see the
 dataset loaded in QGIS.</li>
 </ol>
-<img alt="../_images/718.png" class="align-center" src="../_images/718.png" />
+<img alt="../_images/725.png" class="align-center" src="../_images/725.png" />
 </div>
 </div>
 
@@ -345,8 +341,8 @@ dataset loaded in QGIS.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

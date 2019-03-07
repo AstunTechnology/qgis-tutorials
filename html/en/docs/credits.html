@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Data Credits &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,9 +21,10 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Batch Processing using Processing Framework (QGIS2)" href="batch_processing.html" />
     <link rel="prev" title="QGIS Learning Resources" href="learning_resources.html" />
 
 <meta charset='utf-8'>
@@ -51,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -62,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -104,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -121,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -131,6 +127,10 @@
                 
   <li>
     <a href="learning_resources.html" title="Previous Chapter: QGIS Learning Resources"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; QGIS Learning...</span>
+    </a>
+  </li>
+  <li>
+    <a href="batch_processing.html" title="Next Chapter: Batch Processing using Processing Framework (QGIS2)"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Batch Process... &raquo;</span>
     </a>
   </li>
               
@@ -197,7 +197,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="data-credits">
@@ -211,12 +211,14 @@
 <li><a class="reference internal" href="points_in_polygon.html"><span class="doc">Points in Polygon Analysis</span></a></li>
 <li><a class="reference internal" href="performing_spatial_queries.html"><span class="doc">Performing Spatial Queries</span></a></li>
 <li><a class="reference internal" href="nearest_neighbor_analysis.html"><span class="doc">Nearest Neighbor Analysis</span></a></li>
-<li><a class="reference internal" href="batch_processing.html"><span class="doc">Batch Processing using Processing Framework</span></a></li>
+<li><a class="reference internal" href="batch_processing.html"><span class="doc">Batch Processing using Processing Framework (QGIS2)</span></a></li>
+<li><a class="reference internal" href="3/batch_processing.html"><span class="doc">Batch Processing using Processing Framework (QGIS3)</span></a></li>
 <li><a class="reference internal" href="getting_started_with_pyqgis.html"><span class="doc">Getting Started With Python Programming</span></a></li>
 <li><a class="reference internal" href="custom_python_functions.html"><span class="doc">Using Custom Python Expression Functions</span></a></li>
 <li><a class="reference internal" href="processing_python_scripts.html"><span class="doc">Writing Python Scripts for Processing Framework</span></a></li>
 <li><a class="reference internal" href="find_neighbor_polygons.html"><span class="doc">Find Neighbor Polygons in a Layer</span></a></li>
 <li><a class="reference internal" href="leaflet_maps_with_qgis2leaf.html"><span class="doc">Leaflet Web Maps with qgis2leaf</span></a></li>
+<li><a class="reference internal" href="3/processing_graphical_modeler.html"><span class="doc">Automating Complex Workflows using Processing Modeler (QGIS3)</span></a></li>
 </ul>
 <table class="docutils citation" frame="void" id="naturalearth" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
@@ -392,7 +394,17 @@ and the Pacific Northwest National Laboratory, College Park, Maryland, USA.</td>
 </tbody>
 </table>
 <ul class="simple">
+<li><a class="reference internal" href="3/processing_graphical_modeler.html"><span class="doc">Automating Complex Workflows using Processing Modeler (QGIS3)</span></a></li>
+</ul>
+<table class="docutils citation" frame="void" id="nga-msi" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[NGA_MSI]</td><td><a class="reference external" href="https://msi.nga.mil/NGAPortal/MSI.porta">Maritine Safety Information portal</a> ,  National Geospatial-Intelligence Agency</td></tr>
+</tbody>
+</table>
+<ul class="simple">
 <li><a class="reference internal" href="automating_map_creation.html"><span class="doc">Automating Map Creation with Print Composer Atlas</span></a></li>
+<li><a class="reference internal" href="3/automating_map_creation.html"><span class="doc">Automating Map Creation with Print Layout Atlas (QGIS3)</span></a></li>
 </ul>
 <table class="docutils citation" frame="void" id="hawaii" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
@@ -455,8 +467,8 @@ Published by: Municipal Transportation Agency</td></tr>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

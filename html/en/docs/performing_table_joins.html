@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Performing Table Joins &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Performing Spatial Joins" href="performing_spatial_joins.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/performing_table_joins_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'performing_table_joins_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/performing_table_joins_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'performing_table_joins_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/performing_table_joins_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'performing_table_joins_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/performing_table_joins_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'performing_table_joins_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="performing-table-joins">
@@ -258,32 +254,32 @@ links below:</p>
 <li>We will first load the census tracts shapefile. Go to <span class="menuselection">Layer
 ‣ Add Vector Layer</span>.</li>
 </ol>
-<img alt="../_images/1104.png" class="align-center" src="../_images/1104.png" />
+<img alt="../_images/1131.png" class="align-center" src="../_images/1131.png" />
 <ol class="arabic simple" start="2">
 <li>Browse to the downloaded zip file <code class="docutils literal"><span class="pre">tl_2013_06_tract.zip</span></code> and select it. QGIS
 can open zip files directly so no need to uncompress it first.</li>
 </ol>
-<img alt="../_images/250.png" class="align-center" src="../_images/250.png" />
+<img alt="../_images/288.png" class="align-center" src="../_images/288.png" />
 <ol class="arabic simple" start="3">
 <li>Select the <code class="docutils literal"><span class="pre">tl_2013_06_tract.shp</span></code> layer and click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/330.png" class="align-center" src="../_images/330.png" />
+<img alt="../_images/348.png" class="align-center" src="../_images/348.png" />
 <ol class="arabic simple" start="4">
 <li>You will see the census tracts loaded into QGIS.</li>
 </ol>
-<img alt="../_images/422.png" class="align-center" src="../_images/422.png" />
+<img alt="../_images/429.png" class="align-center" src="../_images/429.png" />
 <ol class="arabic simple" start="5">
 <li>Right-click on the layer and select <span class="guilabel">Open Attribute Table</span>.</li>
 </ol>
-<img alt="../_images/523.png" class="align-center" src="../_images/523.png" />
+<img alt="../_images/530.png" class="align-center" src="../_images/530.png" />
 <ol class="arabic simple" start="6">
 <li>Examine the attributes of the tracts shapefile. To join a table with this shapefile, we need a unique and common attribute for each feature. In this case, the <strong>GEOID</strong> field is a unique identifier for each tract and can be used to <cite>link</cite> this shapefile with any other table containing the same ID.</li>
 </ol>
-<img alt="../_images/622.png" class="align-center" src="../_images/622.png" />
+<img alt="../_images/628.png" class="align-center" src="../_images/628.png" />
 <ol class="arabic simple" start="7">
 <li>Open the CSV file <code class="docutils literal"><span class="pre">ca_tracts_pop.csv</span></code> in a text editor. You will notice that each row of the file contains information about a tract along with the unique identifier we saw in the previous step. Note that this field is called <strong>GEO.id2</strong> in the CSV. You will also note that the <strong>D001</strong> column has population value for each of the census tract.</li>
 </ol>
-<img alt="../_images/721.png" class="align-center" src="../_images/721.png" />
+<img alt="../_images/728.png" class="align-center" src="../_images/728.png" />
 <ol class="arabic simple" start="8">
 <li>We could import this csv file without any further action and it would be
 imported. But, the default type of each column would be a <em>String</em> (text).
@@ -295,12 +291,12 @@ file will have only 1 row specifying data types for each column. Save this
 file as <code class="docutils literal"><span class="pre">ca_tracts_pop.csvt</span></code> in the same directory as the original <cite>.csv</cite>
 file. You can also <a class="reference external" href="../../downloads/ca_tracts_pop.csvt">download the csvt file from here.</a></li>
 </ol>
-<img alt="../_images/820.png" class="align-center" src="../_images/820.png" />
+<img alt="../_images/825.png" class="align-center" src="../_images/825.png" />
 <ol class="arabic simple" start="9">
 <li>Now we are ready to import the CSV file to QGIS. Go to <span class="menuselection">Layer
 ‣ Add Delimited Text Layer</span>.</li>
 </ol>
-<img alt="../_images/918.png" class="align-center" src="../_images/918.png" />
+<img alt="../_images/925.png" class="align-center" src="../_images/925.png" />
 <ol class="arabic simple" start="10">
 <li>Browse to the folder containing the CSV file and select it. Make sure you
 have selected <span class="guilabel">File format</span> as <span class="guilabel">CSV (comma separated
@@ -308,21 +304,21 @@ values)</span>. Since we are importing this as a table, we must specify that our
 file contains no geometry. Select the <span class="guilabel">No geometry (attribute
 only table)</span> option. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1019.png" class="align-center" src="../_images/1019.png" />
+<img alt="../_images/1024.png" class="align-center" src="../_images/1024.png" />
 <ol class="arabic simple" start="11">
 <li>The CSV will now be imported as a table to QGIS.</li>
 </ol>
-<img alt="../_images/1122.png" class="align-center" src="../_images/1122.png" />
+<img alt="../_images/1132.png" class="align-center" src="../_images/1132.png" />
 <ol class="arabic simple" start="12">
 <li>Select the <code class="docutils literal"><span class="pre">tl_2013_06_tract</span></code> layer. Right-click on it and select
 <span class="guilabel">Properties</span>.</li>
 </ol>
-<img alt="../_images/1221.png" class="align-center" src="../_images/1221.png" />
+<img alt="../_images/1226.png" class="align-center" src="../_images/1226.png" />
 <ol class="arabic simple" start="13">
 <li>In the <span class="guilabel">Layer Properties</span> dialog, select the <span class="guilabel">Joins</span>
 tab. Click on the <cite>+</cite> button at the bottom to create a new table join.</li>
 </ol>
-<img alt="../_images/1318.png" class="align-center" src="../_images/1318.png" />
+<img alt="../_images/1324.png" class="align-center" src="../_images/1324.png" />
 <ol class="arabic simple" start="14">
 <li>In the <span class="guilabel">Add vector join</span> dialog, select <code class="docutils literal"><span class="pre">ca_tracts_pop</span></code> as the
 <span class="guilabel">Join layer</span>. Next we have to select the field with unique ids in
@@ -330,25 +326,25 @@ both the shapefile and the CSV. Select <cite>GEO.id2</cite> and <cite>GEOID</cit
 <span class="guilabel">Join field</span> and <span class="guilabel">Target field</span> respectively. Click
 <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1417.png" class="align-center" src="../_images/1417.png" />
+<img alt="../_images/1423.png" class="align-center" src="../_images/1423.png" />
 <ol class="arabic simple" start="15">
 <li>Close the <span class="guilabel">Layer Properties</span> dialog and return to the main QGIS
 window. At this point, the fields from the CSV file are joined with the
 shapefile. Right-click on the <code class="docutils literal"><span class="pre">tl_2013_06_tract</span></code> layer and select
 <span class="guilabel">Open Attribute Table</span>.</li>
 </ol>
-<img alt="../_images/1516.png" class="align-center" src="../_images/1516.png" />
+<img alt="../_images/1522.png" class="align-center" src="../_images/1522.png" />
 <ol class="arabic simple" start="16">
 <li>You can now see a new set of fields, including
 <span class="guilabel">ca_tracts_pop_D001</span> field added to each feature. Now you have
 access to the population value of each tract from the CSV file. Close the
 attribute table and return to the main QGIS window.</li>
 </ol>
-<img alt="../_images/1615.png" class="align-center" src="../_images/1615.png" />
+<img alt="../_images/1620.png" class="align-center" src="../_images/1620.png" />
 <ol class="arabic simple" start="17">
 <li>Right-click the <code class="docutils literal"><span class="pre">tl_2013_06_tract</span></code> layer and select <span class="guilabel">Properties</span>.</li>
 </ol>
-<img alt="../_images/1714.png" class="align-center" src="../_images/1714.png" />
+<img alt="../_images/1718.png" class="align-center" src="../_images/1718.png" />
 <ol class="arabic simple" start="18">
 <li>Select the <span class="guilabel">Style</span> tab. Select the <span class="guilabel">Graduated</span> from the
 drop-down menu. As we are looking to create a population map, we want to
@@ -359,18 +355,18 @@ drop-down. In the <span class="guilabel">Mode</span>, select <span class="guilab
 Count)</span>. Next click <span class="guilabel">Classify</span>. You will see a different color
 assigned to certain population ranges. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1814.png" class="align-center" src="../_images/1814.png" />
+<img alt="../_images/1819.png" class="align-center" src="../_images/1819.png" />
 <ol class="arabic simple" start="19">
 <li>You will now see a nice visualization of the census tracts as styled using
 population values. Use the <span class="guilabel">Zoom in</span> tool to select a smaller
 area from the layer.</li>
 </ol>
-<img alt="../_images/1912.png" class="align-center" src="../_images/1912.png" />
+<img alt="../_images/1917.png" class="align-center" src="../_images/1917.png" />
 <ol class="arabic simple" start="20">
 <li>You have a detailed and accurate population map of California. You can use
 the same technique to create maps based on variety of census data.</li>
 </ol>
-<img alt="../_images/209.png" class="align-center" src="../_images/209.png" />
+<img alt="../_images/2013.png" class="align-center" src="../_images/2013.png" />
 </div>
 </div>
 
@@ -396,8 +392,8 @@ the same technique to create maps based on variety of census data.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

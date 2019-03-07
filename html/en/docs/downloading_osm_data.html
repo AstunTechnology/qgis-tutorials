@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Searching and Downloading OpenStreetMap Data &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Basic Vector Styling" href="basic_vector_styling.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/downloading_osm_data_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'downloading_osm_data_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/downloading_osm_data_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'downloading_osm_data_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/downloading_osm_data_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'downloading_osm_data_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/downloading_osm_data_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'downloading_osm_data_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="searching-and-downloading-openstreetmap-data">
@@ -239,19 +235,19 @@ extract all pub locations as a shapefile.</p>
 <strong>OSM Place Search</strong> and <strong>OpenLayers</strong> plugins. See <a class="reference internal" href="using_plugins.html"><span class="doc">Using Plugins</span></a> for
 instructions on downloading plugins.</li>
 </ol>
-<img alt="../_images/139.png" class="align-center" src="../_images/139.png" />
+<img alt="../_images/1101.png" class="align-center" src="../_images/1101.png" />
 <ol class="arabic simple" start="2">
 <li>The <strong>OSM Place Search</strong> plugin will install itself as a <em>Panel</em> in QGIS.
-You will see a new panel titled <span class="guilabel">OSM place search...</span> in QGIS.</li>
+You will see a new panel titled <span class="guilabel">OSM place search…</span> in QGIS.</li>
 </ol>
-<img alt="../_images/225.png" class="align-center" src="../_images/225.png" />
+<img alt="../_images/248.png" class="align-center" src="../_images/248.png" />
 <ol class="arabic simple" start="3">
 <li>The <strong>OpenLayers</strong> plugin is installed under the <em>Plugin</em> menu. This plugin
-allows you to access basemaps from various providers in QGIS. Let&#8217;s load the
+allows you to access basemaps from various providers in QGIS. Let’s load the
 OpenStreetMap basemap in QGIS by going to <span class="menuselection">Plugins ‣
 OpenLayers plugin ‣ Add OpenStreetMap layer</span>.</li>
 </ol>
-<img alt="../_images/316.png" class="align-center" src="../_images/316.png" />
+<img alt="../_images/333.png" class="align-center" src="../_images/333.png" />
 <ol class="arabic simple" start="4">
 <li>You will see a world map loaded in QGIS.</li>
 </ol>
@@ -261,33 +257,33 @@ OpenLayers plugin ‣ Add OpenStreetMap layer</span>.</li>
 are fetched from the internet. You can also use the <em>Pan</em> tool to move the
 map canvas slightly, which will trigger a refresh of the basemap.</p>
 </div>
-<img alt="../_images/411.png" class="align-center" src="../_images/411.png" />
+<img alt="../_images/418.png" class="align-center" src="../_images/418.png" />
 <ol class="arabic simple" start="5">
-<li>Now, let&#8217;s search for <em>London</em>. Type the query in the <span class="guilabel">Name
-contains...</span> box in the <strong>OSM Place Search</strong> panel. You can hover over the
+<li>Now, let’s search for <em>London</em>. Type the query in the <span class="guilabel">Name
+contains…</span> box in the <strong>OSM Place Search</strong> panel. You can hover over the
 results and the appropriate place will be highlighted on the map. Select the
 first result - which the city of London in UK - and click the
 <span class="guilabel">Zoom</span> button.</li>
 </ol>
-<img alt="../_images/511.png" class="align-center" src="../_images/511.png" />
+<img alt="../_images/518.png" class="align-center" src="../_images/518.png" />
 <ol class="arabic simple" start="6">
 <li>You will see the base layer move and center around the city of London. You
 can use the <span class="guilabel">Zoom</span> tool to zoom and select the exact area of your
 interest. For this tutorial, you can zoom in the center of the city as
 shown.</li>
 </ol>
-<img alt="../_images/610.png" class="align-center" src="../_images/610.png" />
+<img alt="../_images/616.png" class="align-center" src="../_images/616.png" />
 <ol class="arabic simple" start="7">
 <li>Now we can download the data displayed on the map canvas. Go to
 <span class="menuselection">Vector ‣ OpenStreetMap ‣ Downlod data</span>.</li>
 </ol>
-<img alt="../_images/710.png" class="align-center" src="../_images/710.png" />
+<img alt="../_images/717.png" class="align-center" src="../_images/717.png" />
 <ol class="arabic simple" start="8">
 <li>In the <span class="guilabel">Download OpenStreetMap data</span> dialog, choose
 <span class="guilabel">From map canvas</span> as the <span class="guilabel">Extent</span>. Choose the path and
 name the output file as <code class="docutils literal"><span class="pre">london.osm</span></code>.</li>
 </ol>
-<img alt="../_images/810.png" class="align-center" src="../_images/810.png" />
+<img alt="../_images/815.png" class="align-center" src="../_images/815.png" />
 <ol class="arabic simple" start="9">
 <li>The downloaded file with the <code class="docutils literal"><span class="pre">.osm</span></code> extension is an text file in the <a class="reference external" href="http://wiki.openstreetmap.org/wiki/OSM_XML">OSM
 XML</a> format. We first need to
@@ -299,22 +295,22 @@ convert it into a suitable format that is easy to consume in QGIS. Go to
 <p class="last">Now that we do not need the <strong>OSM Place Search</strong> functionality, you can
 click the close button to remove it from the main window. If you need to use
 it again, you can enable it from  <span class="menuselection">View ‣ Panels ‣ OSM
-place search...</span> (Windows) or <span class="menuselection">Settings ‣ Panels ‣ OSM place search...</span> (Linux).</p>
+place search…</span> (Windows) or <span class="menuselection">Settings ‣ Panels ‣ OSM place search…</span> (Linux).</p>
 </div>
-<img alt="../_images/910.png" class="align-center" src="../_images/910.png" />
+<img alt="../_images/917.png" class="align-center" src="../_images/917.png" />
 <ol class="arabic simple" start="10">
 <li>Choose the downloaded <code class="docutils literal"><span class="pre">london.osm</span></code> as the <span class="guilabel">Input XML file</span>.
 Name the <span class="guilabel">Output SpatiaLite DB file</span> as <code class="docutils literal"><span class="pre">london.osm.db</span></code>. Make
 sure the <span class="guilabel">Create connection (SpatiaLite) after import</span> button is
 checked.</li>
 </ol>
-<img alt="../_images/1010.png" class="align-center" src="../_images/1010.png" />
+<img alt="../_images/1015.png" class="align-center" src="../_images/1015.png" />
 <ol class="arabic simple" start="11">
 <li>Now the last step. We need to create SpatialLite geometry layers that can
 be viewed and analyzed in QGIS. This is done using <span class="menuselection">Vector
 ‣ OpenStreetMap ‣ Export topology to SpatialLite</span>.</li>
 </ol>
-<img alt="../_images/1113.png" class="align-center" src="../_images/1113.png" />
+<img alt="../_images/1119.png" class="align-center" src="../_images/1119.png" />
 <ol class="arabic simple" start="12">
 <li>The <code class="docutils literal"><span class="pre">london.osm.db</span></code> file contains all feature types in the OSM database -
 Points, Lines and Polygons. GIS layers typically contain only one type of
@@ -331,7 +327,7 @@ fetch all attributes from the <code class="docutils literal"><span class="pre">l
 each attribute means. Make sure the <span class="guilabel">Load into canvas when
 finished</span> is checked, and click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1212.png" class="align-center" src="../_images/1212.png" />
+<img alt="../_images/1217.png" class="align-center" src="../_images/1217.png" />
 <ol class="arabic simple" start="13">
 <li>You will see a new point layer named <code class="docutils literal"><span class="pre">london_points</span></code> loaded in QGIS. Note
 that this contains <strong>ALL</strong> points in the OSM database for the viewport.
@@ -339,41 +335,41 @@ Since we are interested only in pubs, we need to write a query to select
 only those. Right click on <code class="docutils literal"><span class="pre">london_points</span></code> layer and select
 <span class="guilabel">Open Attribute Table</span>.</li>
 </ol>
-<img alt="../_images/1310.png" class="align-center" src="../_images/1310.png" />
+<img alt="../_images/1316.png" class="align-center" src="../_images/1316.png" />
 <ol class="arabic simple" start="14">
 <li>You will note that some features have the attribute value of <strong>pubs</strong>
 listed under the <span class="guilabel">amenity</span> column. Click on <span class="guilabel">Select
 features using an expression</span> button.</li>
 </ol>
-<img alt="../_images/149.png" class="align-center" src="../_images/149.png" />
+<img alt="../_images/1415.png" class="align-center" src="../_images/1415.png" />
 <ol class="arabic simple" start="15">
-<li>Enter the expression <cite>&#8220;amenity&#8221; = &#8216;pub&#8217;</cite> and click <span class="guilabel">Select</span>.</li>
+<li>Enter the expression <cite>“amenity” = ‘pub’</cite> and click <span class="guilabel">Select</span>.</li>
 </ol>
-<img alt="../_images/159.png" class="align-center" src="../_images/159.png" />
+<img alt="../_images/1515.png" class="align-center" src="../_images/1515.png" />
 <ol class="arabic simple" start="16">
 <li>Back in the QGIS Canvas, you will see some points highlighted in yellow.
 These are the result of our query. Right-click the <code class="docutils literal"><span class="pre">london_points</span></code> layer
-and choose <span class="guilabel">Save Selection As...</span>.</li>
+and choose <span class="guilabel">Save Selection As…</span>.</li>
 </ol>
-<img alt="../_images/168.png" class="align-center" src="../_images/168.png" />
+<img alt="../_images/1613.png" class="align-center" src="../_images/1613.png" />
 <ol class="arabic simple" start="17">
-<li>In the <span class="guilabel">Save vector layer as...</span> dialog, enter the name of the
+<li>In the <span class="guilabel">Save vector layer as…</span> dialog, enter the name of the
 output file as <code class="docutils literal"><span class="pre">london_pubs.shp</span></code>. Leave all other options as they are and
 make sure the <span class="guilabel">Add saved file to map</span> option is checked. Click
 <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/177.png" class="align-center" src="../_images/177.png" />
+<img alt="../_images/1712.png" class="align-center" src="../_images/1712.png" />
 <ol class="arabic simple" start="18">
 <li>You will see a new layer named <code class="docutils literal"><span class="pre">london_pubs</span></code> in the QGIS canvas. Uncheck
-the <code class="docutils literal"><span class="pre">london_points</span></code> layer as we don&#8217;t need that anymore.</li>
+the <code class="docutils literal"><span class="pre">london_points</span></code> layer as we don’t need that anymore.</li>
 </ol>
-<img alt="../_images/188.png" class="align-center" src="../_images/188.png" />
+<img alt="../_images/1813.png" class="align-center" src="../_images/1813.png" />
 <ol class="arabic simple" start="19">
 <li>The extraction of the pubs shapefile layer is now complete. You can use the
 <span class="guilabel">Identify</span> tool to click on any of the point as see its
 attributes.</li>
 </ol>
-<img alt="../_images/196.png" class="align-center" src="../_images/196.png" />
+<img alt="../_images/1911.png" class="align-center" src="../_images/1911.png" />
 </div>
 </div>
 
@@ -399,8 +395,8 @@ attributes.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

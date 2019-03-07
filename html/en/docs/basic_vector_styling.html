@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Basic Vector Styling &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Calculating Line Lengths and Statistics" href="calculating_line_lengths.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/basic_vector_styling_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'basic_vector_styling_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/basic_vector_styling_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'basic_vector_styling_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/basic_vector_styling_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'basic_vector_styling_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/basic_vector_styling_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'basic_vector_styling_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="basic-vector-styling">
@@ -253,23 +249,23 @@ link below:</p>
 <ol class="arabic simple">
 <li>Open QGIS and go to <span class="menuselection">Layer ‣ Add Vector Layer..</span>.</li>
 </ol>
-<img alt="../_images/112.png" class="align-center" src="../_images/112.png" />
+<img alt="../_images/130.png" class="align-center" src="../_images/130.png" />
 <ol class="arabic simple" start="2">
 <li>Browse to the downloaded <code class="docutils literal"><span class="pre">lifeexpectancy.zip</span></code> file and click
 <span class="guilabel">Open</span>. Select <code class="docutils literal"><span class="pre">newsweek_data.shp</span></code> and click <span class="guilabel">Open</span>.
 Next you will be prompted for choosing the CRS. Select <cite>WGS84 EPSG:4326</cite>
 as the Coordinate Reference System (CRS).</li>
 </ol>
-<img alt="../_images/210.png" class="align-center" src="../_images/210.png" />
+<img alt="../_images/225.png" class="align-center" src="../_images/225.png" />
 <ol class="arabic simple" start="3">
 <li>The shapefile contained within the zip file is now loaded and you can see
 the default style applied to it.</li>
 </ol>
-<img alt="../_images/35.png" class="align-center" src="../_images/35.png" />
+<img alt="../_images/320.png" class="align-center" src="../_images/320.png" />
 <ol class="arabic simple" start="4">
 <li>Right click on the layer name and select <span class="guilabel">Open Attribute Table</span>.</li>
 </ol>
-<img alt="../_images/42.png" class="align-center" src="../_images/42.png" />
+<img alt="../_images/49.png" class="align-center" src="../_images/49.png" />
 <ol class="arabic simple" start="5">
 <li>Explore the different attributes. To style a layer, we must pick an
 <cite>attribute</cite> or a <cite>column</cite> that would represent the map we are trying to
@@ -277,12 +273,12 @@ create. Since we want to create a layer represting life expectancy, i.e. the
 average age till a person lives in a country, the field <span class="guilabel">LIFEXPCT</span>
 is the attribute we want to use in styling.</li>
 </ol>
-<img alt="../_images/52.png" class="align-center" src="../_images/52.png" />
+<img alt="../_images/59.png" class="align-center" src="../_images/59.png" />
 <ol class="arabic simple" start="6">
 <li>Close the attribute table. Right click on the layer again and choose
 <span class="guilabel">Properties</span>.</li>
 </ol>
-<img alt="../_images/62.png" class="align-center" src="../_images/62.png" />
+<img alt="../_images/68.png" class="align-center" src="../_images/68.png" />
 <ol class="arabic simple" start="7">
 <li>The various styling options are located in the <span class="guilabel">Style</span> tab of the Properties
 dialog. Clicking on the drop-down button inthe Style dialiog, you will see
@@ -290,7 +286,7 @@ there are five options available - <span class="guilabel">Single Symbol</span>, 
 <span class="guilabel">Graduated</span>, <span class="guilabel">Rule Based</span> and <span class="guilabel">Point
 displacement</span>. We will explore the first three in this tutorial.</li>
 </ol>
-<img alt="../_images/72.png" class="align-center" src="../_images/72.png" />
+<img alt="../_images/79.png" class="align-center" src="../_images/79.png" />
 <ol class="arabic simple" start="8">
 <li>Select <span class="guilabel">Single Symbol</span>. This option allows you to choose a single
 style that will be applied to all the features in the layer. Since this is a
@@ -298,12 +294,12 @@ polygon dataset, you have two basic choices. You can <cite>fill</cite> the polyg
 you can style with only <cite>outline</cite>. You can choose the <span class="guilabel">dotted</span>
 pattern fill and click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/82.png" class="align-center" src="../_images/82.png" />
+<img alt="../_images/87.png" class="align-center" src="../_images/87.png" />
 <ol class="arabic simple" start="9">
 <li>You will see a new style applied to the layer with the fill pattern you
 chose.</li>
 </ol>
-<img alt="../_images/92.png" class="align-center" src="../_images/92.png" />
+<img alt="../_images/99.png" class="align-center" src="../_images/99.png" />
 <ol class="arabic simple" start="10">
 <li>You will see that this Single Symbol style isn’t useful in communicating
 the life expectancy data we are trying to map. Let us explore another
@@ -315,7 +311,7 @@ field. Choose <span class="guilabel">LIFEXPCT</span> value as the <span class="g
 a <span class="guilabel">color ramp</span> of your choice and click <span class="guilabel">Classify</span>
 at the bottom. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/102.png" class="align-center" src="../_images/102.png" />
+<img alt="../_images/107.png" class="align-center" src="../_images/107.png" />
 <ol class="arabic simple" start="11">
 <li>You will see different countries appearing in shades of blue. Lighter
 shades meaning lower life expectancy and darker shades meaning higher life
@@ -323,7 +319,7 @@ expectancy. This representation of the data is more useful and clearly show
 how life expectancy in developed countries vs. developing countries. This
 would be the type of style we set out to create.</li>
 </ol>
-<img alt="../_images/113.png" class="align-center" src="../_images/113.png" />
+<img alt="../_images/1112.png" class="align-center" src="../_images/1112.png" />
 <ol class="arabic" start="12">
 <li><p class="first">Let us explore the <span class="guilabel">Graduated</span> symbology type in the <span class="guilabel">Style</span>
 dialog now. Graduated symbology type allows you to break down the data in a column in
@@ -367,28 +363,28 @@ Click <span class="guilabel">OK</span>.</p>
 values are fine, but if the attribute field type is String, it cannot be
 used with this styling option.</p>
 </div>
-<img alt="../_images/122.png" class="align-center" src="../_images/122.png" />
+<img alt="../_images/1210.png" class="align-center" src="../_images/1210.png" />
 <ol class="arabic simple" start="13">
 <li>You will see a map showing countries in either of 3 colors representing
 average life expectancy in the country.</li>
 </ol>
-<img alt="../_images/132.png" class="align-center" src="../_images/132.png" />
+<img alt="../_images/139.png" class="align-center" src="../_images/139.png" />
 <ol class="arabic simple" start="14">
 <li>Now go back to the <span class="guilabel">Style</span> dialog by right clicking the layer and choosing
 <span class="guilabel">Properties</span>. There are some more styling options available.
 You can click on the Symbol for each of the classes and choose a different style.
 We will choose Red, Yellow and Green fill colors to indicate low, medium and high life expectancy.</li>
 </ol>
-<img alt="../_images/142.png" class="align-center" src="../_images/142.png" />
+<img alt="../_images/148.png" class="align-center" src="../_images/148.png" />
 <ol class="arabic simple" start="15">
 <li>In the <span class="guilabel">Symbol Selector</span> dialog, click on <span class="guilabel">Color</span>
 selector.</li>
 </ol>
-<img alt="../_images/152.png" class="align-center" src="../_images/152.png" />
+<img alt="../_images/158.png" class="align-center" src="../_images/158.png" />
 <ol class="arabic simple" start="16">
 <li>Click on a color fom the <span class="guilabel">Select Color</span> dialog.</li>
 </ol>
-<img alt="../_images/162.png" class="align-center" src="../_images/162.png" />
+<img alt="../_images/167.png" class="align-center" src="../_images/167.png" />
 <ol class="arabic simple" start="17">
 <li>Back in the <span class="guilabel">Layer Properties</span> dialog, you can double-click on the
 <span class="guilabel">Label</span> column next to each value and enter the text that you
@@ -396,13 +392,13 @@ want to display. Similarly, you may double-click on the <span class="guilabel">V
 column to edit the selected ranges. Click <span class="guilabel">OK</span> once you are
 satisfied with the classes.</li>
 </ol>
-<img alt="../_images/171.png" class="align-center" src="../_images/171.png" />
+<img alt="../_images/176.png" class="align-center" src="../_images/176.png" />
 <ol class="arabic simple" start="18">
 <li>This style definitely conveys a lot more useful map than the previous two
 attempts. There are clearly marked class names and colors to represent our
 interpretation of the life expectancy values.</li>
 </ol>
-<img alt="../_images/182.png" class="align-center" src="../_images/182.png" />
+<img alt="../_images/187.png" class="align-center" src="../_images/187.png" />
 </div>
 </div>
 
@@ -428,8 +424,8 @@ interpretation of the life expectancy values.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

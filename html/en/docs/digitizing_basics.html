@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Digitizing Map Data &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Performing Table Joins" href="performing_table_joins.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/digitizing_basics_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'digitizing_basics_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/digitizing_basics_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'digitizing_basics_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/digitizing_basics_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'digitizing_basics_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/digitizing_basics_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'digitizing_basics_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="digitizing-map-data">
@@ -257,7 +253,7 @@ link below:</p>
 <li>Go to <span class="menuselection">Layer ‣ Add Raster Layer</span>. Locate the downloaded
 <code class="docutils literal"><span class="pre">BX24_GeoTifv1-02.tif</span></code> and click <span class="guilabel">Open</span>.</li>
 </ol>
-<img alt="../_images/130.png" class="align-center" src="../_images/130.png" />
+<img alt="../_images/1100.png" class="align-center" src="../_images/1100.png" />
 <ol class="arabic simple" start="2">
 <li>This is a large raster file and you may notice that when you zoom or pan
 around the map, the map takes a little time to render the image. QGIS offers
@@ -267,25 +263,25 @@ these are presented to you instead of the full raster. This makes map
 navigation snappy and responsive. Right-click the <code class="docutils literal"><span class="pre">BX24_GeoTifv1-02</span></code> layer
 and choose <span class="guilabel">Properties</span>.</li>
 </ol>
-<img alt="../_images/223.png" class="align-center" src="../_images/223.png" />
+<img alt="../_images/240.png" class="align-center" src="../_images/240.png" />
 <ol class="arabic simple" start="3">
 <li>Choose the <span class="guilabel">Pyramids</span> tab. Hold the <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> key and select all
 the resolutios offered in the <span class="guilabel">Resolutions</span> panel. Leave other
 options to defaults and click <span class="guilabel">Build pyramids</span>. Once the process
 finishes, click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/314.png" class="align-center" src="../_images/314.png" />
+<img alt="../_images/330.png" class="align-center" src="../_images/330.png" />
 <ol class="arabic simple" start="4">
 <li>Back in the main QGIS window, use the <span class="guilabel">Zoom</span> tool to locate
 <em>Hagley Park</em> area in Christchurch. This is the park that we will be
 digitizing.</li>
 </ol>
-<img alt="../_images/410.png" class="align-center" src="../_images/410.png" />
+<img alt="../_images/417.png" class="align-center" src="../_images/417.png" />
 <ol class="arabic simple" start="5">
 <li>Before we start, we need to set default <strong>Digitizing Options</strong>. Go to
-<span class="menuselection">Settings ‣ Options...</span>.</li>
+<span class="menuselection">Settings ‣ Options…</span>.</li>
 </ol>
-<img alt="../_images/510.png" class="align-center" src="../_images/510.png" />
+<img alt="../_images/517.png" class="align-center" src="../_images/517.png" />
 <ol class="arabic simple" start="6">
 <li>Select the <span class="guilabel">Digitizing</span> tab in the <span class="guilabel">Options</span> dialog.
 Set the <span class="guilabel">Default snap mode</span> to <span class="guilabel">To vertex and segment</span>.
@@ -296,13 +292,13 @@ This will ensure that the snapping distance remains constant regardless of
 zoom level. Depending on your computer screen resolution, you
 may choose an appropriate value. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/69.png" class="align-center" src="../_images/69.png" />
+<img alt="../_images/615.png" class="align-center" src="../_images/615.png" />
 <ol class="arabic simple" start="7">
 <li>Now we are ready to start digitizing. We will first create a roads layer and
 digitize the roads around the park area. Select <span class="menuselection">Layer ‣ New
-‣ New Spatialite Layer...</span>. You may also choose to create a <span class="guilabel">New
-Shapefile Layer...</span> instead if you prefer. Spatialite is an open database
-format similar to ESRI&#8217;s geodatabase format. Spatialite database is
+‣ New Spatialite Layer…</span>. You may also choose to create a <span class="guilabel">New
+Shapefile Layer…</span> instead if you prefer. Spatialite is an open database
+format similar to ESRI’s geodatabase format. Spatialite database is
 contained within a single file on your hard drive and can contain diferent
 types of spatial (point, line, polygon) as well as non-spatial layers. This
 makes is much easier to move it around instead of a bunch of shapefiles. In
@@ -310,9 +306,9 @@ this tutorial, we are creating a couple of polygon layers and a line layer,
 so a Spatialite database will be better suited. You can always load a
 spatialite layer and save it as a shapefile or any other format you want.</li>
 </ol>
-<img alt="../_images/79.png" class="align-center" src="../_images/79.png" />
+<img alt="../_images/716.png" class="align-center" src="../_images/716.png" />
 <ol class="arabic simple" start="8">
-<li>In the <span class="guilabel">New Spatialite Layer</span> dialog, click the <span class="guilabel">...</span>
+<li>In the <span class="guilabel">New Spatialite Layer</span> dialog, click the <span class="guilabel">…</span>
 button and save a new spatialite database named <code class="docutils literal"><span class="pre">nztopo.sqlite</span></code>. Choose
 the <span class="guilabel">Layer name</span> as <code class="docutils literal"><span class="pre">Roads</span></code> and select <code class="docutils literal"><span class="pre">Line</span></code> as the
 <span class="guilabel">Type</span>. The base topographic map is in the
@@ -326,17 +322,17 @@ attributes - Name and Class. Enter <code class="docutils literal"><span class="p
 of the attribute in the <span class="guilabel">New attribute</span> section and click
 <span class="guilabel">Add to attribute list.</span></li>
 </ol>
-<img alt="../_images/89.png" class="align-center" src="../_images/89.png" />
+<img alt="../_images/814.png" class="align-center" src="../_images/814.png" />
 <ol class="arabic simple" start="9">
 <li>Similarly create a new attribute <code class="docutils literal"><span class="pre">Class</span></code> of the type <span class="guilabel">Text data</span>.
 Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/99.png" class="align-center" src="../_images/99.png" />
+<img alt="../_images/916.png" class="align-center" src="../_images/916.png" />
 <ol class="arabic simple" start="10">
 <li>Once the layer is loaded, click the <span class="guilabel">Toggle Editing</span> button to
 put the layer in editing mode.</li>
 </ol>
-<img alt="../_images/109.png" class="align-center" src="../_images/109.png" />
+<img alt="../_images/1014.png" class="align-center" src="../_images/1014.png" />
 <ol class="arabic simple" start="11">
 <li>Click the <span class="guilabel">Add feature</span> button. Click on the map canvas to add a
 new vertex. Add new vertices along the road feature. Once you have digitized
@@ -347,7 +343,7 @@ a road segment, right-click to end the feature.</li>
 <p class="last">You can use the scroll wheel of the mouse to zoom in or out while digitizing.
 You can also hold the scroll button and move the mouse to pan around.</p>
 </div>
-<img alt="../_images/1112.png" class="align-center" src="../_images/1112.png" />
+<img alt="../_images/1118.png" class="align-center" src="../_images/1118.png" />
 <ol class="arabic simple" start="12">
 <li>After you right-click to end the feature, you will get a pop-up dialog
 called <span class="guilabel">Attributes</span>. Here you can enter attributes of the newly
@@ -356,30 +352,30 @@ will not be able to enter a value manually. Leave it blank and enter the
 road name as it appears on the topo map. Optionally, assign a Road Class
 value as well. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1211.png" class="align-center" src="../_images/1211.png" />
+<img alt="../_images/1216.png" class="align-center" src="../_images/1216.png" />
 <ol class="arabic simple" start="13">
-<li>The default style of the new line layer is a thin line. Let&#8217;s change it so
+<li>The default style of the new line layer is a thin line. Let’s change it so
 we can better see the digitized features on the canvas. Right click the
 <code class="docutils literal"><span class="pre">Roads</span></code> layer and select <span class="guilabel">Properties</span>.</li>
 </ol>
-<img alt="../_images/138.png" class="align-center" src="../_images/138.png" />
+<img alt="../_images/1315.png" class="align-center" src="../_images/1315.png" />
 <ol class="arabic simple" start="14">
 <li>Select the <span class="guilabel">Style</span> tab in the <span class="guilabel">Layer Properties</span>
 dialog. Choose a thicker line style such as <span class="guilabel">Primary</span> from the
 predefined styles. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/148.png" class="align-center" src="../_images/148.png" />
+<img alt="../_images/1414.png" class="align-center" src="../_images/1414.png" />
 <ol class="arabic simple" start="15">
 <li>Now you will see the digitized road feature clearly. Click <span class="guilabel">Save
 Layer Edits</span> to commit the new feature to disk.</li>
 </ol>
-<img alt="../_images/158.png" class="align-center" src="../_images/158.png" />
+<img alt="../_images/1514.png" class="align-center" src="../_images/1514.png" />
 <ol class="arabic simple" start="16">
 <li>Before we digitize remaining roads, it is important to update some other
 settings that are important to create an error free layer. Go to
-<span class="menuselection">Settings ‣ Snapping Options...</span>.</li>
+<span class="menuselection">Settings ‣ Snapping Options…</span>.</li>
 </ol>
-<img alt="../_images/167.png" class="align-center" src="../_images/167.png" />
+<img alt="../_images/1612.png" class="align-center" src="../_images/1612.png" />
 <ol class="arabic simple" start="17">
 <li>In the <span class="guilabel">Snapping Options</span> dialog, check the <span class="guilabel">Enable
 topological editing</span>. This option will ensure that the common boundaries
@@ -387,14 +383,14 @@ are maintained correctly in polygon layers. Also check the
 <span class="guilabel">Enable snapping on intersection</span> which allows you to snap on an
 intersection of a background layer.</li>
 </ol>
-<img alt="../_images/176.png" class="align-center" src="../_images/176.png" />
+<img alt="../_images/1711.png" class="align-center" src="../_images/1711.png" />
 <ol class="arabic simple" start="18">
 <li>Now you can click <span class="guilabel">Add feature</span> button and digitize other roads
 around the park. Make sure to click <span class="guilabel">Save Edits</span> after you add a
 new feaure to save your work. A useful tool to help you with digitizing is
 the <strong>Node Tool</strong>. Click the <span class="guilabel">Node Tool</span> button.</li>
 </ol>
-<img alt="../_images/187.png" class="align-center" src="../_images/187.png" />
+<img alt="../_images/1812.png" class="align-center" src="../_images/1812.png" />
 <ol class="arabic simple" start="19">
 <li>Once the node tool is activated, click on any feature to show the vertices.
 Click on any vertex to select it. The vertex will change the color once it
@@ -403,44 +399,44 @@ is useful when you want to make adjustments after the feature is created.
 You can also delete a selected vertex by clicking the <code class="kbd docutils literal"><span class="pre">Delete</span></code> key.
 (<code class="kbd docutils literal"><span class="pre">Option+Delete</span></code> on a mac)</li>
 </ol>
-<img alt="../_images/195.png" class="align-center" src="../_images/195.png" />
+<img alt="../_images/1910.png" class="align-center" src="../_images/1910.png" />
 <ol class="arabic simple" start="20">
 <li>Once you have finished digitizing all the roads, click the
 <span class="guilabel">Toggle Editing</span> button.</li>
 </ol>
-<img alt="../_images/203.png" class="align-center" src="../_images/203.png" />
+<img alt="../_images/207.png" class="align-center" src="../_images/207.png" />
 <ol class="arabic simple" start="21">
 <li>Now we will create a polygon layer representing the park boundaries. Go to
-<span class="menuselection">Layer ‣ New ‣ New Spatialite Layer...</span>. Select the
+<span class="menuselection">Layer ‣ New ‣ New Spatialite Layer…</span>. Select the
 <code class="docutils literal"><span class="pre">nztopo.sqlite</span></code> database from the dropdown list. Name the new layer as
 <code class="docutils literal"><span class="pre">Parks</span></code>. Select <code class="docutils literal"><span class="pre">Polygon</span></code> as the <span class="guilabel">Type</span>. Create a new
 attribute called <code class="docutils literal"><span class="pre">Name</span></code>. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/2110.png" class="align-center" src="../_images/2110.png" />
+<img alt="../_images/2113.png" class="align-center" src="../_images/2113.png" />
 <ol class="arabic simple" start="22">
 <li>Click the <span class="guilabel">Add feature</span> button and click on the map canvas to add
 a polygon vertex. Digitize the polygon representing the park. Make sure you
 snap to the roads vertices so there are no gaps between the park polygons
 and road lines. Right-click to finish the polygon.</li>
 </ol>
-<img alt="../_images/224.png" class="align-center" src="../_images/224.png" />
+<img alt="../_images/2211.png" class="align-center" src="../_images/2211.png" />
 <ol class="arabic simple" start="23">
 <li>Enter the park name in the <span class="guilabel">Attributes</span> pop-up.</li>
 </ol>
-<img alt="../_images/233.png" class="align-center" src="../_images/233.png" />
+<img alt="../_images/2310.png" class="align-center" src="../_images/2310.png" />
 <ol class="arabic simple" start="24">
 <li>Polygon layers offer another very useful setting called <strong>Avoid
 intersections of new polygons</strong>. Go to <span class="menuselection">Settings ‣
-Snapping Options...</span>. Check the box in the <span class="guilabel">Avoid Int</span> column in
+Snapping Options…</span>. Check the box in the <span class="guilabel">Avoid Int</span> column in
 the row for the <code class="docutils literal"><span class="pre">Parks</span></code> layer. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/243.png" class="align-center" src="../_images/243.png" />
+<img alt="../_images/247.png" class="align-center" src="../_images/247.png" />
 <ol class="arabic simple" start="25">
 <li>Now click on <span class="guilabel">Add feature</span> to add a polygon. With the <strong>Avoid
 intersections of new polygons</strong>, you will be able quickly digitize a new
 polygon without worrying about snapping exactly to the neighboring polygons.</li>
 </ol>
-<img alt="../_images/252.png" class="align-center" src="../_images/252.png" />
+<img alt="../_images/255.png" class="align-center" src="../_images/255.png" />
 <ol class="arabic simple" start="26">
 <li>Right-click to finish the polygon and enter the attributes. Magically the
 new polygon is shrunk and snapped exactly to the boundary of the neighboring
@@ -448,19 +444,19 @@ polygons! This is very useful when digitizing complex boundaries where you
 need not be very precise and still have topologically correct polygon.
 Click <span class="guilabel">Toggle Editing</span> to finish editing the <code class="docutils literal"><span class="pre">Parks</span></code> layer.</li>
 </ol>
-<img alt="../_images/261.png" class="align-center" src="../_images/261.png" />
+<img alt="../_images/266.png" class="align-center" src="../_images/266.png" />
 <ol class="arabic simple" start="27">
 <li>Now it is time to digitize a buildings layer. Create a new polygon layer named
 <code class="docutils literal"><span class="pre">Buildings</span></code> by going to <span class="menuselection">Layer ‣ New ‣ New Spatialite
 Layer</span>.</li>
 </ol>
-<img alt="../_images/271.png" class="align-center" src="../_images/271.png" />
+<img alt="../_images/275.png" class="align-center" src="../_images/275.png" />
 <ol class="arabic simple" start="28">
 <li>Once the <code class="docutils literal"><span class="pre">Buildings</span></code> layer is added, turn off the <code class="docutils literal"><span class="pre">Parks</span></code> and <code class="docutils literal"><span class="pre">Roads</span></code>
 layer so the base topo map is visible. Select the <code class="docutils literal"><span class="pre">Buildings</span></code> layer and
 click <span class="guilabel">Toggle Editing</span>.</li>
 </ol>
-<img alt="../_images/261.png" class="align-center" src="../_images/261.png" />
+<img alt="../_images/266.png" class="align-center" src="../_images/266.png" />
 <ol class="arabic simple" start="29">
 <li>Digitizing buildings can be a cumbersome task. Also it is difficult to add
 vertices manually so that the edges are perpendicular and form a rectangle.
@@ -469,35 +465,35 @@ this task. See <a class="reference internal" href="using_plugins.html"><span cla
 plugins. Once the <strong>Rectangles Ovals Digitizing</strong> plugin is installed, you
 will see a new toolbar appear above the canvas.</li>
 </ol>
-<img alt="../_images/291.png" class="align-center" src="../_images/291.png" />
+<img alt="../_images/294.png" class="align-center" src="../_images/294.png" />
 <ol class="arabic simple" start="30">
 <li>Zoom to an area with the buildings and click <span class="guilabel">Rectangle by
 Extent</span> button. Click and drag the mouse to draw a perfect rectangle.
 Similarly, add remaining buildings.</li>
 </ol>
-<img alt="../_images/301.png" class="align-center" src="../_images/301.png" />
+<img alt="../_images/303.png" class="align-center" src="../_images/303.png" />
 <ol class="arabic simple" start="31">
 <li>You will notice that some buildings are not vertical. We will need to draw
 a rectangle at an angle to match the building footprint. Click the
 <span class="guilabel">Rectangle from center</span>.</li>
 </ol>
-<img alt="../_images/315.png" class="align-center" src="../_images/315.png" />
+<img alt="../_images/3110.png" class="align-center" src="../_images/3110.png" />
 <ol class="arabic simple" start="32">
 <li>Click at the center of the building and drag the mouse to draw a vertical
 rectangle.</li>
 </ol>
-<img alt="../_images/321.png" class="align-center" src="../_images/321.png" />
+<img alt="../_images/3210.png" class="align-center" src="../_images/3210.png" />
 <ol class="arabic simple" start="33">
 <li>We need to rotate this rectangle to match the image on the topo map. The
 rotate tool is available in the <strong>Advanced Digitizing</strong> toolbar.
 Right-click on an empty area on the toolbar section and enable the
 <span class="guilabel">Advanced Digitizing</span> toolbar.</li>
 </ol>
-<img alt="../_images/331.png" class="align-center" src="../_images/331.png" />
+<img alt="../_images/332.png" class="align-center" src="../_images/332.png" />
 <ol class="arabic simple" start="34">
 <li>Click the <span class="guilabel">Rotate Feature(s)</span> button.</li>
 </ol>
-<img alt="../_images/341.png" class="align-center" src="../_images/341.png" />
+<img alt="../_images/342.png" class="align-center" src="../_images/342.png" />
 <ol class="arabic simple" start="35">
 <li>Use the <span class="guilabel">Select Single feature</span> tool to select the polygon that
 you want to rotate. Once the <span class="guilabel">Rotate Feature(s)</span> tool is
@@ -544,8 +540,8 @@ data you created.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

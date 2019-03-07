@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Raster Mosaicing and Clipping &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Working with Terrain Data" href="working_with_terrain.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/raster_mosaicing_and_clipping_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'raster_mosaicing_and_clipping_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/raster_mosaicing_and_clipping_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'raster_mosaicing_and_clipping_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/raster_mosaicing_and_clipping_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'raster_mosaicing_and_clipping_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/raster_mosaicing_and_clipping_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'raster_mosaicing_and_clipping_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="raster-mosaicing-and-clipping">
@@ -251,18 +247,18 @@ use 2km resolution FAS subsets for Brazil for this tutorial.</p>
 Brazil subsets shown in the <span class="guilabel">FAS Subsets</span> section. Click on any
 one of them.</li>
 </ol>
-<img alt="../_images/1109.png" class="align-center" src="../_images/1109.png" />
+<img alt="../_images/1140.png" class="align-center" src="../_images/1140.png" />
 <ol class="arabic simple" start="2">
 <li>In the details page, click the <span class="guilabel">2km</span> link under the product of
 your choice. Here we will download the <span class="guilabel">NDVI</span> product. <a class="reference external" href="http://en.wikipedia.org/wiki/Normalized_Difference_Vegetation_Index">Learn more
 about NDVI</a>.</li>
 </ol>
-<img alt="../_images/267.png" class="align-center" src="../_images/267.png" />
+<img alt="../_images/2100.png" class="align-center" src="../_images/2100.png" />
 <ol class="arabic simple" start="3">
 <li>Click the <span class="guilabel">Download GeoTIFF file</span> link to download the raster
 image.</li>
 </ol>
-<img alt="../_images/337.png" class="align-center" src="../_images/337.png" />
+<img alt="../_images/355.png" class="align-center" src="../_images/355.png" />
 <p>Repeat the process for all 7 FAS subsets for Brazil.</p>
 <p>For convenience, you can directly download sample data used in this tutorial from links below.</p>
 <p><a class="reference external" href="http://www.qgistutorials.com/downloads/ne_10m_admin_0_countries.zip">ne_10m_admin_0_countries.zip</a></p>
@@ -280,13 +276,13 @@ image.</li>
 <ol class="arabic simple" start="4">
 <li>Open QGIS and go to <span class="menuselection">Layer ‣ Add Raster Layer..</span>.</li>
 </ol>
-<img alt="../_images/427.png" class="align-center" src="../_images/427.png" />
+<img alt="../_images/434.png" class="align-center" src="../_images/434.png" />
 <ol class="arabic simple" start="5">
 <li>Browse to the directory with the individual images. Hold down the <code class="kbd docutils literal"><span class="pre">Ctrl</span></code>
 key and click on the image files to make a multiple selection. Click
 <span class="guilabel">Open</span>.</li>
 </ol>
-<img alt="../_images/528.png" class="align-center" src="../_images/528.png" />
+<img alt="../_images/535.png" class="align-center" src="../_images/535.png" />
 <ol class="arabic simple" start="6">
 <li>You will see the images load up in the Table of Content on the left panel.
 Now let us create a single <cite>Mosaic</cite> image from all these individual images.
@@ -299,64 +295,64 @@ Click on <span class="menuselection">Raster ‣ Miscellaneous ‣ Merge</span>.<
 enable the <span class="guilabel">GdalTools</span> plugin from <span class="menuselection">Plugins ‣
 Manage and install plugins ‣ Installed</span>. See <a class="reference internal" href="using_plugins.html"><span class="doc">Using Plugins</span></a> for more details.</p>
 </div>
-<img alt="../_images/626.png" class="align-center" src="../_images/626.png" />
+<img alt="../_images/632.png" class="align-center" src="../_images/632.png" />
 <ol class="arabic simple" start="7">
-<li>In the <span class="guilabel">Merge</span> dialog, click <span class="guilabel">Select...</span> next to
+<li>In the <span class="guilabel">Merge</span> dialog, click <span class="guilabel">Select…</span> next to
 <span class="guilabel">Input files</span> and browse to the directory containing all
 the individual geotiffs. Keep holding <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> key and select all the.
-subsets. Now click <span class="guilabel">Select...</span> next to <span class="guilabel">Output file</span>
+subsets. Now click <span class="guilabel">Select…</span> next to <span class="guilabel">Output file</span>
 and name the output as <code class="docutils literal"><span class="pre">Brazil_mosaic.tif</span></code>. At the bottom, check the box next to
 <span class="guilabel">Load into canvas when finished</span>. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/725.png" class="align-center" src="../_images/725.png" />
+<img alt="../_images/732.png" class="align-center" src="../_images/732.png" />
 <ol class="arabic simple" start="8">
 <li>You will get a pop-up message saying <cite>Processing complete</cite>, once the mosaic is
 created and loaded to the QGIS Canvas. You will see that the individual
 images and now combined and mosaiced into a single layer. You can now turn
 off individual layers by un-checking the box next to them.</li>
 </ol>
-<img alt="../_images/824.png" class="align-center" src="../_images/824.png" />
+<img alt="../_images/829.png" class="align-center" src="../_images/829.png" />
 <ol class="arabic simple" start="9">
 <li>Another Raster operation you can do is to subset or <cite>crop</cite> an image. We can
 use a polygon from a vector layer to crop the raster to the exact shape.
-Let&#8217;s load the country polygons shapefile we downloaded from Natural Earth.
+Let’s load the country polygons shapefile we downloaded from Natural Earth.
 Go to <span class="menuselection">Layer ‣ Add Vector Layer</span>.</li>
 </ol>
-<img alt="../_images/922.png" class="align-center" src="../_images/922.png" />
+<img alt="../_images/929.png" class="align-center" src="../_images/929.png" />
 <ol class="arabic simple" start="10">
 <li>Select the <code class="docutils literal"><span class="pre">ne_10m_admin_0_countries.zip</span></code> file and click
 <span class="guilabel">Open</span>. When prompted to select the layer within the zip file,
 select <code class="docutils literal"><span class="pre">ne_10m_admin_0_countries.shp</span></code>.</li>
 </ol>
-<img alt="../_images/1023.png" class="align-center" src="../_images/1023.png" />
+<img alt="../_images/1028.png" class="align-center" src="../_images/1028.png" />
 <ol class="arabic simple" start="11">
 <li>Once the vector layer is loaded, we want to select and extract the polygon
 for Brazil. Select the <span class="guilabel">Select Single Feature</span> tool from the
 toolbar.</li>
 </ol>
-<img alt="../_images/1126.png" class="align-center" src="../_images/1126.png" />
+<img alt="../_images/1141.png" class="align-center" src="../_images/1141.png" />
 <ol class="arabic simple" start="12">
 <li>Click anywhere on the Brazil polygon and it will be selected.</li>
 </ol>
-<img alt="../_images/1224.png" class="align-center" src="../_images/1224.png" />
+<img alt="../_images/1229.png" class="align-center" src="../_images/1229.png" />
 <ol class="arabic simple" start="13">
 <li>Right-click the <code class="docutils literal"><span class="pre">ne_10m_admin_0_countries</span></code> layer and select
-<span class="guilabel">Save Selection As...</span>.</li>
+<span class="guilabel">Save Selection As…</span>.</li>
 </ol>
-<img alt="../_images/1321.png" class="align-center" src="../_images/1321.png" />
+<img alt="../_images/1327.png" class="align-center" src="../_images/1327.png" />
 <ol class="arabic simple" start="14">
 <li>Name your output as <code class="docutils literal"><span class="pre">brazil_boundary.shp</span></code> and make sure <span class="guilabel">Add
 saved file to map</span> box is checked. click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1420.png" class="align-center" src="../_images/1420.png" />
+<img alt="../_images/1426.png" class="align-center" src="../_images/1426.png" />
 <ol class="arabic simple" start="15">
 <li>You will see the Brazil boundary polygon now loaded in QGIS.</li>
 </ol>
-<img alt="../_images/1519.png" class="align-center" src="../_images/1519.png" />
+<img alt="../_images/1525.png" class="align-center" src="../_images/1525.png" />
 <ol class="arabic simple" start="16">
 <li>Now go to <span class="menuselection">Raster ‣ Extraction ‣ Clipper</span>.</li>
 </ol>
-<img alt="../_images/1618.png" class="align-center" src="../_images/1618.png" />
+<img alt="../_images/1623.png" class="align-center" src="../_images/1623.png" />
 <ol class="arabic simple" start="17">
 <li>Select the <span class="guilabel">input file (raster)</span> as <code class="docutils literal"><span class="pre">Brazil_mosaic</span></code>. Name the
 <span class="guilabel">Output file</span> as <code class="docutils literal"><span class="pre">Brazil_mosaic_clipped</span></code>. In the
@@ -364,23 +360,23 @@ saved file to map</span> box is checked. click <span class="guilabel">OK</span>.
 the newly created <code class="docutils literal"><span class="pre">brazil_boundary</span></code> as the mask layer. Check the box next
 to <span class="guilabel">Load into canvas when finished</span>. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1717.png" class="align-center" src="../_images/1717.png" />
+<img alt="../_images/1721.png" class="align-center" src="../_images/1721.png" />
 <ol class="arabic simple" start="18">
 <li>The new cropped layer will be loaded into QGIS. You will notice the black
-pixels surrounding the actual mosaic. Let&#8217;s remove that. Right-click on the
+pixels surrounding the actual mosaic. Let’s remove that. Right-click on the
 <code class="docutils literal"><span class="pre">Brazil_mosaic_clipped</span></code> layer and select <span class="guilabel">Properties</span>.</li>
 </ol>
-<img alt="../_images/1817.png" class="align-center" src="../_images/1817.png" />
+<img alt="../_images/1822.png" class="align-center" src="../_images/1822.png" />
 <ol class="arabic simple" start="19">
 <li>Go to the <span class="guilabel">Transparency</span> tab, and add <cite>0</cite> as an
 <span class="guilabel">Additional no data value</span>.</li>
 </ol>
-<img alt="../_images/1915.png" class="align-center" src="../_images/1915.png" />
+<img alt="../_images/1920.png" class="align-center" src="../_images/1920.png" />
 <ol class="arabic simple" start="20">
 <li>Now you have a nice mosaic cropped to a country boundary that you can use
 in your project as a background layer or do further analysis on.</li>
 </ol>
-<img alt="../_images/2012.png" class="align-center" src="../_images/2012.png" />
+<img alt="../_images/2016.png" class="align-center" src="../_images/2016.png" />
 </div>
 </div>
 
@@ -406,8 +402,8 @@ in your project as a background layer or do further analysis on.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

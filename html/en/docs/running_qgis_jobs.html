@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Running and Scheduling QGIS Processing Jobs &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,11 +21,11 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Find Neighbor Polygons in a Layer" href="find_neighbor_polygons.html" />
-    <link rel="prev" title="Writing Python Scripts for Processing Framework" href="processing_python_scripts.html" />
+    <link rel="prev" title="Writing Python Scripts for Processing Framework (QGIS3)" href="3/processing_python_scripts.html" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -131,7 +126,7 @@
               
                 
   <li>
-    <a href="processing_python_scripts.html" title="Previous Chapter: Writing Python Scripts for Processing Framework"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Writing Pytho...</span>
+    <a href="3/processing_python_scripts.html" title="Previous Chapter: Writing Python Scripts for Processing Framework (QGIS3)"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Writing Pytho...</span>
     </a>
   </li>
   <li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/running_qgis_jobs_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'running_qgis_jobs_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/running_qgis_jobs_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'running_qgis_jobs_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/running_qgis_jobs_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'running_qgis_jobs_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/running_qgis_jobs_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'running_qgis_jobs_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="running-and-scheduling-qgis-processing-jobs">
@@ -231,7 +227,7 @@ via the command-line. In this tutorial, we will learn how to write and
 schedule a job that uses the QGIS Processing framework.</p>
 <div class="section" id="overview-of-the-task">
 <h2>Overview of the task<a class="headerlink" href="#overview-of-the-task" title="Permalink to this headline">¶</a></h2>
-<p>Let&#8217;s say we are working on some analysis using shapefiles of a region. The
+<p>Let’s say we are working on some analysis using shapefiles of a region. The
 shapefiles are updated on a daily basis and we always need the latest file. But
 before we can use these files, we need to cleanup the data. We can setup a QGIS
 job that automates this process and runs it daily so you have the latest
@@ -263,59 +259,59 @@ unzip it to a folder on your disk.</p>
 note the commands that we will use in the python script. Launch QGIS and go
 to <span class="menuselection">Layer ‣ Add Layer ‣ Add Vector Layer</span>.</li>
 </ol>
-<img alt="../_images/1129.png" class="align-center" src="../_images/1129.png" />
+<img alt="../_images/1144.png" class="align-center" src="../_images/1144.png" />
 <ol class="arabic simple" start="2">
 <li>Browse to the folder containing the unzipped shapefiles and select the
 <code class="docutils literal"><span class="pre">roads.shp</span></code> file and click <span class="guilabel">Open</span>.</li>
 </ol>
-<img alt="../_images/269.png" class="align-center" src="../_images/269.png" />
+<img alt="../_images/2102.png" class="align-center" src="../_images/2102.png" />
 <ol class="arabic simple" start="3">
 <li>First we must re-project the roads layer to a Projected CRS. This will allow
 us to use <em>meters</em> as units when performing analysis instead of degrees.
 Open <span class="menuselection">Processing ‣ Toolbox</span>.</li>
 </ol>
-<img alt="../_images/339.png" class="align-center" src="../_images/339.png" />
+<img alt="../_images/357.png" class="align-center" src="../_images/357.png" />
 <ol class="arabic simple" start="4">
 <li>Search for the <span class="guilabel">Reproject layer</span> tool. Double-click it to launch
 the dialog.</li>
 </ol>
-<img alt="../_images/429.png" class="align-center" src="../_images/429.png" />
+<img alt="../_images/436.png" class="align-center" src="../_images/436.png" />
 <ol class="arabic simple" start="5">
 <li>In the <span class="guilabel">Reproject layer</span> dialog, select the <code class="docutils literal"><span class="pre">roads</span></code> layer as
 <span class="guilabel">Input layer</span>. We will use <code class="docutils literal"><span class="pre">EPSG:3460</span> <span class="pre">Fiji</span> <span class="pre">1986</span> <span class="pre">/</span> <span class="pre">Fiji</span> <span class="pre">Map</span> <span class="pre">Grid</span></code>
 CRS as the <span class="guilabel">Target CRS</span>. Click <span class="guilabel">Run</span>.</li>
 </ol>
-<img alt="../_images/530.png" class="align-center" src="../_images/530.png" />
+<img alt="../_images/537.png" class="align-center" src="../_images/537.png" />
 <ol class="arabic simple" start="6">
 <li>Once the process finishes, you will see the reprojected layer loaded in
 QGIS. Go to <span class="menuselection">Processing ‣ History and Log..</span>.</li>
 </ol>
-<img alt="../_images/628.png" class="align-center" src="../_images/628.png" />
+<img alt="../_images/634.png" class="align-center" src="../_images/634.png" />
 <ol class="arabic simple" start="7">
 <li>In the <span class="guilabel">History and Log</span> dialog, expand the <span class="guilabel">Algorithm</span>
 folder and select the latest entry. You will see the full processing command
 shown in the bottom panel. Note this command for use in our script.</li>
 </ol>
-<img alt="../_images/727.png" class="align-center" src="../_images/727.png" />
+<img alt="../_images/734.png" class="align-center" src="../_images/734.png" />
 <ol class="arabic simple" start="8">
 <li>Back in the main QGIS Window, click at the <span class="guilabel">CRS</span> button in the
 bottom-right corner.</li>
 </ol>
-<img alt="../_images/826.png" class="align-center" src="../_images/826.png" />
+<img alt="../_images/831.png" class="align-center" src="../_images/831.png" />
 <ol class="arabic simple" start="9">
 <li>In the <span class="guilabel">Project Properties | CRS</span> dialog, check the
 <span class="guilabel">Enable on-the-fly CRS transformation</span> and select <code class="docutils literal"><span class="pre">EPSG:3460</span> <span class="pre">Fiji</span>
 <span class="pre">1986</span> <span class="pre">/</span> <span class="pre">Fiji</span> <span class="pre">Map</span> <span class="pre">Grid</span></code> as the CRS. This will ensure that our original and
 reprojected layers will line up correctly.</li>
 </ol>
-<img alt="../_images/924.png" class="align-center" src="../_images/924.png" />
+<img alt="../_images/931.png" class="align-center" src="../_images/931.png" />
 <ol class="arabic simple" start="10">
 <li>Now we will run the cleaning operation. GRASS has a very powerful set of
 topological cleaning tools. These are available in QGIS via the <code class="docutils literal"><span class="pre">v.clean</span></code>
 algorithm. Search for this algorithm in the <span class="guilabel">Processing Toolbox</span>
 and double-click it to launch the dialog.</li>
 </ol>
-<img alt="../_images/1025.png" class="align-center" src="../_images/1025.png" />
+<img alt="../_images/1030.png" class="align-center" src="../_images/1030.png" />
 <ol class="arabic simple" start="11">
 <li>You can read more about various tools and options in the <span class="guilabel">Help</span>
 tab. For this tutorial, we will be using the <code class="docutils literal"><span class="pre">snap</span></code> tool to remove
@@ -325,7 +321,7 @@ the <span class="guilabel">Cleaning tool</span>.  Enter <code class="docutils li
 <span class="guilabel">Threshold</span>. Leave the other fields blank and click
 <span class="guilabel">Run</span>.</li>
 </ol>
-<img alt="../_images/1130.png" class="align-center" src="../_images/1130.png" />
+<img alt="../_images/1145.png" class="align-center" src="../_images/1145.png" />
 <ol class="arabic simple" start="12">
 <li>Once the processing finishes, you will see 2 new layers added to QGIS. The
 <code class="docutils literal"><span class="pre">Cleaned</span> <span class="pre">vector</span> <span class="pre">layer</span></code> is the layer with topological errors corrected.
@@ -333,12 +329,12 @@ You will also have a <code class="docutils literal"><span class="pre">Errors</sp
 which were repaired. You can use the errors layer as a guide and zoom in to
 see vertices that were removed.</li>
 </ol>
-<img alt="../_images/1226.png" class="align-center" src="../_images/1226.png" />
+<img alt="../_images/1231.png" class="align-center" src="../_images/1231.png" />
 <ol class="arabic simple" start="13">
 <li>Go to <span class="menuselection">Processing ‣ History and Log</span> dialog and note the
 full processing command for later use.</li>
 </ol>
-<img alt="../_images/1323.png" class="align-center" src="../_images/1323.png" />
+<img alt="../_images/1329.png" class="align-center" src="../_images/1329.png" />
 <ol class="arabic simple" start="14">
 <li>We are ready to start coding now. See the <strong>A Text Editor or a Python IDE</strong>
 section in the <a class="reference internal" href="building_a_python_plugin.html"><span class="doc">Building a Python Plugin</span></a> tutorial for instructions to
@@ -347,7 +343,7 @@ use QGIS, we must set various configuration options. A good way to run
 standalone scripts is to launch them via a <code class="docutils literal"><span class="pre">.bat</span></code> file. This file will
 first set the correct configuration options and then call the python
 script. Create a new file named <code class="docutils literal"><span class="pre">launch.bat</span></code> and enter the following
-text. Change the values according to your QGIS configuration. Don&#8217;t forget
+text. Change the values according to your QGIS configuration. Don’t forget
 to replace the username with your own username in the path to the python
 script.  The paths in this file will be the same on your system if you
 installed QGIS via the <code class="docutils literal"><span class="pre">OSGeo4W</span> <span class="pre">Installer</span></code>. Save the file on your
@@ -375,7 +371,7 @@ python c:\Users\Ujaval\Desktop\download_and_clean.py
 pause
 </pre></div>
 </div>
-<img alt="../_images/1422.png" class="align-center" src="../_images/1422.png" />
+<img alt="../_images/1428.png" class="align-center" src="../_images/1428.png" />
 <ol class="arabic simple" start="15">
 <li>Create a new python file and enter the following code. Name the file as
 <code class="docutils literal"><span class="pre">download_and_clean.py</span></code> and save it on your Desktop.</li>
@@ -384,7 +380,7 @@ pause
 <span class="k">print</span> <span class="s1">&#39;Hello QGIS!&#39;</span>
 </pre></div>
 </div>
-<img alt="../_images/1521.png" class="align-center" src="../_images/1521.png" />
+<img alt="../_images/1527.png" class="align-center" src="../_images/1527.png" />
 <ol class="arabic simple" start="16">
 <li>Switch to your Desktop and locate the <code class="docutils literal"><span class="pre">launch.bat</span></code> icon. Double-click it
 to launch a new command window and run the script. If you see <code class="docutils literal"><span class="pre">Hello</span>
@@ -392,7 +388,7 @@ to launch a new command window and run the script. If you see <code class="docut
 fine. If you see errors or do not see the text, check your <code class="docutils literal"><span class="pre">launch.bat</span></code>
 file and make sure all the paths match the locations on your system.</li>
 </ol>
-<img alt="../_images/1620.png" class="align-center" src="../_images/1620.png" />
+<img alt="../_images/1625.png" class="align-center" src="../_images/1625.png" />
 <ol class="arabic simple" start="17">
 <li>Back in your text editor, modify the <code class="docutils literal"><span class="pre">download_and_clean.py</span></code> script to
 add the following code. This is the bootstrap code to initialize QGIS.
@@ -422,7 +418,7 @@ script.</li>
 <span class="k">print</span> <span class="s1">&#39;Hello QGIS!&#39;</span>
 </pre></div>
 </div>
-<img alt="../_images/1719.png" class="align-center" src="../_images/1719.png" />
+<img alt="../_images/1723.png" class="align-center" src="../_images/1723.png" />
 <ol class="arabic simple" start="18">
 <li>Recall the first processing command that we had saved from the log. This
 was the command to re-project a layer. Paste the command to your script and
@@ -437,12 +433,12 @@ the path to the output layers as a dictionary. We are storing this as the
 <span class="k">print</span> <span class="n">output</span>
 </pre></div>
 </div>
-<img alt="../_images/1819.png" class="align-center" src="../_images/1819.png" />
+<img alt="../_images/1824.png" class="align-center" src="../_images/1824.png" />
 <ol class="arabic simple" start="19">
 <li>Run the script via <code class="docutils literal"><span class="pre">launch.bat</span></code> and you will see the path to the newly
 created reprojected layer.</li>
 </ol>
-<img alt="../_images/1917.png" class="align-center" src="../_images/1917.png" />
+<img alt="../_images/1922.png" class="align-center" src="../_images/1922.png" />
 <ol class="arabic simple" start="20">
 <li>Now add the code for cleaning the topology. Since this is our final output,
 we will add the output file paths as the last 2 arguments for the
@@ -460,10 +456,10 @@ created in a temporary directory.</li>
                   <span class="s1">&#39;C:\Users</span><span class="se">\\</span><span class="s1">Ujaval</span><span class="se">\\</span><span class="s1">Desktop</span><span class="se">\\</span><span class="s1">errors.shp&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../_images/2014.png" class="align-center" src="../_images/2014.png" />
+<img alt="../_images/2018.png" class="align-center" src="../_images/2018.png" />
 <ol class="arabic simple" start="21">
 <li>Run the script and you will see 2 new shapefiles created on your Desktop.
-This completes the processing part of the script. Let&#8217;s add the code to
+This completes the processing part of the script. Let’s add the code to
 download the data from the original website and unzip it automatically. We
 will also store the path to the unzipped file in a variable that we can
 pass to the processing algorithm later. We will need to import some
@@ -491,12 +487,12 @@ full script with all the changes)</li>
                 <span class="n">roads_shp_path</span> <span class="o">=</span> <span class="n">file_path</span>
 </pre></div>
 </div>
-<img alt="../_images/2118.png" class="align-center" src="../_images/2118.png" />
+<img alt="../_images/2121.png" class="align-center" src="../_images/2121.png" />
 <ol class="arabic simple" start="22">
 <li>Run the completed script. Everytime you run the script, a fresh copy of the
 data will be downloaded and processed.</li>
 </ol>
-<img alt="../_images/2217.png" class="align-center" src="../_images/2217.png" />
+<img alt="../_images/2219.png" class="align-center" src="../_images/2219.png" />
 <ol class="arabic simple" start="23">
 <li>To automate running on this script on a daily basis, we can use the <code class="docutils literal"><span class="pre">Task</span>
 <span class="pre">Scheduler</span></code> in Windows. Launch the Task Scheduler and click
@@ -506,35 +502,35 @@ data will be downloaded and processed.</li>
 <p class="first admonition-title">Note</p>
 <p class="last">Linux and Mac users can use cron jobs to schedule  tasks.</p>
 </div>
-<img alt="../_images/2314.png" class="align-center" src="../_images/2314.png" />
+<img alt="../_images/2318.png" class="align-center" src="../_images/2318.png" />
 <ol class="arabic simple" start="24">
 <li>Name the task as <code class="docutils literal"><span class="pre">Daily</span> <span class="pre">Download</span> <span class="pre">and</span> <span class="pre">Cleanup</span></code> and click <span class="guilabel">Next</span>.</li>
 </ol>
-<img alt="../_images/2412.png" class="align-center" src="../_images/2412.png" />
+<img alt="../_images/2416.png" class="align-center" src="../_images/2416.png" />
 <ol class="arabic simple" start="25">
 <li>Select <code class="docutils literal"><span class="pre">Daily</span></code> as the <span class="guilabel">Trigger</span> and click <span class="guilabel">Next</span></li>
 </ol>
-<img alt="../_images/2511.png" class="align-center" src="../_images/2511.png" />
+<img alt="../_images/2515.png" class="align-center" src="../_images/2515.png" />
 <ol class="arabic simple" start="26">
 <li>Select a time as per your liking and click <span class="guilabel">Next</span>.</li>
 </ol>
-<img alt="../_images/2610.png" class="align-center" src="../_images/2610.png" />
+<img alt="../_images/2613.png" class="align-center" src="../_images/2613.png" />
 <ol class="arabic simple" start="27">
 <li>Choose <code class="docutils literal"><span class="pre">Start</span> <span class="pre">a</span> <span class="pre">program</span></code> as the <span class="guilabel">Action</span> and click
 <span class="guilabel">Next</span>.</li>
 </ol>
-<img alt="../_images/277.png" class="align-center" src="../_images/277.png" />
+<img alt="../_images/2712.png" class="align-center" src="../_images/2712.png" />
 <ol class="arabic simple" start="28">
 <li>Click <span class="guilabel">Browse</span> and locate the <code class="docutils literal"><span class="pre">launch.bat</span></code> script. Click
 <span class="guilabel">Next</span>.</li>
 </ol>
-<img alt="../_images/286.png" class="align-center" src="../_images/286.png" />
+<img alt="../_images/2811.png" class="align-center" src="../_images/2811.png" />
 <ol class="arabic simple" start="29">
 <li>Click <span class="guilabel">Finish</span> at the last screen to schedule the task. Now the
 script will automatically launch at the specified time to give you a fresh
 copy of cleaned data everyday.</li>
 </ol>
-<img alt="../_images/295.png" class="align-center" src="../_images/295.png" />
+<img alt="../_images/2910.png" class="align-center" src="../_images/2910.png" />
 <p>Below is the full <code class="docutils literal"><span class="pre">download_and_clean.py</span></code> script for your reference.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">qgis.core</span> <span class="k">import</span> <span class="o">*</span>
@@ -621,8 +617,8 @@ copy of cleaned data everyday.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

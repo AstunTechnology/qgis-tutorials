@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Performing Table Joins (PyQGIS) &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Web Mapping with QGIS2Web" href="web_mapping_with_qgis2web.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/performing_table_joins_pyqgis_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'performing_table_joins_pyqgis_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/performing_table_joins_pyqgis_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'performing_table_joins_pyqgis_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/performing_table_joins_pyqgis_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'performing_table_joins_pyqgis_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/performing_table_joins_pyqgis_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'performing_table_joins_pyqgis_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="performing-table-joins-pyqgis">
@@ -267,9 +263,9 @@ the zip archive.</li>
 <span class="n">QgsMapLayerRegistry</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">shp</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../_images/1105.png" class="align-center" src="../_images/1105.png" />
+<img alt="../_images/1133.png" class="align-center" src="../_images/1133.png" />
 <ol class="arabic simple" start="2">
-<li>Load the CSV file. As the CSV file doesn&#8217;t contain any spatial data, we load
+<li>Load the CSV file. As the CSV file doesn’t contain any spatial data, we load
 it as a table using the <code class="docutils literal"><span class="pre">delimitedtext</span></code> provider.</li>
 </ol>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">csv_uri</span> <span class="o">=</span> <span class="s1">&#39;file:///C:/Users/Ujaval/Downloads/ca_tracts_pop.csv?delimiter=,&#39;</span>
@@ -277,7 +273,7 @@ it as a table using the <code class="docutils literal"><span class="pre">delimit
 <span class="n">QgsMapLayerRegistry</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">csv</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../_images/257.png" class="align-center" src="../_images/257.png" />
+<img alt="../_images/289.png" class="align-center" src="../_images/289.png" />
 <ol class="arabic simple" start="3">
 <li>Create the table join. Table joins in QGIS are performed using
 <code class="docutils literal"><span class="pre">QgsVectorJoinInfo</span></code> object. We need to specify the <code class="docutils literal"><span class="pre">GEO.id2</span></code> field from
@@ -301,7 +297,7 @@ loaded in the QgsMapLayerRegistry - otherwise the join would not work.</p>
 <span class="n">shp</span><span class="o">.</span><span class="n">addJoin</span><span class="p">(</span><span class="n">joinObject</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../_images/333.png" class="align-center" src="../_images/333.png" />
+<img alt="../_images/349.png" class="align-center" src="../_images/349.png" />
 <ol class="arabic simple" start="4">
 <li>An easier - and preferred way of accomplishing the same thing is via the
 Processing Framework. You can call the algorithm
@@ -320,7 +316,7 @@ choice.</p>
 <span class="n">result</span> <span class="o">=</span> <span class="n">processing</span><span class="o">.</span><span class="n">runandload</span><span class="p">(</span><span class="s1">&#39;qgis:joinattributestable&#39;</span><span class="p">,</span> <span class="n">shp</span><span class="p">,</span> <span class="n">csv</span><span class="p">,</span> <span class="n">shpField</span><span class="p">,</span> <span class="n">csvField</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../_images/423.png" class="align-center" src="../_images/423.png" />
+<img alt="../_images/430.png" class="align-center" src="../_images/430.png" />
 <ol class="arabic simple" start="5">
 <li>We will stick with the original join using <code class="docutils literal"><span class="pre">QgsVectorJoinInfo</span></code> for the
 remainder of the tutorial. Now it is time to apply a graduated style to the
@@ -381,7 +377,7 @@ joined layer. The population field name in the joined layer is
 <span class="n">shp</span><span class="o">.</span><span class="n">setRendererV2</span><span class="p">(</span><span class="n">myRenderer</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../_images/524.png" class="align-center" src="../_images/524.png" />
+<img alt="../_images/531.png" class="align-center" src="../_images/531.png" />
 <ol class="arabic simple" start="6">
 <li>Typing the code in the Python Console is useful for small tasks, but it
 is far easier to use the built-in <span class="guilabel">Editor</span>. You can copy the
@@ -389,7 +385,7 @@ entire script in the <span class="guilabel">Editor</span> and click <span class=
 script finishes, you would have created a table join and styled the
 resulting layer without any manual steps.</li>
 </ol>
-<img alt="../_images/623.png" class="align-center" src="../_images/623.png" />
+<img alt="../_images/629.png" class="align-center" src="../_images/629.png" />
 <p>Below is the full <code class="docutils literal"><span class="pre">join_attributes.py</span></code> file as a reference.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PyQt4</span> <span class="k">import</span> <span class="n">QtGui</span>
 <span class="n">zip_uri</span> <span class="o">=</span> <span class="s1">&#39;/vsizip/C:/Users/Ujaval/Downloads/tl_2013_06_tract.zip/tl_2013_06_tract.shp&#39;</span>
@@ -484,8 +480,8 @@ resulting layer without any manual steps.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

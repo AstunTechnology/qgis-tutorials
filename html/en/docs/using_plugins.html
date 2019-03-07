@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Using Plugins &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Searching and Downloading OpenStreetMap Data" href="downloading_osm_data.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/using_plugins_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'using_plugins_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/using_plugins_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'using_plugins_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/using_plugins_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'using_plugins_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/using_plugins_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'using_plugins_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="using-plugins">
@@ -233,53 +229,53 @@
 <h3>Core Plugins<a class="headerlink" href="#core-plugins" title="Permalink to this headline">¶</a></h3>
 <p>Core plugins are already part of the standard QGIS installation. To use these, you just need to enable them.</p>
 <ol class="arabic simple">
-<li>Open QGIS. Click on <span class="menuselection">Plugins ‣ Manage and Install Plugins...</span>. to open the <span class="guilabel">Plugin Manager</span> dialog.</li>
+<li>Open QGIS. Click on <span class="menuselection">Plugins ‣ Manage and Install Plugins…</span>. to open the <span class="guilabel">Plugin Manager</span> dialog.</li>
 </ol>
-<img alt="../_images/1135.png" class="align-center" src="../_images/1135.png" />
+<img alt="../_images/1150.png" class="align-center" src="../_images/1150.png" />
 <ol class="arabic simple" start="2">
 <li>Even if this is your first time using QGIS, you will see a lot of plugins listed under the <span class="guilabel">Installed</span> tab. This is because they are <em>Core Plugins</em> and were installed during QGIS installation.</li>
 </ol>
-<img alt="../_images/280.png" class="align-center" src="../_images/280.png" />
+<img alt="../_images/2105.png" class="align-center" src="../_images/2105.png" />
 <ol class="arabic simple" start="3">
-<li>Let&#8217;s enable one of the plugins. Check on the checkbox next to <span class="guilabel">Spatial Query Plugin</span>. This will enable the plugin and you will be able to use it. One thing to note is that plugins have the ability to insert menu items at various locations and create new panels and toolbars. Sometimes it is difficult to know how to find the newly enabled tools. Once clue is to look in the plugin discription. Here the description says <em>Category: Vector</em>. That indicates that the plugin would be found under the <span class="guilabel">Vector</span> menu once enabled. Click <span class="guilabel">Close</span>.</li>
+<li>Let’s enable one of the plugins. Check on the checkbox next to <span class="guilabel">Spatial Query Plugin</span>. This will enable the plugin and you will be able to use it. One thing to note is that plugins have the ability to insert menu items at various locations and create new panels and toolbars. Sometimes it is difficult to know how to find the newly enabled tools. Once clue is to look in the plugin discription. Here the description says <em>Category: Vector</em>. That indicates that the plugin would be found under the <span class="guilabel">Vector</span> menu once enabled. Click <span class="guilabel">Close</span>.</li>
 </ol>
-<img alt="../_images/345.png" class="align-center" src="../_images/345.png" />
+<img alt="../_images/360.png" class="align-center" src="../_images/360.png" />
 <ol class="arabic simple" start="4">
 <li>Now that the <span class="guilabel">Spatial Query Plugin</span> is enabled, you can go to the <span class="menuselection">Vector ‣ Spatial Query</span> to use the functionality added by the plugin.</li>
 </ol>
-<img alt="../_images/432.png" class="align-center" src="../_images/432.png" />
+<img alt="../_images/439.png" class="align-center" src="../_images/439.png" />
 </div>
 <div class="section" id="external-plugins">
 <h3>External Plugins<a class="headerlink" href="#external-plugins" title="Permalink to this headline">¶</a></h3>
 <p>External plugins are available in the <a class="reference external" href="http://plugins.qgis.org/">QGIS Plugins Repository</a> and need to be installed by the users before using them. An easy way to browse and install these plugins is by using the <span class="guilabel">Plugin Manager</span> tool.</p>
 <ol class="arabic simple">
-<li>Open QGIS. Click on <span class="menuselection">Plugins ‣ Manage and Install Plugins...</span>. to open the <span class="guilabel">Plugin Manager</span> dialog.</li>
+<li>Open QGIS. Click on <span class="menuselection">Plugins ‣ Manage and Install Plugins…</span>. to open the <span class="guilabel">Plugin Manager</span> dialog.</li>
 </ol>
-<img alt="../_images/533.png" class="align-center" src="../_images/533.png" />
+<img alt="../_images/540.png" class="align-center" src="../_images/540.png" />
 <ol class="arabic simple" start="2">
 <li>Click on <span class="guilabel">Get more</span> tab. Here you will see a list of plugins listed.</li>
 </ol>
-<img alt="../_images/631.png" class="align-center" src="../_images/631.png" />
+<img alt="../_images/637.png" class="align-center" src="../_images/637.png" />
 <ol class="arabic simple" start="3">
-<li>For this tutorial, let&#8217;s find and install a plugin called &#8216;QuickQKT&#8217;. As you start typing <em>qui</em> in the <span class="guilabel">search</span> box, you will see the search results below. Click on the <span class="guilabel">QuickWKT</span>. Next, click on <span class="guilabel">Install plugin</span> button to install it.</li>
+<li>For this tutorial, let’s find and install a plugin called ‘QuickQKT’. As you start typing <em>qui</em> in the <span class="guilabel">search</span> box, you will see the search results below. Click on the <span class="guilabel">QuickWKT</span>. Next, click on <span class="guilabel">Install plugin</span> button to install it.</li>
 </ol>
-<img alt="../_images/730.png" class="align-center" src="../_images/730.png" />
+<img alt="../_images/737.png" class="align-center" src="../_images/737.png" />
 <ol class="arabic simple" start="4">
 <li>Once the plugin is downloaded and installed, you will see a confirmation dialog.</li>
 </ol>
-<img alt="../_images/829.png" class="align-center" src="../_images/829.png" />
+<img alt="../_images/834.png" class="align-center" src="../_images/834.png" />
 <ol class="arabic simple" start="5">
 <li>If you noticed, there was no mention of the plugin category in the description. That makes it hard to determine how to access the newly installed plugin. Most external plugins are installed under the <span class="guilabel">Plugins</span> menu itself in QGIS. Click on <span class="menuselection">Plugins ‣ QuickWKT</span> and you will see the newly installed plugin. Usually, external plugins also install a  button in the <span class="guilabel">Plugins</span> toolbar also. You may also use that button to access the plugin.</li>
 </ol>
-<img alt="../_images/927.png" class="align-center" src="../_images/927.png" />
+<img alt="../_images/934.png" class="align-center" src="../_images/934.png" />
 </div>
 <div class="section" id="experimental-plugins">
 <h3>Experimental Plugins<a class="headerlink" href="#experimental-plugins" title="Permalink to this headline">¶</a></h3>
-<p>Now you know how to install and find an <em>External Plugin</em> in QGIS. Let&#8217;s explore some advanced options. Sometimes you are looking for a specific plugin, but cannot find it in the <span class="guilabel">Get more</span> tab. It maybe because the plugin is marked <em>Experimental</em>. Here is how to install <em>experimental</em> plugins.</p>
+<p>Now you know how to install and find an <em>External Plugin</em> in QGIS. Let’s explore some advanced options. Sometimes you are looking for a specific plugin, but cannot find it in the <span class="guilabel">Get more</span> tab. It maybe because the plugin is marked <em>Experimental</em>. Here is how to install <em>experimental</em> plugins.</p>
 <ol class="arabic simple">
-<li>Open <span class="guilabel">Plugin Manager</span> by <span class="menuselection">Plugins ‣ Manage and Install Plugins...</span>. Click on the <span class="guilabel">Settings</span> tab. You will see an option called <span class="guilabel">Show also experimental plugins</span>. Click the checkbox next to it, to enable it.</li>
+<li>Open <span class="guilabel">Plugin Manager</span> by <span class="menuselection">Plugins ‣ Manage and Install Plugins…</span>. Click on the <span class="guilabel">Settings</span> tab. You will see an option called <span class="guilabel">Show also experimental plugins</span>. Click the checkbox next to it, to enable it.</li>
 </ol>
-<img alt="../_images/1028.png" class="align-center" src="../_images/1028.png" />
+<img alt="../_images/1033.png" class="align-center" src="../_images/1033.png" />
 <ol class="arabic simple" start="2">
 <li>You will see a new tab called <span class="guilabel">New</span>. The newly enabled experimental plugins will show up here.</li>
 </ol>
@@ -287,19 +283,19 @@
 <p class="first admonition-title">Note</p>
 <p class="last">The <span class="guilabel">New</span> tab will appear only temporarily once you enable the experimental plugins. The next time you open <span class="guilabel">Plugin Manager</span>, the experimental plugins will show alongside regular plugins in the <span class="guilabel">Get more</span> tab.</p>
 </div>
-<img alt="../_images/1136.png" class="align-center" src="../_images/1136.png" />
+<img alt="../_images/1151.png" class="align-center" src="../_images/1151.png" />
 <ol class="arabic simple" start="3">
-<li>Let&#8217;s install a plugin called <span class="guilabel">TimeManager</span>. Click on the plugin name and then Click <span class="guilabel">Install</span>.</li>
+<li>Let’s install a plugin called <span class="guilabel">TimeManager</span>. Click on the plugin name and then Click <span class="guilabel">Install</span>.</li>
 </ol>
-<img alt="../_images/1229.png" class="align-center" src="../_images/1229.png" />
+<img alt="../_images/1234.png" class="align-center" src="../_images/1234.png" />
 <ol class="arabic simple" start="4">
 <li>Now when you come back to the main QGIS window, you will see a new <em>Panel</em> at the bottom of the canvas. This panel is created by the TimeManager plugin. This is yet another way of plugins to add useful functionality to the user interface .</li>
 </ol>
-<img alt="../_images/1326.png" class="align-center" src="../_images/1326.png" />
+<img alt="../_images/1332.png" class="align-center" src="../_images/1332.png" />
 <ol class="arabic simple" start="5">
 <li>You can enable/disable this panel from <span class="menuselection">View ‣ Panels ‣ Time Manager</span>.</li>
 </ol>
-<img alt="../_images/1425.png" class="align-center" src="../_images/1425.png" />
+<img alt="../_images/1431.png" class="align-center" src="../_images/1431.png" />
 </div>
 </div>
 </div>
@@ -326,8 +322,8 @@
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

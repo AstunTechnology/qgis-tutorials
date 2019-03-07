@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Using Custom Python Expression Functions &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,10 +21,10 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Writing Python Scripts for Processing Framework" href="processing_python_scripts.html" />
+    <link rel="next" title="Writing Python Scripts for Processing Framework (QGIS3)" href="3/processing_python_scripts.html" />
     <link rel="prev" title="Building a Python Plugin" href="building_a_python_plugin.html" />
 
 <meta charset='utf-8'>
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -135,7 +130,7 @@
     </a>
   </li>
   <li>
-    <a href="processing_python_scripts.html" title="Next Chapter: Writing Python Scripts for Processing Framework"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Writing Pytho... &raquo;</span>
+    <a href="3/processing_python_scripts.html" title="Next Chapter: Writing Python Scripts for Processing Framework (QGIS3)"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Writing Pytho... &raquo;</span>
     </a>
   </li>
               
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/custom_python_functions_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'custom_python_functions_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/custom_python_functions_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'custom_python_functions_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/custom_python_functions_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'custom_python_functions_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/custom_python_functions_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'custom_python_functions_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="using-custom-python-expression-functions">
@@ -242,7 +238,7 @@ feature.</li>
 </div>
 <div class="section" id="get-the-data">
 <h2>Get the data<a class="headerlink" href="#get-the-data" title="Permalink to this headline">¶</a></h2>
-<p>We will use Natural Earth&#8217;s <a class="reference external" href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/">Populated Places</a>
+<p>We will use Natural Earth’s <a class="reference external" href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/">Populated Places</a>
 dataset. Download the <a class="reference external" href="http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_populated_places_simple.zip">simple (less columns) dataset</a></p>
 <p>For convenience, you may directly download a copy of the dataset from the links
 below:</p>
@@ -251,85 +247,47 @@ below:</p>
 <div class="section" id="procedure">
 <h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Open QGIS and go to <span class="menuselection">Layers ‣ Add Layer ‣ Add Vector
+<li>Open QGIS and go to <span class="menuselection">Layers ‣ Add Vector ‣ Add Vector
 Layer</span>.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/129.png" class="align-center" src="../_images/129.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/199.png" class="align-center" src="../_images/199.png" />
 <ol class="arabic simple" start="2">
 <li>Browse to the downloaded <code class="docutils literal"><span class="pre">ne_10m_populated_places_simple.zip</span></code> file and
 click <span class="guilabel">Open</span>.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/220.png" class="align-center" src="../_images/220.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/239.png" class="align-center" src="../_images/239.png" />
 <ol class="arabic simple" start="3">
-<li>Go to <span class="menuselection">View ‣ Select ‣ Select By Expression...</span></li>
+<li>Go to <span class="menuselection">View ‣ Select ‣ Select By Expressions…</span>.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/313.png" class="align-center" src="../_images/313.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/329.png" class="align-center" src="../_images/329.png" />
 <ol class="arabic simple" start="4">
 <li>Switch to the <span class="guilabel">Function Editor</span> tab. Here you can write any
 PyQGIS code that will be executed by the expression engine.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/49.png" class="align-center" src="../_images/49.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/416.png" class="align-center" src="../_images/416.png" />
 <ol class="arabic simple" start="5">
 <li>We will define a custom function named <code class="docutils literal"><span class="pre">GetUtmZone</span></code> that will calculate
 the UTM zone number for each feature. Since custom functions in QGIS work at
-the feature level. We will use the centroid of the feature&#8217;s geometry and
+the feature level. We will use the centroid of the feature’s geometry and
 compute the UTM Zone from the latitude and longitude of the centroid
-geometry. We will also add a &#8216;N&#8217; or &#8216;S&#8217; designation to the zone to indicate
-whether the zone is in the northern or southern hemisphere. Click
-<span class="guilabel">New file</span> and enter the filename <code class="docutils literal"><span class="pre">utm_zones.py</span></code> then enter the
-following code in the editor.</li>
+geometry. We will also add a ‘N’ or ‘S’ designation to the zone to indicate
+whether the zone is in the northern or southern hemisphere. Type the
+following code in the editor, enter the name of the file as <code class="docutils literal"><span class="pre">utm_zones.py</span></code>
+and click <span class="guilabel">Save file</span>.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">UTM Zones are longitudinal projection zones numbered from 1 to 60. Each UTM
 zone is 6 degree wide. Here we use a simple mathematical formula to find the
-appropriate zone for a given longitude value. Note that this formula doesn&#8217;t
+appropriate zone for a given longitude value. Note that this formula doesn’t
 cover some special UTM zones.</p>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Template function file. Define new functions using @qgsfunction.</span>
-<span class="sd">When using args=&quot;auto&quot; you may define a new variable for each value for the function.</span>
-<span class="sd">feature and parent must always be the last args.</span>
-<span class="sd">To pass a any number of args into a function use args=-1 the first</span>
-<span class="sd">variable will then be a list of values.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="nd">@qgsfunction</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s1">&#39;Custom&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">GetUtmZone</span><span class="p">(</span><span class="n">feature</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+<span class="nd">@qgsfunction</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s1">&#39;Custom&#39;</span><span class="p">,</span> <span class="n">usesgeometry</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">GetUtmZone</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">feature</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
     <span class="n">centroid</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">geometry</span><span class="p">()</span>
     <span class="n">longitude</span> <span class="o">=</span> <span class="n">centroid</span><span class="o">.</span><span class="n">asPoint</span><span class="p">()</span><span class="o">.</span><span class="n">x</span><span class="p">()</span>
     <span class="n">latitude</span> <span class="o">=</span> <span class="n">centroid</span><span class="o">.</span><span class="n">asPoint</span><span class="p">()</span><span class="o">.</span><span class="n">y</span><span class="p">()</span>
@@ -343,60 +301,33 @@ cover some special UTM zones.</p>
     <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%d%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">zone_number</span><span class="p">),</span> <span class="n">zone_letter</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/59.png" class="align-center" src="../_images/59.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/516.png" class="align-center" src="../_images/516.png" />
 <ol class="arabic simple" start="6">
-<li>Click <span class="guilabel">Load</span>. This will execute the python code and register
+<li>Click <span class="guilabel">Run Script</span>. This will execute the python code and register
 the function <code class="docutils literal"><span class="pre">GetUtmZone</span></code> with the expression engine. Note that this is
 needed to be done only once. Once the function is registered, it will always
 be available to the expression engine.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/68.png" class="align-center" src="../_images/68.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/614.png" class="align-center" src="../_images/614.png" />
 <ol class="arabic simple" start="7">
 <li>Switch to the <span class="guilabel">Expression</span> tab in the <span class="guilabel">Select by
 expression</span> dialog. Find and expand the <span class="guilabel">Custom</span> group in the
 <span class="guilabel">Functions</span> section. You will notice a new custom function
-<code class="docutils literal"><span class="pre">GetUtmZone()</span></code> in the list. We can now use this function in the expressions
+<code class="docutils literal"><span class="pre">$GetUtmZone</span></code> in the list. We can now use this function in the expressions
 just like any other function. Type the following expression in the editor.
 This expression will select all points that fall in the UTM Zone <code class="docutils literal"><span class="pre">40N</span></code>.
 Click <span class="guilabel">Select</span>.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="highlight-none"><div class="highlight"><pre><span></span>GetUtmZone() = &#39;40N&#39;
+<div class="highlight-none"><div class="highlight"><pre><span></span>$GetUtmZone = &#39;40N&#39;
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/78.png" class="align-center" src="../_images/78.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/715.png" class="align-center" src="../_images/715.png" />
 <ol class="arabic simple" start="8">
 <li>Back in the main QGIS window, you will see many points highlighted in
 yellow. These are the points falling in the UTM Zone we specified in the
 expression.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/88.png" class="align-center" src="../_images/88.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/813.png" class="align-center" src="../_images/813.png" />
 <ol class="arabic simple" start="9">
 <li>You saw how we defined and used a custom function to select features by
 expression. We will now use the same function in another context. One of the
@@ -404,86 +335,47 @@ hidden gems in QGIS is the <code class="docutils literal"><span class="pre">Map<
 text when you hover over a feature. Right-click the
 <code class="docutils literal"><span class="pre">ne_10m_populated_places_simple</span></code> layer and select <span class="guilabel">Properties</span>.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/98.png" class="align-center" src="../_images/98.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/915.png" class="align-center" src="../_images/915.png" />
 <ol class="arabic simple" start="10">
 <li>Switch to the <span class="guilabel">Display</span> tab and select <span class="guilabel">HTML</span>. Here you
 can enter any text that will be displayed when you hover over the features
 of the layer. Even better, you can use layer field values and expressions
 to define a much more useful message. Click on the <span class="guilabel">Insert
-expression...</span> button.</li>
+expression…</span> button.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/108.png" class="align-center" src="../_images/108.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/1013.png" class="align-center" src="../_images/1013.png" />
 <ol class="arabic simple" start="11">
 <li>You will see the familiar expression editor again. We will use the
 <code class="docutils literal"><span class="pre">concat</span></code> function to join the value of the field <code class="docutils literal"><span class="pre">name</span></code> and the result
-of our custom function GetUtmZone(). Enter the following expression and
+of our custom function $GetUtmZone. Enter the following expression and
 click <span class="guilabel">OK</span>.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="highlight-none"><div class="highlight"><pre><span></span>concat(&quot;name&quot;, &#39; | UTM Zone: &#39;, GetUtmZone())
+<div class="highlight-none"><div class="highlight"><pre><span></span>concat(&quot;name&quot;, &#39; | UTM Zone: &#39;, $GetUtmZone)
 </pre></div>
 </div>
-<img alt="../_images/1111.png" class="align-center" src="../_images/1111.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/1117.png" class="align-center" src="../_images/1117.png" />
 <ol class="arabic simple" start="12">
 <li>You will see the expression entered as the value of the <span class="guilabel">Display</span>
 text. Click <span class="guilabel">OK</span>.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/1210.png" class="align-center" src="../_images/1210.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/1215.png" class="align-center" src="../_images/1215.png" />
 <ol class="arabic simple" start="13">
 <li>Before we proceed, let us de-select the features that were selected in the
 previous step. Go to <span class="menuselection">View ‣ Select ‣ Deselect Features
 from All Layers</span>.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/137.png" class="align-center" src="../_images/137.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/1314.png" class="align-center" src="../_images/1314.png" />
 <ol class="arabic simple" start="14">
 <li>Activate the <code class="docutils literal"><span class="pre">Map</span> <span class="pre">Tips</span></code> tool by going to <span class="menuselection">View ‣ Map
 Tips</span>.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/147.png" class="align-center" src="../_images/147.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="../_images/1413.png" class="align-center" src="../_images/1413.png" />
 <ol class="arabic simple" start="15">
 <li>Zoom into any area of the map and put your mouse cursor over any feature.
 You will see the name of the city and corresponding UTM zone displayed as
 the map tip.</li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="../_images/157.png" class="align-center" src="../_images/157.png" />
+<img alt="../_images/1513.png" class="align-center" src="../_images/1513.png" />
 </div>
 </div>
 
@@ -509,8 +401,8 @@ the map tip.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

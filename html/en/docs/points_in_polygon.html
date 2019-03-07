@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Points in Polygon Analysis &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Creating Heatmaps" href="creating_heatmaps.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/points_in_polygon_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'points_in_polygon_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/points_in_polygon_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'points_in_polygon_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/points_in_polygon_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'points_in_polygon_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/points_in_polygon_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'points_in_polygon_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="points-in-polygon-analysis">
@@ -253,7 +249,7 @@ below:</p>
 <li>Open <span class="menuselection">Layer ‣ Add Delimited Text Layer</span> and browse to the
 downloaded <code class="docutils literal"><span class="pre">signif.txt</span></code> file.</li>
 </ol>
-<img alt="../_images/1106.png" class="align-center" src="../_images/1106.png" />
+<img alt="../_images/1134.png" class="align-center" src="../_images/1134.png" />
 <ol class="arabic simple" start="2">
 <li>Since this is a <em>tab-delimited file</em>, choose <span class="guilabel">Tab</span> as the
 <span class="guilabel">File format</span>. The <span class="guilabel">X field</span> and <span class="guilabel">Y field</span>
@@ -265,25 +261,25 @@ would be auto-populated. Click <span class="guilabel">OK</span>.</li>
 valid errors and some rows from the file will not be imported. You can ignore
 the errors for the purpose of this tutorial.</p>
 </div>
-<img alt="../_images/258.png" class="align-center" src="../_images/258.png" />
+<img alt="../_images/290.png" class="align-center" src="../_images/290.png" />
 <ol class="arabic simple" start="3">
 <li>As the earthquake dataset has Latitude/Longitude coordinates, choose
 <span class="guilabel">WGS 84 EPSG:436</span> as the CRS in the <span class="guilabel">Coordinate
 Reference System Selector</span> dialog.</li>
 </ol>
-<img alt="../_images/334.png" class="align-center" src="../_images/334.png" />
+<img alt="../_images/350.png" class="align-center" src="../_images/350.png" />
 <ol class="arabic simple" start="4">
-<li>The earthquake point layer would now be loaded and displayed in QGIS. Let&#8217;s
+<li>The earthquake point layer would now be loaded and displayed in QGIS. Let’s
 also open the Countries layer. Go to <span class="menuselection">Layer ‣ Add Vector
 Layer</span>.  Browse to the downloaded <code class="docutils literal"><span class="pre">ne_10m_admin_0_countries.zip</span></code> file and
 click <span class="guilabel">Open</span>. Select the <code class="docutils literal"><span class="pre">ne_10m_admin_0_countries.shp</span></code> as the
-layer in the <span class="guilabel">Select layers to add...</span> dialog.</li>
+layer in the <span class="guilabel">Select layers to add…</span> dialog.</li>
 </ol>
-<img alt="../_images/424.png" class="align-center" src="../_images/424.png" />
+<img alt="../_images/431.png" class="align-center" src="../_images/431.png" />
 <ol class="arabic simple" start="5">
 <li>Click on <span class="menuselection">Vector ‣ Analysis Tools ‣ Point in Polygon</span></li>
 </ol>
-<img alt="../_images/525.png" class="align-center" src="../_images/525.png" />
+<img alt="../_images/532.png" class="align-center" src="../_images/532.png" />
 <ol class="arabic simple" start="6">
 <li>In the pop-up window, select the polygon layer and point layer respectively.
 Name the output layer as <code class="docutils literal"><span class="pre">earthquake_per_coutry.shp</span></code> and Click
@@ -297,26 +293,26 @@ results.</p>
 <ol class="arabic simple" start="7">
 <li>When asked whether you want to add the layer to TOC, click <span class="guilabel">Yes</span>.</li>
 </ol>
-<img alt="../_images/722.png" class="align-center" src="../_images/722.png" />
+<img alt="../_images/729.png" class="align-center" src="../_images/729.png" />
 <ol class="arabic simple" start="8">
 <li>You will see a new layer is added to the table of content. Open the
 attribute table by right-clicking on the layer and selecting <span class="guilabel">Open
 Attribute Table</span>.</li>
 </ol>
-<img alt="../_images/821.png" class="align-center" src="../_images/821.png" />
+<img alt="../_images/826.png" class="align-center" src="../_images/826.png" />
 <ol class="arabic simple" start="9">
 <li>In the attribute table, you will notice a new field named <code class="docutils literal"><span class="pre">PNTCNT</span></code>. This is
 the count of number of points from the earthquakes layer that fall within
 each polygon.</li>
 </ol>
-<img alt="../_images/919.png" class="align-center" src="../_images/919.png" />
+<img alt="../_images/926.png" class="align-center" src="../_images/926.png" />
 <ol class="arabic simple" start="10">
 <li>To get our answer, we can simply sort the table by <code class="docutils literal"><span class="pre">PNTCNT</span></code> field and the
 country with highest count will be our answer. Click 2-times on the
 <code class="docutils literal"><span class="pre">PNTCNT</span></code> column to get it sorted in descending order. Click on the first
 row to select it and close the Attribute Table.</li>
 </ol>
-<img alt="../_images/1020.png" class="align-center" src="../_images/1020.png" />
+<img alt="../_images/1025.png" class="align-center" src="../_images/1025.png" />
 <ol class="arabic simple" start="11">
 <li>Back in  the main QGIS window, you will see one feature highlighted in
 yellow. This is the feature linked to the selected row in the attribute
@@ -324,7 +320,7 @@ table which had the highest number of points. Select the
 <span class="guilabel">Identify</span> tool and click on that polygon. You can see that the
 country with the highest number of Significant earthquakes is <strong>China</strong>.</li>
 </ol>
-<img alt="../_images/1123.png" class="align-center" src="../_images/1123.png" />
+<img alt="../_images/1135.png" class="align-center" src="../_images/1135.png" />
 <p>We determined from the simple analysis of 2 datasets that China has had
 the highest number of major earthquakes. You may refine this analysis further
 by taking into consideration the population as well as the size of the country
@@ -355,8 +351,8 @@ earthquakes.</p>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

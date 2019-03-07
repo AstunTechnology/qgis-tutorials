@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Writing Python Scripts for Processing Framework &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,11 +21,9 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Running and Scheduling QGIS Processing Jobs" href="running_qgis_jobs.html" />
-    <link rel="prev" title="Using Custom Python Expression Functions" href="custom_python_functions.html" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -52,7 +44,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +55,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -80,7 +72,7 @@
      href="../index.html">Tutorials List <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
+      aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="making_a_map.html">Making a Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="working_with_attributes.html">Working with Attributes</a></li>
@@ -105,16 +97,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -130,14 +123,6 @@
             
               
                 
-  <li>
-    <a href="custom_python_functions.html" title="Previous Chapter: Using Custom Python Expression Functions"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Using Custom ...</span>
-    </a>
-  </li>
-  <li>
-    <a href="running_qgis_jobs.html" title="Next Chapter: Running and Scheduling QGIS Processing Jobs"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Running and S... &raquo;</span>
-    </a>
-  </li>
               
             
             
@@ -198,18 +183,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/processing_python_scripts_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'processing_python_scripts_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/processing_python_scripts_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'processing_python_scripts_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/processing_python_scripts_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'processing_python_scripts_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/processing_python_scripts_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'processing_python_scripts_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,11 +203,15 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="writing-python-scripts-for-processing-framework">
 <h1>Writing Python Scripts for Processing Framework<a class="headerlink" href="#writing-python-scripts-for-processing-framework" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">A new version of this tutorial is available at <a class="reference internal" href="3/processing_python_scripts.html"><span class="doc">Writing Python Scripts for Processing Framework (QGIS3)</span></a></p>
+</div>
 <p>One can write standalone pyqgis scripts that can be run via the Python Console
 in QGIS. With a few tweaks, you can make your standalone scripts run via the
 Processing Framework. This has several advantages. First, taking user input and
@@ -263,12 +253,12 @@ Layer</span>. Browse to the downloaded <code class="docutils literal"><span clas
 load the <code class="docutils literal"><span class="pre">ne_10_admin_0_countries</span></code> layer. Go to <span class="menuselection">Processing
 ‣ Toolbox</span>.</li>
 </ol>
-<img alt="../_images/1108.png" class="align-center" src="../_images/1108.png" />
+<img alt="../_images/1138.png" class="align-center" src="../_images/1138.png" />
 <ol class="arabic simple" start="2">
 <li>Expand the <span class="guilabel">Scripts</span> group in the <span class="guilabel">Processing Toolbox</span>
 and select <span class="guilabel">Create a new script</span>.</li>
 </ol>
-<img alt="../_images/260.png" class="align-center" src="../_images/260.png" />
+<img alt="../_images/299.png" class="align-center" src="../_images/299.png" />
 <ol class="arabic simple" start="3">
 <li>For a python script to be recognized as a Processing script, the beginning
 of the script must be the specifications of the input and outputs. This will
@@ -287,24 +277,24 @@ choice of fields from the <code class="docutils literal"><span class="pre">disso
 ##output_layer=output vector
 </pre></div>
 </div>
-<img alt="../_images/336.png" class="align-center" src="../_images/336.png" />
+<img alt="../_images/354.png" class="align-center" src="../_images/354.png" />
 <ol class="arabic simple" start="4">
 <li>Name the script <code class="docutils literal"><span class="pre">dissolve_with_sum</span></code> and save it at the default location
 under <span class="menuselection">.qgis2 ‣ processing ‣ scripts</span> folder.</li>
 </ol>
-<img alt="../_images/426.png" class="align-center" src="../_images/426.png" />
+<img alt="../_images/433.png" class="align-center" src="../_images/433.png" />
 <ol class="arabic simple" start="5">
 <li>Back in the <span class="guilabel">Script editor</span>, click <span class="guilabel">Run algorithm</span>
 button to preview the user interface.</li>
 </ol>
-<img alt="../_images/527.png" class="align-center" src="../_images/527.png" />
+<img alt="../_images/534.png" class="align-center" src="../_images/534.png" />
 <ol class="arabic simple" start="6">
 <li>You can see that just by adding a few lines, we have a nice user interface
 for the user to specify the inputs. It is also consistent with all other
 Processing algorithms, so there is no learning curve involved in using your
 custom algorithm.</li>
 </ol>
-<img alt="../_images/625.png" class="align-center" src="../_images/625.png" />
+<img alt="../_images/631.png" class="align-center" src="../_images/631.png" />
 <ol class="arabic simple" start="7">
 <li>In the <span class="guilabel">Script editor</span>, enter the following code. You will notice
 that we are using some special methods such as <code class="docutils literal"><span class="pre">processing.getObject()</span></code>
@@ -334,7 +324,7 @@ to get familiar with the syntax.</p>
 <span class="k">print</span> <span class="n">unique_values</span>
 </pre></div>
 </div>
-<img alt="../_images/724.png" class="align-center" src="../_images/724.png" />
+<img alt="../_images/731.png" class="align-center" src="../_images/731.png" />
 <ol class="arabic simple" start="8">
 <li>While writing code, it is important to be able to see errors and debug your
 code. Your processing scripts can be debugged easily via the built-in Python
@@ -342,29 +332,29 @@ Console. In the main QGIS window, go to <span class="menuselection">Plugins ‣ 
 Console</span>. Once the console is open, find your script in the
 <span class="guilabel">Processing Toolbox</span> and double-click it to launch it.</li>
 </ol>
-<img alt="../_images/823.png" class="align-center" src="../_images/823.png" />
+<img alt="../_images/828.png" class="align-center" src="../_images/828.png" />
 <ol class="arabic simple" start="9">
 <li>Select <code class="docutils literal"><span class="pre">SUBREGION</span></code> as the <span class="guilabel">dissolve field</span>. You may choose any
-field as the <span class="guilabel">sum field</span> as the script doesn&#8217;t have any code yet
+field as the <span class="guilabel">sum field</span> as the script doesn’t have any code yet
 to deal with it. Click <span class="guilabel">Run</span>.</li>
 </ol>
-<img alt="../_images/921.png" class="align-center" src="../_images/921.png" />
+<img alt="../_images/928.png" class="align-center" src="../_images/928.png" />
 <ol class="arabic simple" start="10">
 <li>You will see an error dialog. This is expected since the script is
-incomplete and doesn&#8217;t generate any output yet.</li>
+incomplete and doesn’t generate any output yet.</li>
 </ol>
-<img alt="../_images/1022.png" class="align-center" src="../_images/1022.png" />
+<img alt="../_images/1027.png" class="align-center" src="../_images/1027.png" />
 <ol class="arabic simple" start="11">
 <li>In the main QGIS windows, you will see the debug output from the script
 printed in the console. This is useful way to add print statements and see
 intermediate variable values.</li>
 </ol>
-<img alt="../_images/1125.png" class="align-center" src="../_images/1125.png" />
+<img alt="../_images/1139.png" class="align-center" src="../_images/1139.png" />
 <ol class="arabic simple" start="12">
-<li>Let&#8217;s go back to editing the script by right-clicking the script and select
+<li>Let’s go back to editing the script by right-clicking the script and select
 <span class="guilabel">Edit script</span>.</li>
 </ol>
-<img alt="../_images/1223.png" class="align-center" src="../_images/1223.png" />
+<img alt="../_images/1228.png" class="align-center" src="../_images/1228.png" />
 <ol class="arabic simple" start="13">
 <li>Enter the following code to complete the script. Note that we are using the
 existing dissolve algorithm in QGIS via processing using
@@ -396,7 +386,7 @@ existing dissolve algorithm in QGIS via processing using
 <span class="n">outlayer</span><span class="o">.</span><span class="n">commitChanges</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../_images/1320.png" class="align-center" src="../_images/1320.png" />
+<img alt="../_images/1326.png" class="align-center" src="../_images/1326.png" />
 <ol class="arabic simple" start="14">
 <li>Run the algorithm by selecting <code class="docutils literal"><span class="pre">SUBREGION</span></code> as the <span class="guilabel">dissolve
 field</span> and <code class="docutils literal"><span class="pre">POP_EST</span></code> as the <span class="guilabel">sum field</span>. Click <span class="guilabel">Run</span>.</li>
@@ -406,16 +396,16 @@ field</span> and <code class="docutils literal"><span class="pre">POP_EST</span>
 <p class="last">The processing algorithm may take upto 10 minutes to finish depending on
 your system.</p>
 </div>
-<img alt="../_images/1419.png" class="align-center" src="../_images/1419.png" />
+<img alt="../_images/1425.png" class="align-center" src="../_images/1425.png" />
 <ol class="arabic simple" start="15">
 <li>Once the processing finishes, you can use the <span class="guilabel">Identify</span> tool and
 click on any polygon. You will see the newly added <code class="docutils literal"><span class="pre">SUM</span></code> field with the
 <code class="docutils literal"><span class="pre">POP_EST</span></code> values from all original polygons added up.</li>
 </ol>
-<img alt="../_images/1518.png" class="align-center" src="../_images/1518.png" />
+<img alt="../_images/1524.png" class="align-center" src="../_images/1524.png" />
 <ol class="arabic simple" start="16">
 <li>You will note that all other fields in the output are still present. When
-you dissolve many features to create a single feature, it doesn&#8217;t make
+you dissolve many features to create a single feature, it doesn’t make
 sense to keep the original fields in the output. Go back to the
 <span class="guilabel">Script editor</span> and add the following code to delete all fields
 except the <code class="docutils literal"><span class="pre">SUM</span></code> field and the field that was used to dissolve the
@@ -431,16 +421,16 @@ original layer. Click <span class="guilabel">Save</span> button and close the wi
 <span class="n">outlayer</span><span class="o">.</span><span class="n">commitChanges</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../_images/1617.png" class="align-center" src="../_images/1617.png" />
+<img alt="../_images/1622.png" class="align-center" src="../_images/1622.png" />
 <ol class="arabic simple" start="17">
 <li>One of the hidden features of the Processing Framework is that all
 algorithms can work on selected features of a layer. This is very helpful
 when you want to run an algorithm on the subset of a layer. As our script
 uses <code class="docutils literal"><span class="pre">processing.features()</span></code> method to read features, it will respect the
-current selection. To demonstrate that, let&#8217;s make a selection first. Click
+current selection. To demonstrate that, let’s make a selection first. Click
 on the <span class="guilabel">Select features using an expression</span> button.</li>
 </ol>
-<img alt="../_images/1716.png" class="align-center" src="../_images/1716.png" />
+<img alt="../_images/1720.png" class="align-center" src="../_images/1720.png" />
 <ol class="arabic simple" start="18">
 <li>Enter the following expression to select features from North and South
 America and click <span class="guilabel">Select</span>.</li>
@@ -448,35 +438,35 @@ America and click <span class="guilabel">Select</span>.</li>
 <div class="highlight-none"><div class="highlight"><pre><span></span>&quot;CONTINENT&quot; = &#39;North America&#39; OR &quot;CONTINENT&quot; = &#39;South America&#39;
 </pre></div>
 </div>
-<img alt="../_images/1816.png" class="align-center" src="../_images/1816.png" />
+<img alt="../_images/1821.png" class="align-center" src="../_images/1821.png" />
 <ol class="arabic simple" start="19">
 <li>You will see the selected features highlighted in yellow. Right-click the
 <code class="docutils literal"><span class="pre">dissolve_with_sum</span></code> script and select <span class="guilabel">Execute</span>.</li>
 </ol>
-<img alt="../_images/1914.png" class="align-center" src="../_images/1914.png" />
+<img alt="../_images/1919.png" class="align-center" src="../_images/1919.png" />
 <ol class="arabic simple" start="20">
 <li>Select the inputs as before and click <span class="guilabel">Run</span>.</li>
 </ol>
-<img alt="../_images/2011.png" class="align-center" src="../_images/2011.png" />
+<img alt="../_images/2015.png" class="align-center" src="../_images/2015.png" />
 <ol class="arabic simple" start="22">
 <li>A new <code class="docutils literal"><span class="pre">output</span> <span class="pre">layer</span></code> will be added to QGIS. This will contain dissolved
 geometries only from the selected features in the input layer. You will
 also note that the <code class="docutils literal"><span class="pre">output</span> <span class="pre">layer</span></code> will contain only 2 fields as expected.</li>
 </ol>
-<img alt="../_images/2116.png" class="align-center" src="../_images/2116.png" />
+<img alt="../_images/2119.png" class="align-center" src="../_images/2119.png" />
 <ol class="arabic simple" start="23">
 <li>One last but important remmaining work is to document our algorithm. The
 Processing Framework has nice tools to write and access help. Go to the
 <span class="guilabel">Script editor</span> and click the <span class="guilabel">Edit script help</span>
 button.</li>
 </ol>
-<img alt="../_images/2215.png" class="align-center" src="../_images/2215.png" />
+<img alt="../_images/2217.png" class="align-center" src="../_images/2217.png" />
 <ol class="arabic simple" start="24">
 <li>Fill in the details for different elements and click <span class="guilabel">OK</span>. Now a
 detailed help will be available to all users of your script in the
 <span class="guilabel">Help</span> tab when they launch the algorithm.</li>
 </ol>
-<img alt="../_images/2312.png" class="align-center" src="../_images/2312.png" />
+<img alt="../_images/2316.png" class="align-center" src="../_images/2316.png" />
 <p>Below is the complete script for reference. You may modify it to suit your
 needs.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">##dissolve_layer=vector</span>
@@ -552,8 +542,8 @@ needs.</p>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>

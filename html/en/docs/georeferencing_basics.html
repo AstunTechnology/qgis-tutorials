@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Georeferencing Topo Sheets and Scanned Maps &#8212; QGIS Tutorials and Tips</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Georeferencing Aerial Imagery" href="advanced_georeferencing.html" />
@@ -52,7 +46,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,7 +57,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo.png"></span>
           QGIS Tutorials and Tips</a>
         <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
       </div>
@@ -105,16 +99,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolating_point_data.html">Interpolating Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Composer Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/batch_processing.html">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_qgis_browser.html">Using the QGIS Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_a_python_plugin.html">Building a Python Plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_python_functions.html">Using Custom Python Expression Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
@@ -122,6 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning_resources.html">QGIS Learning Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
 </ul>
 </ul>
 </li>
@@ -198,18 +193,19 @@
 
 
   
-  <h4>Download PDF</h4>
-  
-  
-
-  <p>
-  <a class="reference external" href="../pdf/georeferencing_basics_a4.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'georeferencing_basics_a4');"
-   target="_blank">[A4]</a>
-  <a class="reference external" href="../pdf/georeferencing_basics_letter.pdf"
-   onClick="ga('send', 'event', 'PDF Download', 'georeferencing_basics_letter');"
-   target="_blank">[Letter]</a>
-  </p>
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../pdf/georeferencing_basics_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'georeferencing_basics_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../pdf/georeferencing_basics_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'georeferencing_basics_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+    
   
 
 
@@ -217,7 +213,7 @@
 <div class="addthis_sharing_toolbox"></div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
 
   <div class="section" id="georeferencing-topo-sheets-and-scanned-maps">
@@ -262,24 +258,24 @@ need to enable it. Go to <span class="menuselection">Plugins ‣ Manage and Inst
 Plugins</span> and enable the <span class="guilabel">Georeferencer GDAL</span> plugin in the
 <span class="guilabel">Installed</span> tab. See <a class="reference internal" href="using_plugins.html"><span class="doc">Using Plugins</span></a> for more details on how to
 work with plugins.</p>
-<img alt="../_images/150.png" class="align-center" src="../_images/150.png" />
+<img alt="../_images/1103.png" class="align-center" src="../_images/1103.png" />
 <ol class="arabic simple" start="2">
 <li>The plugin is installed in the Raster menu. Click on <span class="menuselection">Raster
 ‣ Georeferencer ‣ Georeferencer</span> to open the plugin.</li>
 </ol>
-<img alt="../_images/227.png" class="align-center" src="../_images/227.png" />
+<img alt="../_images/250.png" class="align-center" src="../_images/250.png" />
 <ol class="arabic simple" start="3">
 <li>The plugin window is divided into 2 sections. The top section where the
 raster will be displayed and the bottom section where a table showing your
 GCPs will appear.</li>
 </ol>
-<img alt="../_images/318.png" class="align-center" src="../_images/318.png" />
+<img alt="../_images/335.png" class="align-center" src="../_images/335.png" />
 <ol class="arabic simple" start="4">
 <li>Now we will open our JPG image. Go to <span class="menuselection">File ‣ Open Raster</span>.
 Browse to the downloaded image of the scanned map and click
 <span class="guilabel">Open</span>.</li>
 </ol>
-<img alt="../_images/413.png" class="align-center" src="../_images/413.png" />
+<img alt="../_images/420.png" class="align-center" src="../_images/420.png" />
 <ol class="arabic simple" start="5">
 <li>In the next screen, you will asked to choose the raster’s coordinate
 reference system (CRS). This is to specify the projection and datum of your
@@ -291,42 +287,42 @@ information given, so we have to assume an appropriate one. Since it is
 India and the map is quite old, we can bet the Everest 1830 datum would give
 us good results.</li>
 </ol>
-<img alt="../_images/513.png" class="align-center" src="../_images/513.png" />
+<img alt="../_images/520.png" class="align-center" src="../_images/520.png" />
 <ol class="arabic simple" start="6">
 <li>You will see the image will be loaded on the top section.</li>
 </ol>
-<img alt="../_images/612.png" class="align-center" src="../_images/612.png" />
+<img alt="../_images/618.png" class="align-center" src="../_images/618.png" />
 <ol class="arabic simple" start="7">
 <li>You can use the zoom/pan controls in the toolbar to learn more about the map.</li>
 </ol>
-<img alt="../_images/712.png" class="align-center" src="../_images/712.png" />
+<img alt="../_images/719.png" class="align-center" src="../_images/719.png" />
 <ol class="arabic simple" start="8">
 <li>Now we need to assign coordinates to some points on this map. If you look
 closely, you will see coordinate grid with markings. Using this grid, you
 can determine the X and Y coordinates of the points where the grids
 intersect. Click on <span class="guilabel">Add Point</span> in the toolbar.</li>
 </ol>
-<img alt="../_images/812.png" class="align-center" src="../_images/812.png" />
+<img alt="../_images/817.png" class="align-center" src="../_images/817.png" />
 <ol class="arabic simple" start="9">
 <li>In the pop-up window, enter the coordinates. Remember that X=longitude and
 Y=latitude.  Click <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/911.png" class="align-center" src="../_images/911.png" />
+<img alt="../_images/918.png" class="align-center" src="../_images/918.png" />
 <ol class="arabic simple" start="10">
 <li>You will notice the GCP table now has a row with details of your first GCP.</li>
 </ol>
-<img alt="../_images/1011.png" class="align-center" src="../_images/1011.png" />
+<img alt="../_images/1016.png" class="align-center" src="../_images/1016.png" />
 <ol class="arabic simple" start="11">
 <li>Similarly, add at least 4 GCPs covering the entire image. The more points
 you have, the more accurate your image is registered to the target
 coordinates.</li>
 </ol>
-<img alt="../_images/1114.png" class="align-center" src="../_images/1114.png" />
+<img alt="../_images/1120.png" class="align-center" src="../_images/1120.png" />
 <ol class="arabic simple" start="12">
 <li>Once you have enough points, go to <span class="menuselection">Settings -&gt;
 Transformation settings</span>.</li>
 </ol>
-<img alt="../_images/1213.png" class="align-center" src="../_images/1213.png" />
+<img alt="../_images/1218.png" class="align-center" src="../_images/1218.png" />
 <ol class="arabic simple" start="13">
 <li>In the <span class="guilabel">Transformation settings</span> dialog, choose the
 <span class="guilabel">Transformation type</span> as <span class="guilabel">Thin Plate Spline</span>. Name your
@@ -335,20 +331,20 @@ output raster as  <span class="guilabel">1870_southern_india_modified.tif</span>
 widely compatible datum. Make sure the <span class="guilabel">Load in QGIS when done</span>
 option is checked. CLick <span class="guilabel">OK</span>.</li>
 </ol>
-<img alt="../_images/1311.png" class="align-center" src="../_images/1311.png" />
+<img alt="../_images/1317.png" class="align-center" src="../_images/1317.png" />
 <ol class="arabic simple" start="14">
 <li>Back in the <span class="guilabel">Georeferencer</span> window, go to <span class="menuselection">File
 ‣ Start georeferencing</span>. This will start the process of warping the image
 using the GCPs and creating the target raster.</li>
 </ol>
-<img alt="../_images/1410.png" class="align-center" src="../_images/1410.png" />
+<img alt="../_images/1416.png" class="align-center" src="../_images/1416.png" />
 <ol class="arabic simple" start="15">
 <li>Once the process finishes, you will see the georeferenced layer loaded in
 QGIS.</li>
 </ol>
-<img alt="../_images/1510.png" class="align-center" src="../_images/1510.png" />
+<img alt="../_images/1516.png" class="align-center" src="../_images/1516.png" />
 <ol class="arabic simple" start="16">
-<li>The georeferencing is now complete. But as always, it&#8217;s a good practice to
+<li>The georeferencing is now complete. But as always, it’s a good practice to
 verify your work. How do we check if our georeferencing is accurate?
 In this case, load the country boundaries shapefile from a trusted source
 like the Natural Earth dataset and compare them. You will notice they match
@@ -356,7 +352,7 @@ up pretty nicely. There is some error and it can be further improved by
 taking more control points, changing transformation parameters and trying a
 different datum.</li>
 </ol>
-<img alt="../_images/169.png" class="align-center" src="../_images/169.png" />
+<img alt="../_images/1614.png" class="align-center" src="../_images/1614.png" />
 </div>
 </div>
 
@@ -382,8 +378,8 @@ different datum.</li>
     </p>
     <p>
         &copy; Copyright 2016, Ujaval Gandhi.<br/>
-      Last updated on Mar 17, 2017.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.3.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
     </p>
   </div>
 </footer>
