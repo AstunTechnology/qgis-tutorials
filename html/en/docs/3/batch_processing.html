@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Batch Processing using Processing Framework (QGIS3) &#8212; QGIS Tutorials and Tips</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Automating Complex Workflows using Processing Modeler (QGIS3)" href="processing_graphical_modeler.html" />
+    <link rel="prev" title="Interpolating Point Data" href="../interpolating_point_data.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-690672-13', 'qgistutorials.com');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo.png"></span>
+          QGIS Tutorials and Tips</a>
+        <span class="navbar-text navbar-version pull-left"><b>v1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Tutorials List <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../making_a_map.html">Making a Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working_with_attributes.html">Working with Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../importing_spreadsheets_csv.html">Importing Spreadsheets or CSV files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using_plugins.html">Using Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloading_osm_data.html">Searching and Downloading OpenStreetMap Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_vector_styling.html">Basic Vector Styling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calculating_line_lengths.html">Calculating Line Lengths and Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raster_styling_and_analysis.html">Basic Raster Styling and Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raster_mosaicing_and_clipping.html">Raster Mosaicing and Clipping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working_with_terrain.html">Working with Terrain Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working_with_wms.html">Working with WMS Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working_with_projections.html">Working with Projections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../georeferencing_basics.html">Georeferencing Topo Sheets and Scanned Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced_georeferencing.html">Georeferencing Aerial Imagery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../digitizing_basics.html">Digitizing Map Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performing_table_joins.html">Performing Table Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performing_spatial_joins.html">Performing Spatial Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../points_in_polygon.html">Points in Polygon Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../creating_heatmaps.html">Creating Heatmaps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performing_spatial_queries.html">Performing Spatial Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nearest_neighbor_analysis.html">Nearest Neighbor Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sampling_raster_data.html">Sampling Raster Data using Points or Polygons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interpolating_point_data.html">Interpolating Point Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Batch Processing using Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing_graphical_modeler.html">Automating Complex Workflows using Processing Modeler (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automating_map_creation.html">Automating Map Creation with Print Layout Atlas (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using_qgis_browser.html">Using the QGIS Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../counting_vertices.html">Counting Number of Vertices in a Layer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open_bil_bip_bsq_files.html">Open BIL, BIP or BSQ files in QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started_with_pyqgis.html">Getting Started With Python Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building_a_python_plugin.html">Building a Python Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_python_functions.html">Using Custom Python Expression Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing_python_scripts.html">Writing Python Scripts for Processing Framework (QGIS3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running_qgis_jobs.html">Running and Scheduling QGIS Processing Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../find_neighbor_polygons.html">Find Neighbor Polygons in a Layer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performing_table_joins_pyqgis.html">Performing Table Joins (PyQGIS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web_mapping_with_qgis2web.html">Web Mapping with QGIS2Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../creating_basemaps_with_qtiles.html">Creating Basemaps with QTiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../learning_resources.html">QGIS Learning Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits.html">Data Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../batch_processing.html">Batch Processing using Processing Framework (QGIS2)</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../interpolating_point_data.html" title="Previous Chapter: Interpolating Point Data"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Interpolating...</span>
+    </a>
+  </li>
+  <li>
+    <a href="processing_graphical_modeler.html" title="Next Chapter: Automating Complex Workflows using Processing Modeler (QGIS3)"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Automating Co... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+
+            
+
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><h4>Author</h4>
+<p>Ujaval Gandhi</p>
+<a href="https://twitter.com/intent/follow?screen_name=spatialthoughts" class="twitter-follow-button" data-show-count="false">Follow @spatialthoughts</a>
+
+<h4>Change Language</h4>
+<form role="form" class="sidebar-form sidebar-left">
+<select id="languages" class="form-control select-mini">
+  <option value="en">English</option>
+  <option value="zh_TW">Chinese (Taiwan)</option>
+  <option value="nl">Dutch</option>
+  <option value="fi_FI">Finnish</option>
+  <option value="fr">French</option>
+  <option value="de">German</option>
+  <option value="el">Greek</option>
+  <option value="id">Indonesian</option>
+  <option value="it">Italian</option>
+  <option value="ko">Korean</option>
+  <option value="pt_BR">Portuguese</option>
+  <option value="ro">Romanian</option>
+  <option value="ru">Russian</option>
+  <option value="sl">Slovenian</option>
+  <option value="es">Spanish</option>
+  <option value="th">Thai</option>
+  <option value="tr">Turkish</option>
+  <option value="uk">Ukrainian</option>
+  <option value="vi">Vietnamese</option>
+</select>
+</form>
+
+
+
+  
+  <h4>Download PDF</h4> 
+		
+		
+			
+            <p>
+            <a class="reference external" href="../../pdf/batch_processing3_a4.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'batch_processing3_a4');"
+             target="_blank">[A4]</a>
+            <a class="reference external" href="../../pdf/batch_processing3_letter.pdf"
+             onClick="ga('send', 'event', 'PDF Download', 'batch_processing3_letter');"
+             target="_blank">[Letter]</a>
+            </p>
+		
+  
+
+
+<h4>Share</h4>
+<div class="addthis_sharing_toolbox"></div>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+
+  <div class="section" id="batch-processing-using-processing-framework-qgis3">
+<h1>Batch Processing using Processing Framework (QGIS3)<a class="headerlink" href="#batch-processing-using-processing-framework-qgis3" title="Permalink to this headline">¶</a></h1>
+<p>The <em>Processing Framework</em> in QGIS provides an environment within
+QGIS to run native and third-party algorithms for processing data. It contains
+a nice batch processing interface that allows one to execute an algorithm on
+several layers easily. Batch processing is a useful tool that can save manual
+effort and help you automate repetitive tasks.</p>
+<div class="section" id="overview-of-the-task">
+<h2>Overview of the task<a class="headerlink" href="#overview-of-the-task" title="Permalink to this headline">¶</a></h2>
+<p>We will take several global vector layers and clip them to the extent of Africa
+in a single batch command.</p>
+<div class="section" id="other-skills-you-will-learn">
+<h3>Other skills you will learn<a class="headerlink" href="#other-skills-you-will-learn" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Create a <strong>Filter</strong> to remove unwanted features from a layer without creating a new layer.</li>
+<li>Merge multiple layers into a single Geopackage file.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="get-the-data">
+<h2>Get the data<a class="headerlink" href="#get-the-data" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://naturalearthdata.com">Natural Earth</a> has several global vector
+layers. Download the following layers</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip">Admin 0 - Countries</a></li>
+<li><a class="reference external" href="http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_railroads.zip">Railroads</a></li>
+<li><a class="reference external" href="http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_ports.zip">Ports</a></li>
+<li><a class="reference external" href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_urban_areas.zip">Urban Areas</a></li>
+</ul>
+<p>For convenience, you may directly download a geopackage containing the above layers from below:</p>
+<p><a class="reference external" href="http://www.qgistutorials.com/downloads/ne_global.gpkg">ne_global.gpkg</a></p>
+<p>Data Source: <a class="reference internal" href="../credits.html#naturalearth" id="id1">[NATURALEARTH]</a></p>
+</div>
+<div class="section" id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>In the QGIS Browser Panel, locate the directory where you saved your downloaded data. Expand the <code class="docutils literal"><span class="pre">zip</span></code> or the <code class="docutils literal"><span class="pre">gpkg</span></code>  entry and select the <code class="docutils literal"><span class="pre">ne_10m_admin_0_countries</span></code> layer. Drag the layer to the canvas.</li>
+</ol>
+<img alt="../../_images/110.png" class="align-center" src="../../_images/110.png" />
+<ol class="arabic simple" start="2">
+<li>You will see the layer loaded in the Layers panel. As our task is to clip the global layers to the boundary of Africa, we need to first prepare a layer containg features only from that continent. Let’s look at the attribute table to see what column can be used to query features belonging to a particular continent. Right-click the <code class="docutils literal"><span class="pre">ne_10m_admin_0_countries</span></code> layer and select <span class="guilabel">Open Attribute Table</span>.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Tip: You can also use the keyboard shortcut <code class="kbd docutils literal"><span class="pre">F6</span></code> to open the attribute table of the selected layer.</p>
+</div>
+<img alt="../../_images/210.png" class="align-center" src="../../_images/210.png" />
+<ol class="arabic simple" start="3">
+<li>In the <span class="guilabel">Attribute Table</span> window, as you scroll horizontally, you will see that the data contains an attribute called <strong>CONTINENT</strong>. We can use this attribute to filter features.</li>
+</ol>
+<img alt="../../_images/310.png" class="align-center" src="../../_images/310.png" />
+<ol class="arabic simple" start="4">
+<li>Close the attribute table and return to the main QGIS window. Right-click the <code class="docutils literal"><span class="pre">ne_10m_admin_0_countries</span></code> layer and select <span class="guilabel">Filter</span>.</li>
+</ol>
+<img alt="../../_images/41.png" class="align-center" src="../../_images/41.png" />
+<ol class="arabic simple" start="5">
+<li>In the <span class="guilabel">Query Builder</span> window, select the <strong>CONTINENT</strong> field and click <span class="guilabel">Sample</span>. This will populate the <span class="guilabel">Values</span> panel with the a subset of values of that attribute from features. This step is useful to get an understanding of what type of values are present in your dataset. We can see that our dataset contains contains a value called <strong>Africa</strong> among others.</li>
+</ol>
+<img alt="../../_images/51.png" class="align-center" src="../../_images/51.png" />
+<ol class="arabic simple" start="6">
+<li>Now enter the expression in the <span class="guilabel">Provider specific filter expression</span> textbox. You can click the <strong>CONTINENT</strong> label, followed by <span class="guilabel">=</span> button and <strong>Africa</strong> label. Or you can type the following expression in the textbox. Click <span class="guilabel">OK</span> after entering the expression.</li>
+</ol>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&quot;CONTINENT&quot; = &#39;Africa&#39;
+</pre></div>
+</div>
+<img alt="../../_images/61.png" class="align-center" src="../../_images/61.png" />
+<ol class="arabic simple" start="7">
+<li>You will see that the map canvas now contains only the countries from Africa. Note the filter icon next to the layer name indicating that that layer a filter applied to it. If you wanted to see and use all the features from the layer, you can click the filter icon and clear the expression. For now, we will keep the filter so we can clip other layers to Africa.</li>
+</ol>
+<img alt="../../_images/71.png" class="align-center" src="../../_images/71.png" />
+<ol class="arabic simple" start="8">
+<li>We are now ready to run the batch process to clip the layers. Locate the natural earth global layers <code class="docutils literal"><span class="pre">ne_10m_railroads</span></code>, <code class="docutils literal"><span class="pre">ne_10m_ports</span></code> and <code class="docutils literal"><span class="pre">ne_10m_urban_areas</span></code> in the <span class="guilabel">QGIS Browser</span> panel. Hold the <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> key and click each layer to select them. Once selected, drag them to the canvas.</li>
+</ol>
+<img alt="../../_images/81.png" class="align-center" src="../../_images/81.png" />
+<ol class="arabic simple" start="9">
+<li>Once the layers are loaded, you will notice that they are global layers and have features spanning all the countries.  Now, it’s time to start our batch clip process to clip these layers to Africa. Open <span class="menuselection">Processing ‣ Toolbox</span>.</li>
+</ol>
+<img alt="../../_images/91.png" class="align-center" src="../../_images/91.png" />
+<ol class="arabic simple" start="10">
+<li>Browse all available algorithms and find the <span class="guilabel">Clip</span> tool from <span class="menuselection">Vector overlay ‣ Clip</span>. You may also use the <span class="guilabel">Search</span> box to easily find the algorithm as well.</li>
+</ol>
+<img alt="../../_images/101.png" class="align-center" src="../../_images/101.png" />
+<ol class="arabic simple" start="11">
+<li>Right-click the <span class="guilabel">Clip</span> algorithm and select <span class="guilabel">Execute as Batch Process</span>.</li>
+</ol>
+<img alt="../../_images/111.png" class="align-center" src="../../_images/111.png" />
+<ol class="arabic simple" start="12">
+<li>In the <span class="guilabel">Batch Processing</span> dialog, the first tab is <span class="guilabel">Parameters</span> where we define our inputs. Each row in the table represents 1 processing task. Click <span class="guilabel">Add row</span> button to add a new row. As our task involves 3 layers, add 3 rows.</li>
+</ol>
+<img alt="../../_images/121.png" class="align-center" src="../../_images/121.png" />
+<ol class="arabic simple" start="13">
+<li>Click the <span class="guilabel">…</span> next to the first row in the <span class="guilabel">Input layers</span> column. Select <span class="guilabel">Select from Open Layers</span>.</li>
+</ol>
+<img alt="../../_images/131.png" class="align-center" src="../../_images/131.png" />
+<ol class="arabic simple" start="14">
+<li>In the <span class="guilabel">Multiple selection</span> dialog, check the 3 layers that we want to clip and click <span class="guilabel">OK</span>.</li>
+</ol>
+<img alt="../../_images/141.png" class="align-center" src="../../_images/141.png" />
+<ol class="arabic simple" start="15">
+<li>You will notice that the <span class="guilabel">Input layer</span> columns will be auto-populated with all layers you had selected. Next, we need to select the layer containing the boundary to clip our input layers. Click the <span class="guilabel">…</span> button for the first row under <span class="guilabel">Overlay layer</span> column and select <span class="guilabel">Select form Open Layers</span>.</li>
+</ol>
+<img alt="../../_images/151.png" class="align-center" src="../../_images/151.png" />
+<ol class="arabic simple" start="16">
+<li>In the <span class="guilabel">Multiple selection</span> dialog, check <code class="docutils literal"><span class="pre">ne_10m_admin_0_countries</span></code> and click <span class="guilabel">OK</span>.</li>
+</ol>
+<img alt="../../_images/161.png" class="align-center" src="../../_images/161.png" />
+<ol class="arabic simple" start="17">
+<li>Since the clip layer is the same for all our inputs, a handy shortcut is to double-click the column header <span class="guilabel">Overlay layer</span> and the same layer will be auto-filled for all the rows.</li>
+</ol>
+<img alt="../../_images/171.png" class="align-center" src="../../_images/171.png" />
+<ol class="arabic simple" start="18">
+<li>Next, we need to define our outputs.  Click the <span class="guilabel">…</span> buton next to the first row in the <span class="guilabel">Clipped</span> column.</li>
+</ol>
+<img alt="../../_images/181.png" class="align-center" src="../../_images/181.png" />
+<ol class="arabic simple" start="19">
+<li>Browse the the directory where you want your output layers. Type the filename as <code class="docutils literal"><span class="pre">clipped_</span></code> and click <span class="guilabel">Save</span>.</li>
+</ol>
+<img alt="../../_images/191.png" class="align-center" src="../../_images/191.png" />
+<ol class="arabic simple" start="20">
+<li>You will see a new <span class="guilabel">Autofill settings</span> dialog pop up. Select <code class="docutils literal"><span class="pre">Fill</span> <span class="pre">with</span> <span class="pre">parameter</span> <span class="pre">values</span></code> as the <span class="guilabel">Autofill mode</span>. Select <code class="docutils literal"><span class="pre">Input</span> <span class="pre">layer</span></code> as the <span class="guilabel">Parameter to use</span>. This setting will add the input file name to the output along with the specified <code class="docutils literal"><span class="pre">clipped_</span></code> filename. This is important to ensure all the output files have unique names and they do not overwrite each other.</li>
+</ol>
+<img alt="../../_images/201.png" class="align-center" src="../../_images/201.png" />
+<ol class="arabic simple" start="21">
+<li>Now we are ready to start the batch procesing. Make sure to check <span class="guilabel">Load layers on completion</span> and click <span class="guilabel">Run</span>.</li>
+</ol>
+<img alt="../../_images/211.png" class="align-center" src="../../_images/211.png" />
+<ol class="arabic simple" start="22">
+<li>The clip algorithm will run for each of the inputs and create output files are we have specified. Once the batch process finishes, click <span class="guilabel">Close</span> to return to QGIS.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Tip: QGIS can now run Processing tasks in the background without blocking the user interface. So if your batch process is taking long, you can close the dialog and continue to work on other tasks in QGIS while the process keeps running in the background.</p>
+</div>
+<img alt="../../_images/221.png" class="align-center" src="../../_images/221.png" />
+<ol class="arabic simple" start="23">
+<li>Back in the main QGIS window, you will see the layers added to QGIS canvas. As you will notice, all the global layers are properly clipped to the continent boundary that we had specified.</li>
+</ol>
+<img alt="../../_images/231.png" class="align-center" src="../../_images/231.png" />
+<ol class="arabic simple" start="24">
+<li>We have accomplished the task of clipping multiple layers in a batch. But QGIS3 has another handy feature that will help you save and deliver the result in a more efficient way. If you wanted to deliver the clipped layers to someone, you would zip the individual files outside of QGIS. A better option to to package the output layers in a single Geopackage. In the <span class="guilabel">QGIS Browser</span>, locate the clipped output layers. You may have to click the <span class="guilabel">Refresh</span> button to see the newly added files.</li>
+</ol>
+<img alt="../../_images/241.png" class="align-center" src="../../_images/241.png" />
+<ol class="arabic simple" start="25">
+<li>Hold <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> key and select the layers. Drag them to the canvas to load them in QGIS.</li>
+</ol>
+<img alt="../../_images/251.png" class="align-center" src="../../_images/251.png" />
+<ol class="arabic simple" start="25">
+<li>In <span class="guilabel">Processing Toolbox</span>, locate the <span class="menuselection">Database ‣ Package layers</span> tool.</li>
+</ol>
+<img alt="../../_images/261.png" class="align-center" src="../../_images/261.png" />
+<ol class="arabic simple" start="27">
+<li>In the <span class="guilabel">Package layers</span> dialog, click the <span class="guilabel">…</span> button next to <span class="guilabel">Input layers</span>.</li>
+</ol>
+<img alt="../../_images/271.png" class="align-center" src="../../_images/271.png" />
+<ol class="arabic simple" start="28">
+<li>In the <span class="guilabel">Multiple selection</span> dialog, check the <code class="docutils literal"><span class="pre">clipped_ne_10m_ports</span></code>, <code class="docutils literal"><span class="pre">clipped_ne_10m_railroads</span></code> and <code class="docutils literal"><span class="pre">clipped_ne_10m_urban_areas</span></code> layers. Click <span class="guilabel">OK</span>.</li>
+</ol>
+<img alt="../../_images/281.png" class="align-center" src="../../_images/281.png" />
+<ol class="arabic simple" start="29">
+<li>Once the input layers are selected, click the <span class="guilabel">…</span> next to <span class="guilabel">Destination Geopackage</span> and choose <span class="guilabel">Save To File</span>.</li>
+</ol>
+<img alt="../../_images/291.png" class="align-center" src="../../_images/291.png" />
+<ol class="arabic simple" start="30">
+<li>Enter the output file name as <code class="docutils literal"><span class="pre">clipped_layers</span></code>.</li>
+</ol>
+<img alt="../../_images/301.png" class="align-center" src="../../_images/301.png" />
+<ol class="arabic simple" start="31">
+<li>Click <span class="guilabel">Run</span> to start the packaging process.</li>
+</ol>
+<img alt="../../_images/311.png" class="align-center" src="../../_images/311.png" />
+<ol class="arabic simple" start="32">
+<li>Once the process finishes, you will see a new geopackage file in your <span class="guilabel">QGIS Browser</span> containing all the clipped output layers. This is a single file on your computer that contains all the output layers.</li>
+</ol>
+<img alt="../../_images/321.png" class="align-center" src="../../_images/321.png" />
+</div>
+</div>
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2016, Ujaval Gandhi.<br/>
+      Last updated on Mar 07, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">
+  <p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a></p>
+</div>
+<!-- Twitter Button -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Disqus comments widget -->
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'qgistutorials'; // required: replace example with your forum shortname
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+</script>
+
+<script type="text/javascript">
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=spatialthoughts" async="async"></script>
+
+<!-- Script fpr language switching. Largely adapted from https://github.com/pcav/faunalia-website -->
+<script>
+    var currentPage = 'docs/3/batch_processing.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    $(document).ready(function(){
+
+        var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is a index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave 
+
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('You hit an error, please report back to us.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+    });
+
+    // load current page in a different language
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+</script>
+
+  </body>
+</html>
