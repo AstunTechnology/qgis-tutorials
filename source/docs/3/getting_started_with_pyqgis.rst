@@ -66,7 +66,14 @@ Procedure
     For interacting with the QGIS environment, we must use the ``iface``
     variable. To access the currently active layer in QGIS, you can type
     the following and press Enter. This command fetches the reference to
-    the currently loaded layer and stores it in the ``layer`` variable.
+    the currently loaded layer and stores it in the ``layer`` variable. 
+
+    .. note:: 
+      You can call your variable anything you like instead of ``layer`` if you
+      prefer. Python attaches no special meaning to a variable based on its
+      name. However, good practice is to make your variable names meaningful.
+      You never want to come back to a script in a months time and have to try
+      and work out what is stored in ``fred``.
 
     .. code:: python
 
@@ -97,8 +104,8 @@ Procedure
 
     .. code:: python
 
-        for f in layer.getFeatures():
-          print(f)
+        for feature in layer.getFeatures():
+          print(feature)
 
     .. image:: /static/3/getting_started_with_pyqgis/images/7.png
      :align: center
@@ -106,14 +113,23 @@ Procedure
 
 8.  As you will see in the output, each line contains a reference to a
     feature within the layer. The reference to the feature is stored in
-    the ``f`` variable. We can use the ``f`` variable to access the
+    the ``feature`` variable. We can use the ``feature`` variable to access the
     attributes of each feature. Type the following to print the ``name``
-    and ``iata_code`` for each airport feature.
+    and ``iata_code`` for each airport feature. The second line *substitutes*
+    the values of the variables ``feature['name']`` and ``feature['iata_code']``
+    into the string on the left, replacing the ``%s`` with the value for each
+    feature in turn.
+
+    .. note::
+      Again you can call the ``feature`` variable anything, so the for loop could
+      become ``for airport in airports.getFeatures():`` if you prefer. But you
+      must be consistent all the way through the program. So, if you called the
+      layer ``layer`` it must still be known as ``layer`` here. 
 
     .. code:: python
 
-        for f in layer.getFeatures():
-          print(f"{f['name']}, {f['iata_code']}")
+        for feature in layer.getFeatures():
+          print("%s, %s"%(feature['name'],feature['iata_code']))
 
     .. image:: /static/3/getting_started_with_pyqgis/images/8.png
        :align: center
@@ -156,7 +172,7 @@ Procedure
 
 11. Now we have all the pieces that we can stitch together to generate
     our desired output. Type the following code to print the name,
-    ``iata_code``, ``latitude`` and ``longitude`` of each of the airport
+    ``iata_code``, ``latitude`` (Y) and ``longitude`` (X) of each of the airport
     features. The ``%s`` and ``%f`` notations are ways to format a
     string and number variables.
 
@@ -164,7 +180,7 @@ Procedure
 
         for f in layer.getFeatures():
           geom = f.geometry()
-          print(f"{f['name']:40s}\t{f['iata_code']},\t({geom.asPoint().y():.2f},{geom.asPoint().x():.2f})")
+          print("%-40s\t%s\t(%7.2f,%7.2f)"%(f['name'],f['iata_code'],geom.asPoint().y(),geom.asPoint().x()))
 
     .. image:: /static/3/getting_started_with_pyqgis/images/11.png
        :align: center
@@ -182,7 +198,7 @@ Procedure
         with open("/home/ian/airports.csv","w") as output_file:
             for f in layer.getFeatures():
                 geom = f.geometry()
-                line = f"{f['name']:50s}\t{f['iata_code']},\t({geom.asPoint().y():.2f},{geom.asPoint().x():.2f})\n"
+                line = "%-40s\t%s\t(%7.2f,%7.2f)\n"%(f['name'],f['iata_code'],geom.asPoint().y(),geom.asPoint().x())
                 o=output_file.write(line)
 
     .. image:: /static/3/getting_started_with_pyqgis/images/12.png
