@@ -182,9 +182,12 @@ Procedure
    command that we had installed as part of Qt bindings for Python. 
 
    .. note::
+    If you get the message the pb_tool is not found, you will need to run the
+    command ``pip install --user pb_tool`` to install it.
+
     This process used to use ``make`` but that is now deprecated.
 
-   .. code-block:: none
+   .. code-block:: 
 
       pb_tool compile
 
